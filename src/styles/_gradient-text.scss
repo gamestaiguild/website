@@ -1,0 +1,149 @@
+.dashboard-text {
+  align-items: center;
+  text-decoration: none;
+  p {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    margin: 0px;
+    font-weight: bold;
+    text-align: left;
+    background: linear-gradient(to right, rgb(219, 50, 50), rgb(237, 131, 31));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: 0.1em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+
+    svg {
+      display: none;
+      width: 16px;
+      margin-left: 10px;
+    }
+
+    @include screen-size(medium) {
+      font-size: 20px;
+    }
+    @include screen-size(large) {
+      font-size: 20px;
+    }
+  }
+}
+
+.header-text {
+  align-items: center;
+  text-decoration: none;
+  p {
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    margin: 0px;
+    font-weight: bold;
+    text-align: left;
+    background: linear-gradient(to right, rgb(219, 50, 50), rgb(237, 131, 31));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: 0.1em;
+    text-align: left;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    margin-top: 10px;
+
+    svg {
+      display: none;
+      width: 16px;
+      margin-left: 10px;
+    }
+
+    @include screen-size(medium) {
+      font-size: 20px;
+    }
+    @include screen-size(large) {
+      font-size: 40px;
+    }
+  }
+}
+
+.gradient-button-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  p {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 15px;
+
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgb(219, 50, 50), rgb(237, 131, 31));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: 0.25em;
+    padding: 0.5em 0.75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // text-align: left;
+    // font-size: 15px;
+
+    svg {
+      color: #d8624b;
+      fill: #d8624b !important;
+      width: 16 px;
+      margin-right: 10px;
+    }
+  }
+}

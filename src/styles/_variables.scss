@@ -1,0 +1,166 @@
+// Variables
+$font: "Lato", sans-serif;
+
+// Colors
+$red: #e50914;
+$black: #150e07;
+$blackblack: #000000;
+$grey: #f5f5f1;
+$white: #ffffff;
+$gray-light: #cccccc;
+$gray: #f1f1f1;
+$teal: #26a69a;
+$dark-teal: #064f55;
+$green: #3c763d;
+$teal: #0596a7;
+$lime: #78b943;
+$yellow: #f7dd02;
+$orange: #e28648;
+$red: #c3002f;
+$breakpoint: 991px;
+$ease-in-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$space-xxs: 0.4rem;
+$space-xs: 0.8rem;
+$space-sm: 1.6rem;
+$space: 0.5rem;
+$space-md: 3.2rem;
+
+$primary: #5e81f4;
+$primary-light: #eef2fd;
+$primary-light-dark: #e5e9f9;
+$secondary: #ff606d;
+$secondary-light: #f7e5e9;
+$secondary-lighter: #fef2f3;
+$main-color: #f5f5fb;
+$bg-color: #fff;
+$border: #e3e3eb;
+$text: #131336;
+$text-secondary: #b1b6d1;
+$text-inverted: #fff;
+$text-date: #9a9abe;
+$progress-bg: #e1e2eb;
+$vocabulary: #ff808b;
+$grammar: #4d4cac;
+$listening: #5e81f4;
+$writing: #c8c9e9;
+// Fonts
+$font-family-body: "Mulish", sans-serif;
+$font-family-logo: "Ubuntu", Helvetica, sans-serif;
+// Sizes
+$admin-header-height: 6.25em;
+$admin-footer-height: $admin-header-height;
+$admin-nav-width: 11.75em;
+$admin-aside-width: 19.5em;
+// Spacing
+$spacing-xl: 3em;
+$spacing-l: 2.5em;
+$spacing: 2em;
+$spacing-m: 1.5em;
+$spacing-s: 1em;
+$spacing-xs: 0.75em;
+$spacing-xxs: 0.5em;
+$spacing-xxxs: 0.3em;
+$spacing-xxxxs: 0.1em;
+$logo: 1.3em;
+$upgradeIcon: 4.5em;
+$upgradeIconMargin: -3em;
+// Fonts
+$font-logo: 1.1rem;
+$font-message-count: 0.5rem;
+$font-l: 1.25rem;
+$font: 1rem;
+$font-s: 0.9rem;
+$font-xs: 0.8rem;
+$font-xxs: 0.75rem;
+$font-xxxs: 0.7rem;
+// Other spacing
+$main-grid-template-rows: 1fr min-content;
+$main-border: 1px solid $border;
+$main-spacing-vert: 0.7em; //2.7em;
+$main-spacing-hor: 1.75em;
+$main-padding: $main-spacing-vert $main-spacing-hor 0 $main-spacing-hor;
+$nav-active-border: 3px solid $primary;
+$nav-active-margin: 14.6em;
+$nav-message-count-size: 1.5em;
+$main-welcome-back-anna-size: 17.5em;
+$main-welcome-back-anna-margin: 5em;
+$progress-height: 0.4em;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --app-container: #f3f6fd;
+  --main-color: #1f1c2e;
+  --secondary-color: #4a4a4a;
+  --link-color: #1f1c2e;
+  --link-color-hover: #c3cff4;
+  --link-color-active: #fff;
+  --link-color-active-bg: #1f1c2e;
+  --projects-section: #fff;
+  --message-box-hover: #fafcff;
+  --message-box-border: #e9ebf0;
+  --more-list-bg: #fff;
+  --more-list-bg-hover: #f6fbff;
+  --more-list-shadow: rgba(209, 209, 209, 0.4);
+  --button-bg: #1f1c24;
+  --search-area-bg: #fff;
+  --star: #1ff1c2e;
+  --message-btn: #fff;
+}
+
+.dark:root {
+  --app-container: #1f1d2b;
+  --app-container: #111827;
+  --main-color: #fff;
+  --secondary-color: rgba(255, 255, 255, 0.8);
+  --projects-section: #1f2937;
+  --link-color: rgba(255, 255, 255, 0.8);
+  --link-color-hover: rgba(195, 207, 244, 0.1);
+  --link-color-active-bg: rgba(195, 207, 244, 0.2);
+  --button-bg: #1f2937;
+  --search-area-bg: #1f2937;
+  --message-box-hover: #243244;
+  --message-box-border: rgba(255, 255, 255, 0.1);
+  --star: #ffd92c;
+  --light-font: rgba(255, 255, 255, 0.8);
+  --more-list-bg: #2f3142;
+  --more-list-bg-hover: rgba(195, 207, 244, 0.1);
+  --more-list-shadow: rgba(195, 207, 244, 0.1);
+  --message-btn: rgba(195, 207, 244, 0.1);
+}
+
+@mixin generate-gradient($color, $amount) {
+  background: -moz-linear-gradient(
+    top,
+    rgba($color, $amount) 0%,
+    rgba($color, 0) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba($color, $amount) 0%,
+    rgba($color, 0) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba($color, $amount) 0%,
+    rgba($color, 0) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@mixin screen-size($size) {
+  @if $size == "medium" {
+    @media all and (min-width: 800px) {
+      @content;
+    }
+  } @else if $size == "large" {
+    @media all and (min-width: 1000px) {
+      @content;
+    }
+  } @else if $size == "x-large" {
+    @media all and (min-width: 1300px) {
+      @content;
+    }
+  }
+}

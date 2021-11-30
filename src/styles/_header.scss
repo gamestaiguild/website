@@ -1,0 +1,343 @@
+.container {
+  margin: 0 auto;
+  padding: 0px 5vw;
+}
+
+.header-fixed {
+  position: relative;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #131313;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(227, 227, 227);
+  line-height: 30px;
+}
+
+.navbar .logo {
+  flex: 3;
+}
+
+.navbar .logo a {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar .logo a:hover {
+  color: #777777;
+}
+
+.navbar nav {
+  flex: 1;
+}
+
+.navbar label {
+  user-select: none;
+  cursor: pointer;
+  padding: 28px 20px;
+  position: relative;
+  z-index: 3;
+  margin-top: 2px;
+}
+
+.navbar label i {
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.navbar label i:before,
+.navbar label i:after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.navbar label i,
+.navbar label i:before,
+.navbar label i:after {
+  display: block;
+  background: #eee;
+}
+.navbar label i:before {
+  top: 5px;
+}
+.navbar label i:after {
+  top: -5px;
+}
+
+.navbar #navbar-toggle {
+  display: none;
+}
+
+.header #navbar-toggle:checked ~ .menu {
+  visibility: visible;
+  opacity: 0.99;
+}
+.header #navbar-toggle:checked ~ label {
+  background: #212121;
+  border-radius: 50%;
+}
+.header #navbar-toggle:checked ~ label i {
+  background: transparent;
+}
+.header #navbar-toggle:checked ~ label i:before {
+  transform: rotate(-45deg);
+}
+.header #navbar-toggle:checked ~ label i:after {
+  transform: rotate(45deg);
+}
+.header #navbar-toggle:checked ~ label:not(.steps) i:before,
+.header #navbar-toggle:checked ~ label:not(.steps) i:after {
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar nav {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-out;
+    display: table;
+
+    line-height: 30px;
+  }
+  .navbar nav ul {
+    margin: 0;
+    padding: 20px 0;
+    display: table-cell;
+    vertical-align: middle;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: top;
+    background-image: url("../assets/header2.png"),
+      linear-gradient(45deg, #150e07, rgba(0, 0, 0, 0.99));
+    //   linear-gradient(45deg, #150e07, rgba(0, 0, 0, 0.95))
+  }
+  .navbar nav li {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 30px;
+    min-height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .navbar nav li:hover {
+    background: #212121;
+  }
+  .navbar nav li:hover a {
+    color: #ddae34;
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+  }
+  .navbar nav li a {
+    color: #e6e6e6;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+  }
+  .navbar nav li {
+    flex: 0;
+  }
+  .navbar nav li a {
+    width: 10px;
+    display: block;
+    // padding: 0 8px;
+    font-size: 15px;
+    line-height: 60px;
+    font-weight: bold;
+    color: #959595;
+    text-decoration: none;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .navbar nav li a:hover {
+    color: #ddae34;
+  }
+  .navbar label {
+    display: none;
+  }
+}
+
+.nav-container {
+  margin: 0 auto;
+  padding: 0.1rem;
+  width: 80%;
+  @media (max-width: $breakpoint) {
+    width: 95%;
+  }
+}
+
+// Header
+.Header {
+  @include generate-gradient($blackblack, 1);
+  display: flex;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+// Logo
+.Logo {
+  width: 151px;
+  height: 41px;
+  margin-right: 10px;
+  transition: margin 0.125s ease;
+
+  svg {
+    transform: scale(0.5);
+    transform-origin: 0 0;
+
+    path {
+      fill: $red;
+      transition: fill 0.125s ease;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    margin-top: 2px;
+    svg {
+      path {
+        fill: $white !important;
+      }
+    }
+  }
+}
+
+// Navigation
+.Navigation {
+  ul {
+    display: flex;
+    height: 37px;
+    align-items: center;
+    padding: 0 10px;
+
+    li {
+      font-weight: 400;
+      padding: 7px 10px;
+      font-size: 14px;
+      transition: background 0.125s ease;
+      border-radius: 3px;
+
+      &:hover {
+        background: $red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Search
+.Search {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+
+  input {
+    font-family: $font;
+    font-weight: 300;
+    font-size: 14px;
+    height: 37px;
+    width: 20%;
+    background: transparent;
+    color: $white;
+    appearance: none;
+    border: 0;
+    border: 2px solid rgba($grey, 0.1);
+    outline: none;
+    border-radius: 37px;
+    padding: 0 10px;
+    pointer-events: all;
+    transition: border 0.25s ease, width 0.125s ease 0.125s;
+
+    &:focus {
+      border: 2px solid $red;
+      width: 30%;
+    }
+  }
+}
+
+// UserProfile
+.UserProfile {
+  margin-left: auto;
+
+  // User
+  .User {
+    display: flex;
+
+    .image {
+      border-radius: 44px;
+      margin-left: 10px;
+      overflow: hidden;
+      width: 44px;
+      height: 44px;
+      box-sizing: border-box;
+      border: 3px solid transparent;
+      transition: border 0.125s ease;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .name {
+      align-items: center;
+      display: flex;
+      font-size: 18px;
+      font-weight: 300;
+      height: 44px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      .image {
+        border: 3px solid $red;
+      }
+    }
+  }
+
+  // UserProfile-menu
+  .UserProfile-menu {
+    display: none;
+  }
+}

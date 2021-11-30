@@ -1,0 +1,87 @@
+table {
+  padding: 20px;
+  box-sizing: border-box;
+  table-layout: auto;
+  width: 100%;
+  @media (max-width: $breakpoint) {
+    padding: 0px;
+  }
+  // border-collapse: collapse;
+
+  th {
+    font-weight: 700;
+    text-align: left;
+    border-bottom: solid 0px $gray-light;
+    padding: 5px 0;
+    color: transparent;
+  }
+
+  tbody {
+    @media (max-width: $breakpoint) {
+      display: block;
+    }
+  }
+
+  tr {
+    @media (max-width: $breakpoint) {
+      display: block;
+      margin-bottom: 15px;
+      padding: 20px;
+    }
+
+    &:nth-child(odd) {
+      @media (max-width: $breakpoint) {
+      }
+    }
+
+    td {
+      &:last-child {
+        @media (max-width: $breakpoint) {
+        }
+      }
+    }
+  }
+
+  td {
+    text-align: center;
+    vertical-align: middle;
+    height: 34px;
+    padding: 10px;
+    border-bottom: solid 0px $gray;
+    text-align: right;
+    span {
+      color: #8a8a98;
+    }
+    p {
+      margin-top: 0px;
+      color: #ddae34;
+    }
+
+    @media (max-width: $breakpoint) {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      text-align: left;
+      border-bottom: none;
+    }
+
+    // &::before {
+    //   @media (max-width: $breakpoint) {
+    //     content: attr(data-value);
+    //     display: table-cell;
+    //     padding: 10px;
+    //     width: 30%;
+
+    //     font-weight: bold;
+    //   }
+    // }
+
+    // div {
+    //   @media (max-width: $breakpoint) {
+    //     display: table-cell;
+    //     padding: 10px;
+    //   }
+    // }
+  }
+}

@@ -1,0 +1,22 @@
+
+.spec-card-black-container {
+    .sticky {
+        width: 100%;
+        position: relative;
+        z-index: 1000;
+    
+       .animation, .animation2 {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+    
+          .home-content {
+            position: absolute;
+          }
+          img {
+              position: relative;
+          }
+    
+        }
+      }
+}

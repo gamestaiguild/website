@@ -1,0 +1,257 @@
+.pte-conatiner {
+  .sticky {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+
+    .animation,
+    .animation2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      .home-content {
+        position: absolute;
+      }
+      img {
+        position: relative;
+      }
+    }
+  }
+}
+
+.pte-header {
+  margin: auto;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  // margin-top: -120px;
+  height: 200px;
+
+  .pte-header-des {
+    position: absolute;
+    width: 100%;
+    height: 96px;
+    left: -1%;
+    top: -30%;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 100%;
+    /* identical to box height, or 96px */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-feature-settings: "ss01" on, "salt" on;
+    font-family: "neuebold";
+
+    color: #273a41;
+    z-index: 21;
+
+    transform: rotate(-6deg);
+  }
+
+  .pte-header-title {
+    position: absolute;
+    left: 0;
+    top: -40%;
+    width: 100%;
+    height: 144px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 144px;
+    line-height: 100%;
+    /* identical to box height, or 144px */
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-feature-settings: "ss01" on, "salt" on;
+    opacity: 0.4;
+    /* #00B3E8 */
+    transform: rotate(-3deg);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00b3e8;
+    color: transparent;
+    animation: fadeIn 0.25s cubic-bezier(0.6, -0.28, 0.735, 0.045) 0s forwards;
+    font-family: "neuebold";
+    z-index: 22;
+  }
+}
+
+.pte {
+  margin: auto;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  .pte-content {
+    text-align: center;
+
+    .pte-content-title {
+      font-family: "euclidnormal";
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    .pte-content-des {
+      font-family: "euclidnormal";
+      font-size: 16px;
+      font-weight: 400;
+      color: #38484e;
+      max-width: 586px;
+      text-align: left;
+      justify-content: right;
+      margin-left: auto;
+      margin-top: 30px;
+    }
+  }
+}
+
+.pte-nav {
+  margin: auto;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  max-width: 80%;
+
+  .pte-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0rem;
+    row-gap: 1.5rem;
+    margin: auto;
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .pte-card {
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pte-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5rem 1.25rem 0rem 1.25rem;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      span {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          // max-width: 85%;
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  .pte-card-title {
+    font-weight: bold;
+    font-family: "neuebold";
+    color: #00b3e8;
+    font-size: 28px;
+    margin-left: 0.75rem;
+    text-align: left;
+  }
+
+  .pte-card-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0rem 1.25rem 0rem 1.25rem;
+    div {
+      display: flex;
+      align-items: center;
+      p {
+        margin-left: 4.5rem;
+        font-weight: 400;
+        text-align: left;
+        font-family: "euclidnormal";
+        color: #38484e;
+        max-width: 550px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.pte-game {
+  margin: auto;
+  margin-top: 8rem;
+  max-width: 80%;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  .pte-game-header {
+    list-style: none;
+    display: flex;
+    align-items: left;
+    justify-content: start;
+    margin: 0;
+
+    .pte-game-title {
+      margin: 0;
+      padding: 0;
+      font-family: "neuebold";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 100%;
+      /* identical to box height, or 20px */
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #273a41;
+      z-index: 22;
+    }
+  }
+
+  .pte-game-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    @media (max-width: 768px) {
+      margin-top: 35px;
+      margin-left: 35px;
+      margin-right: 0px;
+    }
+
+    .pte-game-list-item {
+      cursor: pointer;
+      margin-right: 2rem;
+      margin-top: 0.75rem;
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .pte-header-des {
+    font-size: 60px !important;
+  }
+  .pte-header .pte-header-title {
+    font-size: 60px !important;
+  }
+}

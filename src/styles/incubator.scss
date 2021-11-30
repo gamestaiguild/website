@@ -1,0 +1,96 @@
+
+.incubator {
+    padding: 0rem;
+    background-size: cover;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: skewY(6deg);
+        transform-origin: 100% 0;
+        z-index: -1;
+        background: #fff;
+        border: 1px solid #d2f0fb;
+      }
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: skewY(-6deg);
+        transform-origin: 100%;
+        z-index: -1;
+        background: #fff;
+      }
+  }
+  
+  .incubator-content {
+    z-index: 1;
+    text-align: left;
+    max-width: 1500px;
+    margin: auto;
+ 
+    .des {
+      padding-top: 80px;
+      margin-right: 0px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 130%;
+      max-width: 873px;
+      margin: auto;
+      /* or 21px */
+      font-feature-settings: "ss01" on, "salt" on;
+      color: #273A41;
+      font-family: "euclidnormal";
+    }
+    .sub-des {
+      font-style: normal;
+      font-size: 18px;
+      font-weight: 400;
+      color: #38484e;
+      font-family: "euclidnormal";
+      max-width: 873px;
+      font-style: normal;
+      line-height: 120%;
+      /* or 24px */
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .btn-incub {
+        max-width: 300px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        cursor: pointer;
+        height: 55px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 6px;
+        transition: all 0.4s ease-in-out;
+        background: linear-gradient(96.42deg, #06c5c1 17.88%, #009fea 96.71%);
+        border-radius: 6px;
+        display: block;
+        font-family: "euclidnormal";
+        margin-top: 30px;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+  }
+
+  

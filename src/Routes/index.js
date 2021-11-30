@@ -4,6 +4,7 @@ import RouteWithLayout from "../components/Routes/RouteWIthLayout";
 import Home from "../views/Home/Home";
 import { Switch, Route } from "react-router-dom";
 import Incubator from "../views/Incubator/Incubator";
+import Projects from "../views/Incubator/Projects";
 
 const Routes = () => {
   return (
@@ -18,6 +19,12 @@ const Routes = () => {
         path="/incubator"
         layout={LandingPageLayout}
         component={Incubator}
+      />
+      <RouteWithLayout
+        exact
+        path="/project/:id"
+        layout={LandingPageLayout}
+        component={Projects}
       />
     </Switch>
   );

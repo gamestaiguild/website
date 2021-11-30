@@ -44,13 +44,13 @@ const Dao = () => {
             // pin
           >
             {(progress) => (
-              <div className="">
+              <div className="" style={{overflow: 'hidden'}}>
                 <Timeline totalProgress={progress} paused>
                   <Tween
                     from={{
                       css: {
                         opacity: 0,
-                        scale: 3,
+                        scale: 2,
                         marginTop: "500px",
                         marginLeft: "780px",
                       },
@@ -134,7 +134,7 @@ const Dao = () => {
           <div className="dao-container">
             <div className="dao-wrapper">
               <div className="dao-content voting">
-                <h1 className="title" data-aos="zoom-out-up">
+                <h1 className="title">
                   Proposals and voting will include, but not be limited to:
                 </h1>
                 <div className="prop-icon-list">
@@ -142,14 +142,13 @@ const Dao = () => {
                     <article className="card">
                       <div className="card-header">
                         <div>
-                          <span data-aos="zoom-out-right">
+                          <span>
                             <img
                               src={Technology}
                               alt=""
-                              data-aos="zoom-out-down"
                             />
                           </span>
-                          <h4 className="prop-title" data-aos="zoom-out-right">
+                          <h4 className="prop-title">
                             Technology
                           </h4>
                         </div>
@@ -163,10 +162,9 @@ const Dao = () => {
                             <img
                               src={tokenIcon}
                               alt=""
-                              data-aos="zoom-out-right"
                             />
                           </span>
-                          <h4 className="prop-title" data-aos="zoom-out-right">
+                          <h4 className="prop-title">
                             Token distribution
                           </h4>
                         </div>
@@ -179,10 +177,9 @@ const Dao = () => {
                             <img
                               src={Empowerment}
                               alt=""
-                              data-aos="zoom-out-right"
                             />
                           </span>
-                          <h4 className="prop-title" data-aos="zoom-out-right">
+                          <h4 className="prop-title">
                             Products and projects
                           </h4>
                         </div>
@@ -192,10 +189,10 @@ const Dao = () => {
                     <article className="card">
                       <div className="card-header">
                         <div>
-                          <span data-aos="zoom-out-right">
+                          <span>
                             <img src={GovernanceStructure} alt="" />
                           </span>
-                          <h4 className="prop-title" data-aos="zoom-out-right">
+                          <h4 className="prop-title">
                             Governance structure
                           </h4>
                         </div>
@@ -203,7 +200,7 @@ const Dao = () => {
                     </article>
                   </div>
                 </div>
-                <p style={{ marginRight: "auto" }} data-aos="zoom-in-up">
+                <p style={{ marginRight: "auto" }}>
                   Whilst the community is maturing, and until the launch of The
                   DAO, we will run financials in a centralised manner, reporting
                   asset acquisitions, gaming profits & yields via a weekly

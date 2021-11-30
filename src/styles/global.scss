@@ -1843,7 +1843,7 @@ header.header-visible .button:hover {
   width: 65%; //100%
   z-index: 1;
   text-align: left;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   margin-left: 120px;
 
@@ -2949,14 +2949,14 @@ $slide-width2: 30rem;
   width: 100%;
   z-index: 1;
   text-align: left;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
 
   .title {
     font-family: "neuebold";
     font-weight: 800;
     text-transform: normal;
-    overflow: hidden;
+    // overflow: hidden;
     display: block;
     line-height: 1.1;
     font-style: normal;
@@ -3246,7 +3246,7 @@ $slide-width2: 30rem;
   padding-bottom: 20px;
   background-size: cover;
   padding-bottom: 0px;
-  overflow: hidden;
+  // overflow: hidden;
   margin: auto;
   border: 0px solid #d2f0fb;
   padding-bottom: 200px;
@@ -3269,9 +3269,9 @@ $slide-width2: 30rem;
 
 .token-content {
   width: 90%;
-  z-index: 1;
+  z-index: 9; //1
   text-align: left;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
 
   .title {
@@ -3926,7 +3926,7 @@ article figure {
 
 .advisors-card {
   border-radius: 8px;
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   flex-direction: column;
 
@@ -5184,7 +5184,7 @@ header.header-visible .button {
     margin-left: 27%;
   }
   .dao-content .title {
-    margin-top: 0;
+    margin-top: 60px;
   }
   .dao-hero-proposals {
     margin-top: -100px !important;

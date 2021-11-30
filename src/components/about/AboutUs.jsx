@@ -64,7 +64,6 @@ const AboutUs = (props) => {
                 <a
                   href="https://forms.gle/3TG7dPkiHF9BjMQh7"
                   target="_blank"
-                  data-aos="fade-up"
                   rel="noreferrer"
                   className="btn-hover spec-btn-link"
                 >
@@ -75,7 +74,6 @@ const AboutUs = (props) => {
             </div>
             <ul
               className="logo-list desktop-logo-list"
-              data-aos="flip-left"
               style={{ zIndex: 200 }}
             >
               <li className="logo-list-item">

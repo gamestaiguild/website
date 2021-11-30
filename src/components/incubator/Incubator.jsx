@@ -32,7 +32,7 @@ const Incubators = (props) => {
     <ScrollStyled>
       <Controller>
         <div className="incubator-hero">
-          <Scene triggerHook="onEnter" duration={800}>
+          <Scene triggerHook="onEnter" duration={600}>
             {(progress) => (
               <div className="">
                 <Timeline totalProgress={progress} paused>
@@ -49,7 +49,7 @@ const Incubators = (props) => {
                       css: {
                         opacity: 1,
                         scale: 1,
-                        transform: "translate3d(155px, -144px, 0px) rotate(360deg)",
+                        transform: "translate3d(31.302px, -100.423px, 0px) rotate(360deg)",
                       },
                     }}
                   >

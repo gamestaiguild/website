@@ -76,7 +76,6 @@ const BlackGamexCard = () => {
                         <article
                           className="text-box text1"
                           style={{ alignItems: "end" }}
-                          data-aos="zoom-out-up"
                         >
                           Black
                         </article>
@@ -84,14 +83,13 @@ const BlackGamexCard = () => {
                         <article
                           className="text-box text3"
                           style={{ alignItems: "start" }}
-                          data-aos="zoom-out-up"
                         >
                           CARD
                         </article>
                       </div>
                       <div className="black-skew-content">
                         <div className="inline-box">
-                          <div className="icon-list2" data-aos="zoom-out-up">
+                          <div className="icon-list2">
                             <strong>
                               Alongside ownership and staking of{" "}
                               <span>$GSG</span>, VIPs will be able to purchase
@@ -105,7 +103,7 @@ const BlackGamexCard = () => {
                                     <img src={Tenfold} alt="" />
                                   </span>
                                   <h3>
-                                    <strong data-aos="zoom-out-up">
+                                    <strong>
                                       Tenfold Increased voting weight in The DAO
                                     </strong>
                                   </h3>
@@ -113,7 +111,7 @@ const BlackGamexCard = () => {
                               </summary>
                             </details>
 
-                            <details data-aos="zoom-out-up">
+                            <details>
                               <summary>
                                 <div>
                                   <span>
@@ -137,12 +135,11 @@ const BlackGamexCard = () => {
                                     <img
                                       src={BetaTestGames}
                                       alt=""
-                                      data-aos="zoom-in"
                                     />
                                   </span>
 
                                   <h3>
-                                    <strong data-aos="zoom-in">
+                                    <strong>
                                       Access to beta test games
                                     </strong>
                                   </h3>
@@ -150,7 +147,7 @@ const BlackGamexCard = () => {
                               </summary>
                             </details>
 
-                            <details data-aos="zoom-in">
+                            <details>
                               <summary>
                                 <div>
                                   <span>
@@ -165,7 +162,7 @@ const BlackGamexCard = () => {
                               </summary>
                             </details>
 
-                            <details data-aos="zoom-in">
+                            <details>
                               <summary>
                                 <div>
                                   <span>
@@ -182,7 +179,7 @@ const BlackGamexCard = () => {
                               </summary>
                             </details>
 
-                            <details data-aos="zoom-in">
+                            <details>
                               <summary>
                                 <div>
                                   <span>
@@ -201,7 +198,7 @@ const BlackGamexCard = () => {
                           </div>
                         </div>
                         <div className="inline-box">
-                          <img src={hand} alt="" data-aos="zoom-in" />
+                          <img src={hand} alt=""/>
                         </div>
                         {/* <img src={Rectangle} /> */}
                         <div className="inline-box">

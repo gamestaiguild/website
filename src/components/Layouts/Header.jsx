@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-const Header = () => {
+const Header = (props) => {
+  const { headerVisible } = props;
   const [show, setShow] = useState(false);
   const [activesection, setActivesection] = useState("");
   const [showHamBurger, setShowHamBurger] = useState(false);
@@ -25,7 +27,11 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    setActivesection(window.location.hash.trim().replace("#", ""));
+    if(headerVisible){
+      setActivesection(window.location.pathname.trim().replace("/", ""))
+    }else{
+      setActivesection(window.location.hash.trim().replace("#", ""));
+    }
   }, []);
   const setPath = (path) => {
     setActivesection(path);
@@ -36,13 +42,59 @@ const Header = () => {
     setShowHamBurger(!showHamBurger);
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("div[id]");
+    window.addEventListener("scroll", navHighlighter);
+    function navHighlighter() {
+      let scrollY = window.pageYOffset;
+      sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+
+        const sectionTop =
+          current.getBoundingClientRect().top + window.pageYOffset - 50;
+
+        let sectionId = current.getAttribute("id");
+        let hrefArray = [
+          "about",
+          "play2earn",
+          "business-modal",
+          "dao",
+          "eco-system",
+          "road-map",
+          "team",
+          "partnership",
+          "contactus",
+        ];
+        let checkArrayValue = hrefArray.includes(sectionId);
+        if (checkArrayValue) {
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document
+              .querySelector(
+                ".header-navigation-links a[href*=" + sectionId + "]"
+              )
+              .classList.add("active");
+          } else {
+            document
+              .querySelector(
+                ".header-navigation-links a[href*=" + sectionId + "]"
+              )
+              .classList.remove("active");
+          }
+        }
+      });
+    }
+    return () => {
+      window.removeEventListener("scroll", navHighlighter);
+    };
+  }, [show]);
+
   return (
     <header
       className={
-        show
+        show || headerVisible
           ? showHamBurger
             ? "header header-visible burger-open"
-            : "header header-visible"
+            : "header header-visible new-header-visible"
           : showHamBurger
           ? "header burger-open"
           : "header"
@@ -65,7 +117,7 @@ const Header = () => {
         <div className="header-navigation">
           <nav className="header-navigation-links">
             <a
-              href="#about"
+              href="/#about"
               rel="noreferrer"
               className={activesection === "about" ? "active" : ""}
               onClick={() => setPath("about")}
@@ -73,7 +125,7 @@ const Header = () => {
               About us
             </a>
             <a
-              href="#play2earn"
+              href="/#play2earn"
               rel="noreferrer"
               className={activesection === "play2earn" ? "active" : ""}
               onClick={() => setPath("play2earn")}
@@ -81,7 +133,7 @@ const Header = () => {
               Play 2 Earn
             </a>
             <a
-              href="#business-modal"
+              href="/#business-modal"
               rel="noreferrer"
               className={activesection === "business-modal" ? "active" : ""}
               onClick={() => setPath("business-modal")}
@@ -89,7 +141,7 @@ const Header = () => {
               Business Model
             </a>
             <a
-              href="#dao"
+              href="/#dao"
               rel="noreferrer"
               className={activesection === "dao" ? "active" : ""}
               onClick={() => setPath("dao")}
@@ -97,7 +149,7 @@ const Header = () => {
               The DAO
             </a>
             <a
-              href="#eco-system"
+              href="/#eco-system"
               rel="noreferrer"
               className={activesection === "eco-system" ? "active" : ""}
               onClick={() => setPath("eco-system")}
@@ -105,7 +157,7 @@ const Header = () => {
               Ecosystem
             </a>
             <a
-              href="#road-map"
+              href="/#road-map"
               rel="noreferrer"
               className={activesection === "road-map" ? "active" : ""}
               onClick={() => setPath("road-map")}
@@ -113,7 +165,7 @@ const Header = () => {
               Roadmap
             </a>
             <a
-              href="#team"
+              href="/#team"
               rel="noreferrer"
               className={activesection === "team" ? "active" : ""}
               onClick={() => setPath("team")}
@@ -121,15 +173,22 @@ const Header = () => {
               Team
             </a>
             <a
-              href="#partnership"
+              href="/#partnership"
               rel="noreferrer"
               className={activesection === "partnership" ? "active" : ""}
               onClick={() => setPath("partnership")}
             >
               Partnership
             </a>
+            <Link
+              to="/incubator"
+              className={activesection === "incubator" ? "active" : ""}
+              onClick={() => setPath("incubator")}
+            >
+              Incubator
+            </Link>
             <a
-              href="#contactus"
+              href="/#contactus"
               rel="noreferrer"
               className={activesection === "contactus" ? "active" : ""}
               onClick={() => setPath("contactus")}
@@ -177,7 +236,7 @@ const Header = () => {
           <div className="header-navigation mob-header-navigation">
             <nav className="header-navigation-links">
               <a
-                href="#about"
+                href="/#about"
                 rel="noreferrer"
                 className={activesection === "about" ? "active" : ""}
                 onClick={() => setPath("about")}
@@ -185,7 +244,7 @@ const Header = () => {
                 About us
               </a>
               <a
-                href="#play2earn"
+                href="/#play2earn"
                 rel="noreferrer"
                 className={activesection === "play2earn" ? "active" : ""}
                 onClick={() => setPath("play2earn")}
@@ -193,7 +252,7 @@ const Header = () => {
                 Play 2 Earn
               </a>
               <a
-                href="#business-modal"
+                href="/#business-modal"
                 rel="noreferrer"
                 className={activesection === "business-modal" ? "active" : ""}
                 onClick={() => setPath("business-modal")}
@@ -201,7 +260,7 @@ const Header = () => {
                 Business Model
               </a>
               <a
-                href="#dao"
+                href="/#dao"
                 rel="noreferrer"
                 className={activesection === "dao" ? "active" : ""}
                 onClick={() => setPath("dao")}
@@ -209,7 +268,7 @@ const Header = () => {
                 The DAO
               </a>
               <a
-                href="#eco-system"
+                href="/#eco-system"
                 rel="noreferrer"
                 className={activesection === "eco-system" ? "active" : ""}
                 onClick={() => setPath("eco-system")}
@@ -217,7 +276,7 @@ const Header = () => {
                 Ecosystem
               </a>
               <a
-                href="#road-map"
+                href="/#road-map"
                 rel="noreferrer"
                 className={activesection === "road-map" ? "active" : ""}
                 onClick={() => setPath("road-map")}
@@ -225,7 +284,7 @@ const Header = () => {
                 Roadmap
               </a>
               <a
-                href="#team"
+                href="/#team"
                 rel="noreferrer"
                 className={activesection === "team" ? "active" : ""}
                 onClick={() => setPath("team")}
@@ -233,15 +292,22 @@ const Header = () => {
                 Team
               </a>
               <a
-                href="#partnership"
+                href="/#partnership"
                 rel="noreferrer"
                 className={activesection === "partnership" ? "active" : ""}
                 onClick={() => setPath("partnership")}
               >
                 Partnership
               </a>
+              <Link
+                to="/incubator"
+                className={activesection === "incubator" ? "active" : ""}
+                onClick={() => setPath("incubator")}
+              >
+                Incubator
+              </Link>
               <a
-                href="#contactus"
+                href="/#contactus"
                 rel="noreferrer"
                 className={activesection === "contactus" ? "active" : ""}
                 onClick={() => setPath("contactus")}

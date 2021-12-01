@@ -19,7 +19,7 @@ import { Tween, Timeline } from "react-gsap";
 
 const PlayToEarn = () => {
   return (
-    <div className="pte-conatiner">
+    <div id="play2earn" className="pte-conatiner">
       <Controller>
         <div>
           <div className="pte-header">

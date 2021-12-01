@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BlackGamexCard from "../../components/blackGamexCard";
 import "../../styles/icubator.scss";
 import proimg from '../../assets/project-image.png';
@@ -35,6 +35,10 @@ const projectListObj = [
   }
 ]
 const Incubator = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+    return () => {}
+  }, [])
   return (
 
     <div className="page-wrapper">

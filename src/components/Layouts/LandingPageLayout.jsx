@@ -7,7 +7,7 @@ function LandingPageLayout(props) {
 
   return (
     <div className="dashboard-wrapper move">
-      <Header />
+      <Header headerVisible={true} />
       <div className="container">{children}</div>
       <Footer />
     </div>

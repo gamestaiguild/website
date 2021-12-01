@@ -1,0 +1,418 @@
+import React, { useState, useEffect } from "react";
+import logo from "../../assets/logo.png";
+import { Controller, Scene } from "react-scrollmagic";
+import { Tween, Timeline } from "react-gsap";
+import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
+
+const AnimatedHeader = () => {
+  const [show, setShow] = useState(false);
+  const [activesection, setActivesection] = useState("");
+  const [showHamBurger, setShowHamBurger] = useState(false);
+
+  const is1440 = useMediaQuery({ query: "(max-width: 1440px)" });
+  const is1200 = useMediaQuery({ query: "(max-width: 1200px)" });
+
+  const listenToScroll = () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > 400) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+  
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => {
+      window.removeEventListener("scroll", listenToScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    setActivesection(window.location.hash.trim().replace("#", ""));
+  }, []);
+  const setPath = (path) => {
+    setActivesection(path);
+    setShowHamBurger(false);
+  };
+
+  const handlehamburger = () => {
+    setShowHamBurger(!showHamBurger);
+  };
+
+//   useEffect(() => {
+//     const sections = document.querySelectorAll("div[id]");
+//     window.addEventListener("scroll", navHighlighter);
+//     function navHighlighter() {
+//       let scrollY = window.pageYOffset;
+//       sections.forEach((current) => {
+//         const sectionHeight = current.offsetHeight;
+
+//         const sectionTop =
+//           current.getBoundingClientRect().top + window.pageYOffset - 50;
+
+//         let sectionId = current.getAttribute("id");
+//         let hrefArray = [
+//           "about",
+//           "play2earn",
+//           "business-modal",
+//           "dao",
+//           "eco-system",
+//           "road-map",
+//           "team",
+//           "partnership",
+//           "contactus",
+//         ];
+//         let checkArrayValue = hrefArray.includes(sectionId);
+//         if (checkArrayValue) {
+//           if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//             document
+//               .querySelector(
+//                 ".header-navigation-links a[href*=" + sectionId + "]"
+//               )
+//               .classList.add("active");
+//           } else {
+//             document
+//               .querySelector(
+//                 ".header-navigation-links a[href*=" + sectionId + "]"
+//               )
+//               .classList.remove("active");
+//           }
+//         }
+//       });
+//     }
+//     return () => {
+//       window.removeEventListener("scroll", navHighlighter);
+//     };
+//   }, [show]);
+
+  return (
+    <Controller>
+      <header
+        className={
+          show
+            ? showHamBurger
+              ? "header header-visible burger-open"
+              : "header header-visible"
+            : showHamBurger
+            ? "header burger-open"
+            : "header"
+        }
+      >
+        {!is1200 ? (
+          <div>
+            <Scene triggerHook="onLeave" duration={400} pin>
+              {(progress) => (
+                <div className="imgObj spec-head-cover">
+                  <Timeline totalProgress={progress} paused>
+                    <Tween
+                      from={{
+                        css: {
+                          zIndex: 7,
+                          position: "absolute",
+                          top: "-200px",
+                          opacity: 1,
+                        },
+                      }}
+                      to={{
+                        css: {
+                          zIndex: 9991,
+                          position: "fixed",
+                          top: "10px",
+                          opacity: 1,
+                        },
+                      }}
+                    >
+                      <div className="desktop-header header-content responsive-wrapper">
+                        <Timeline totalProgress={progress} paused>
+                          <Tween
+                            from={{
+                              css: {
+                                position: "absolute",
+                                top: is1440 ? "585px" : "700px",
+                                left: "43%",
+                                scale: 5,
+                                opacity: 1,
+                                zIndex: -1,
+                              },
+                            }}
+                            to={{
+                              css: {
+                                position: "relative",
+                                top: "0px",
+                                left: "0px",
+                                scale: 1,
+                                opacity: 1,
+                                zIndex: -1,
+                              },
+                            }}
+                          >
+                            <div className="header-logo">
+                              <a
+                                href="#"
+                                onClick={() => {
+                                  document.body.scrollTop = 0;
+                                  document.documentElement.scrollTop = 0;
+                                }}
+                              >
+                                <div className="logomove">
+                                  <img src={logo} alt="" />
+                                </div>
+                              </a>
+                            </div>
+                          </Tween>
+                        </Timeline>
+
+                        <div className="header-navigation">
+                          <nav className="header-navigation-links">
+                            <a
+                              href="#about"
+                              rel="noreferrer"
+                              className={
+                                activesection === "about" ? "active" : ""
+                              }
+                              onClick={() => setPath("about")}
+                            >
+                              About us
+                            </a>
+                            <a
+                              href="#play2earn"
+                              rel="noreferrer"
+                              className={
+                                activesection === "play2earn" ? "active" : ""
+                              }
+                              onClick={() => setPath("play2earn")}
+                            >
+                              Play 2 Earn
+                            </a>
+                            <a
+                              href="#business-modal"
+                              rel="noreferrer"
+                              className={
+                                activesection === "business-modal"
+                                  ? "active"
+                                  : ""
+                              }
+                              onClick={() => setPath("business-modal")}
+                            >
+                              Business Model
+                            </a>
+                            <a
+                              href="#dao"
+                              rel="noreferrer"
+                              className={
+                                activesection === "dao" ? "active" : ""
+                              }
+                              onClick={() => setPath("dao")}
+                            >
+                              The DAO
+                            </a>
+                            <a
+                              href="#eco-system"
+                              rel="noreferrer"
+                              className={
+                                activesection === "eco-system" ? "active" : ""
+                              }
+                              onClick={() => setPath("eco-system")}
+                            >
+                              Ecosystem
+                            </a>
+                            <a
+                              href="#road-map"
+                              rel="noreferrer"
+                              className={
+                                activesection === "road-map" ? "active" : ""
+                              }
+                              onClick={() => setPath("road-map")}
+                            >
+                              Roadmap
+                            </a>
+                            <a
+                              href="#team"
+                              rel="noreferrer"
+                              className={
+                                activesection === "team" ? "active" : ""
+                              }
+                              onClick={() => setPath("team")}
+                            >
+                              Team
+                            </a>
+                            <a
+                              href="#partnership"
+                              rel="noreferrer"
+                              className={
+                                activesection === "partnership" ? "active" : ""
+                              }
+                              onClick={() => setPath("partnership")}
+                            >
+                              Partnership
+                            </a>
+                            <Link
+                              to="/incubator"
+                              className={
+                                activesection === "incubator" ? "active" : ""
+                              }
+                              onClick={() => setPath("incubator")}
+                            >
+                              Incubator
+                            </Link>
+                            <a
+                              href="#contactus"
+                              rel="noreferrer"
+                              className={
+                                activesection === "contactus" ? "active" : ""
+                              }
+                              onClick={() => setPath("contactus")}
+                            >
+                              Contact us
+                            </a>
+                          </nav>
+                          <div className="header-navigation-actions">
+                            <a href="#" className="button">
+                              <span>Login to App</span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <a href="#" className="button">
+                          <i className="ph-list-bold"></i>
+                          <span>Menu</span>
+                        </a>
+                      </div>
+                    </Tween>
+                  </Timeline>
+                </div>
+              )}
+            </Scene>
+          </div>
+        ) : (
+          <div className="mob-header header-content responsive-wrapper">
+            <div className="mob-head">
+              <div className="header-logo">
+                <a href="#">
+                  <div>
+                    <img src={logo} alt="" />
+                  </div>
+                </a>
+              </div>
+              <div className="hemburger-container">
+                <div className="three col">
+                  <div
+                    onClick={handlehamburger}
+                    className={
+                      showHamBurger ? "hamburger is-active" : "hamburger"
+                    }
+                    id="hamburger-1"
+                  >
+                    <span className="line"></span>
+                    <span className="line"></span>
+                    <span className="line"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {showHamBurger && (
+              <div className="header-navigation mob-header-navigation">
+                <nav className="header-navigation-links">
+                  <a
+                    href="#about"
+                    rel="noreferrer"
+                    className={activesection === "about" ? "active" : ""}
+                    onClick={() => setPath("about")}
+                  >
+                    About us
+                  </a>
+                  <a
+                    href="#play2earn"
+                    rel="noreferrer"
+                    className={activesection === "play2earn" ? "active" : ""}
+                    onClick={() => setPath("play2earn")}
+                  >
+                    Play 2 Earn
+                  </a>
+                  <a
+                    href="#business-modal"
+                    rel="noreferrer"
+                    className={
+                      activesection === "business-modal" ? "active" : ""
+                    }
+                    onClick={() => setPath("business-modal")}
+                  >
+                    Business Model
+                  </a>
+                  <a
+                    href="#dao"
+                    rel="noreferrer"
+                    className={activesection === "dao" ? "active" : ""}
+                    onClick={() => setPath("dao")}
+                  >
+                    The DAO
+                  </a>
+                  <a
+                    href="#eco-system"
+                    rel="noreferrer"
+                    className={activesection === "eco-system" ? "active" : ""}
+                    onClick={() => setPath("eco-system")}
+                  >
+                    Ecosystem
+                  </a>
+                  <a
+                    href="#road-map"
+                    rel="noreferrer"
+                    className={activesection === "road-map" ? "active" : ""}
+                    onClick={() => setPath("road-map")}
+                  >
+                    Roadmap
+                  </a>
+                  <a
+                    href="#team"
+                    rel="noreferrer"
+                    className={activesection === "team" ? "active" : ""}
+                    onClick={() => setPath("team")}
+                  >
+                    Team
+                  </a>
+                  <a
+                    href="#partnership"
+                    rel="noreferrer"
+                    className={activesection === "partnership" ? "active" : ""}
+                    onClick={() => setPath("partnership")}
+                  >
+                    Partnership
+                  </a>
+                  <Link
+                    to="/incubator"
+                    className={activesection === "incubator" ? "active" : ""}
+                    onClick={() => setPath("incubator")}
+                  >
+                    Incubator
+                  </Link>
+                  <a
+                    href="#contactus"
+                    rel="noreferrer"
+                    className={activesection === "contactus" ? "active" : ""}
+                    onClick={() => setPath("contactus")}
+                  >
+                    Contact us
+                  </a>
+                  <div className="header-navigation-actions">
+                    <a href="#" className="button">
+                      <span style={{ fontWeight: "bold" }}>Login to App</span>
+                    </a>
+                  </div>
+                </nav>
+              </div>
+            )}
+          </div>
+        )}
+      </header>
+    </Controller>
+  );
+};
+
+export default AnimatedHeader;

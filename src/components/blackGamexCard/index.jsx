@@ -11,7 +11,8 @@ import { Tween, Timeline } from 'react-gsap';
 import icoHeader from "../../assets/head-black.png";
 
 
-const BlackGamexCard = () => {
+const BlackGamexCard = (props) => {
+  const { extraText } = props
   return (
     <div className="spec-card-black-container">
       <Controller>
@@ -72,7 +73,8 @@ const BlackGamexCard = () => {
                     }}
                   >
                     <div className="black-skew-hero">
-                      <div className="text-grid">
+                      <div className="text-grid blk-wrapper">
+                        {extraText && <div className="black-card-content"><p>{extraText}</p></div>}
                         <article
                           className="text-box text1"
                           style={{ alignItems: "end" }}

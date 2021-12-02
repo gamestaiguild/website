@@ -866,3 +866,19 @@ li.tab-content-list:last-child {
       margin: 24px 0px;
     }
   }
+
+//   .main-poster-image::after {
+//         content: "";
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         transform-origin: bottom left;
+//         transform: skew(0deg, -6deg);
+//         background-image: url("/assets/project/one.png");
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         background-size: cover;
+//         z-index: -9;
+//     }

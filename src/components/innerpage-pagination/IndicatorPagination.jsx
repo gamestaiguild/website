@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const IndicatorPagination = (props) => {
-  const { title, caret, proImg } = props;
+  const { title, caret } = props;
   return (
     <div className="incubator-page-header" >
       {/* <div className="main-poster-image" style={{backgroundImage:`url(${proImg})`}} > */}

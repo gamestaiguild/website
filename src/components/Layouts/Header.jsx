@@ -32,7 +32,7 @@ const Header = (props) => {
     } else {
       setActivesection(window.location.hash.trim().replace("#", ""));
     }
-  }, []);
+  }, [headerVisible]);
   const setPath = (path) => {
     setActivesection(path);
     setShowHamBurger(false);

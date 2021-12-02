@@ -1,0 +1,24 @@
+
+ .mob-header {
+    display: none;
+}
+.logo-space {
+    margin-right: 240px;
+}
+
+.header-visible .header-content {
+    padding: 10px 40px !important;
+}
+
+@media(max-width: 1200px){
+    .header-visible .header-content {
+        padding: 10px 0px !important;
+    }
+   .spec-desktop-header {
+       display: none;
+   }
+
+   .mob-header {
+       display: flex;
+   }
+  }

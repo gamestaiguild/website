@@ -2,16 +2,14 @@ import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.png";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
-import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import "../../styles/animationheader.scss";
 
 const AnimatedHeader = () => {
   const [show, setShow] = useState(false);
   const [activesection, setActivesection] = useState("");
   const [showHamBurger, setShowHamBurger] = useState(false);
 
-  const is1440 = useMediaQuery({ query: "(max-width: 1440px)" });
-  const is1200 = useMediaQuery({ query: "(max-width: 1200px)" });
   const isDestop = window.innerWidth;
 
   const listenToScroll = () => {
@@ -117,51 +115,93 @@ const AnimatedHeader = () => {
             : "header"
         }
       >
-        {!is1200 ? (
-          <div>
-            <Scene triggerHook="onLeave" duration={400} pin>
-              {(progress) => (
-                <div className="imgObj spec-head-cover">
-                  <Timeline totalProgress={progress} paused>
-                    <Tween
-                      from={{
-                        css: {
-                          zIndex: 7,
-                          position: "absolute",
-                          top: "-200px",
-                          opacity: 1,
-                        },
-                      }}
-                      to={{
-                        css: {
-                          zIndex: 9991,
-                          position: "fixed",
-                          top: "10px",
-                          opacity: 1,
-                        },
-                      }}
-                    >
-                      <div className="desktop-header header-content responsive-wrapper">
-                        <Timeline totalProgress={progress} paused>
+        <div className="spec-desktop-header">
+          <Scene triggerHook="onLeave" duration={400} pin>
+            {(progress) => (
+              <div className="imgObj spec-head-cover">
+                <Timeline totalProgress={progress} paused>
+                  <Tween
+                    from={{
+                      css: {
+                        position: "absolute",
+                        top: "50vh",
+                        left: "43%",
+                        scale: 5,
+                        opacity: 1,
+                        zIndex: -1,
+                      },
+                    }}
+                    to={{
+                      css: {
+                        position: "fixed",
+                        top: "20px",
+                        left: "48px",
+                        scale: 1,
+                        opacity: 1,
+                        zIndex: 9994,
+                      },
+                    }}
+                  >
+                    <div className="header-logo">
+                      <a
+                        href="#"
+                        onClick={() => {
+                          document.body.scrollTop = 0;
+                          document.documentElement.scrollTop = 0;
+                        }}
+                      >
+                        <div className="logomove">
+                          <img src={logo} alt="" />
+                        </div>
+                      </a>
+                    </div>
+                  </Tween>
+                </Timeline>
+                <Timeline totalProgress={progress} paused>
+                  <Tween
+                    from={{
+                      css: {
+                        zIndex: 7,
+                        position: "absolute",
+                        top: "-200px",
+                        opacity: 1,
+                      },
+                    }}
+                    to={{
+                      css: {
+                        zIndex: 9991,
+                        position: "fixed",
+                        top: "0px",
+                        opacity: 1,
+                      },
+                    }}
+                  >
+                    <div className="desktop-header header-content responsive-wrapper">
+                      {/* <Timeline totalProgress={progress} paused>
                           <Tween
                             from={{
                               css: {
                                 position: "absolute",
-                                top: is1440 ? "585px" : "700px",
+                                top: "75vh",
+                                // top: "1500%",
+                                // marginTop: "93%",
                                 left: "43%",
                                 scale: 5,
                                 opacity: 1,
                                 zIndex: -1,
+                                scrollBehaviour: "smooth"
                               },
                             }}
                             to={{
                               css: {
                                 position: "relative",
-                                top: "0px",
-                                left: "0px",
+                                top: "0vh",
+                                // marginTop: "0%",
+                                left: "0%",
                                 scale: 1,
                                 opacity: 1,
                                 zIndex: -1,
+                                scrollBehaviour: "smooth"
                               },
                             }}
                           >
@@ -179,321 +219,308 @@ const AnimatedHeader = () => {
                               </a>
                             </div>
                           </Tween>
-                        </Timeline>
-
-                        <div className="header-navigation">
-                          <nav className="header-navigation-links">
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "about",
-                              }}
-                              // href="/#about"
-                              rel="noreferrer"
-                              className={
-                                activesection === "about" ? "active" : ""
-                              }
-                              onClick={() => setPath("about")}
-                            >
-                              About us
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "play2earn",
-                              }}
-                              // href="/#play2earn"
-                              rel="noreferrer"
-                              className={
-                                activesection === "play2earn" ? "active" : ""
-                              }
-                              onClick={() => setPath("play2earn")}
-                            >
-                              Play 2 Earn
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "business-modal",
-                              }}
-                              // href="/#business-modal"
-                              rel="noreferrer"
-                              className={
-                                activesection === "business-modal"
-                                  ? "active"
-                                  : ""
-                              }
-                              onClick={() => setPath("business-modal")}
-                            >
-                              Business Model
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "dao",
-                              }}
-                              href="/#dao"
-                              rel="noreferrer"
-                              className={
-                                activesection === "dao" ? "active" : ""
-                              }
-                              onClick={() => setPath("dao")}
-                            >
-                              The DAO
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "eco-system",
-                              }}
-                              // href="/#eco-system"
-                              rel="noreferrer"
-                              className={
-                                activesection === "eco-system" ? "active" : ""
-                              }
-                              onClick={() => setPath("eco-system")}
-                            >
-                              Ecosystem
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "road-map",
-                              }}
-                              // href="/#road-map"
-                              rel="noreferrer"
-                              className={
-                                activesection === "road-map" ? "active" : ""
-                              }
-                              onClick={() => setPath("road-map")}
-                            >
-                              Roadmap
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "team",
-                              }}
-                              // href="/#team"
-                              rel="noreferrer"
-                              className={
-                                activesection === "team" ? "active" : ""
-                              }
-                              onClick={() => setPath("team")}
-                            >
-                              Team
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "partnership",
-                              }}
-                              // href="/#partnership"
-                              rel="noreferrer"
-                              className={
-                                activesection === "partnership" ? "active" : ""
-                              }
-                              onClick={() => setPath("partnership")}
-                            >
-                              Partnership
-                            </Link>
-                            <Link
-                              to="/incubator"
-                              className={
-                                activesection === "incubator" ? "active" : ""
-                              }
-                              onClick={() => setPath("incubator")}
-                            >
-                              Incubator
-                            </Link>
-                            <Link
-                              to={{
-                                pathname: "/",
-                                hash: "contactus",
-                              }}
-                              // href="/#contactus"
-                              rel="noreferrer"
-                              className={
-                                activesection === "contactus" ? "active" : ""
-                              }
-                              onClick={() => setPath("contactus")}
-                            >
-                              Contact us
-                            </Link>
-                          </nav>
-                          <div className="header-navigation-actions">
-                            <a href="#" className="button">
-                              <span>Login to App</span>
-                            </a>
-                          </div>
+                        </Timeline> */}
+                      <div className="logo-space"></div>
+                      <div className="header-navigation">
+                        <nav className="header-navigation-links">
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "about",
+                            }}
+                            // href="/#about"
+                            rel="noreferrer"
+                            className={
+                              activesection === "about" ? "active" : ""
+                            }
+                            onClick={() => setPath("about")}
+                          >
+                            About us
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "play2earn",
+                            }}
+                            // href="/#play2earn"
+                            rel="noreferrer"
+                            className={
+                              activesection === "play2earn" ? "active" : ""
+                            }
+                            onClick={() => setPath("play2earn")}
+                          >
+                            Play 2 Earn
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "business-modal",
+                            }}
+                            // href="/#business-modal"
+                            rel="noreferrer"
+                            className={
+                              activesection === "business-modal" ? "active" : ""
+                            }
+                            onClick={() => setPath("business-modal")}
+                          >
+                            Business Model
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "dao",
+                            }}
+                            href="/#dao"
+                            rel="noreferrer"
+                            className={activesection === "dao" ? "active" : ""}
+                            onClick={() => setPath("dao")}
+                          >
+                            The DAO
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "eco-system",
+                            }}
+                            // href="/#eco-system"
+                            rel="noreferrer"
+                            className={
+                              activesection === "eco-system" ? "active" : ""
+                            }
+                            onClick={() => setPath("eco-system")}
+                          >
+                            Ecosystem
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "road-map",
+                            }}
+                            // href="/#road-map"
+                            rel="noreferrer"
+                            className={
+                              activesection === "road-map" ? "active" : ""
+                            }
+                            onClick={() => setPath("road-map")}
+                          >
+                            Roadmap
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "team",
+                            }}
+                            // href="/#team"
+                            rel="noreferrer"
+                            className={activesection === "team" ? "active" : ""}
+                            onClick={() => setPath("team")}
+                          >
+                            Team
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "partnership",
+                            }}
+                            // href="/#partnership"
+                            rel="noreferrer"
+                            className={
+                              activesection === "partnership" ? "active" : ""
+                            }
+                            onClick={() => setPath("partnership")}
+                          >
+                            Partnership
+                          </Link>
+                          <Link
+                            to="/incubator"
+                            className={
+                              activesection === "incubator" ? "active" : ""
+                            }
+                            onClick={() => setPath("incubator")}
+                          >
+                            Incubator
+                          </Link>
+                          <Link
+                            to={{
+                              pathname: "/",
+                              hash: "contactus",
+                            }}
+                            // href="/#contactus"
+                            rel="noreferrer"
+                            className={
+                              activesection === "contactus" ? "active" : ""
+                            }
+                            onClick={() => setPath("contactus")}
+                          >
+                            Contact us
+                          </Link>
+                        </nav>
+                        <div className="header-navigation-actions">
+                          <a href="#" className="button">
+                            <span>Login to App</span>
+                          </a>
                         </div>
-
-                        <a href="#" className="button">
-                          <i className="ph-list-bold"></i>
-                          <span>Menu</span>
-                        </a>
                       </div>
-                    </Tween>
-                  </Timeline>
-                </div>
-              )}
-            </Scene>
-          </div>
-        ) : (
-          <div className="mob-header header-content responsive-wrapper">
-            <div className="mob-head">
-              <div className="header-logo">
-                <a href="#">
-                  <div>
-                    <img src={logo} alt="" />
-                  </div>
-                </a>
+
+                      <a href="#" className="button">
+                        <i className="ph-list-bold"></i>
+                        <span>Menu</span>
+                      </a>
+                    </div>
+                  </Tween>
+                </Timeline>
               </div>
-              <div className="hemburger-container">
-                <div className="three col">
-                  <div
-                    onClick={handlehamburger}
-                    className={
-                      showHamBurger ? "hamburger is-active" : "hamburger"
-                    }
-                    id="hamburger-1"
-                  >
-                    <span className="line"></span>
-                    <span className="line"></span>
-                    <span className="line"></span>
-                  </div>
+            )}
+          </Scene>
+        </div>
+        <div className="mob-header header-content responsive-wrapper">
+          <div className="mob-head">
+            <div className="header-logo">
+              <a href="#">
+                <div>
+                  <img src={logo} alt="" />
+                </div>
+              </a>
+            </div>
+            <div className="hemburger-container">
+              <div className="three col">
+                <div
+                  onClick={handlehamburger}
+                  className={
+                    showHamBurger ? "hamburger is-active" : "hamburger"
+                  }
+                  id="hamburger-1"
+                >
+                  <span className="line"></span>
+                  <span className="line"></span>
+                  <span className="line"></span>
                 </div>
               </div>
             </div>
-
-            {showHamBurger && (
-              <div className="header-navigation mob-header-navigation">
-                <nav className="header-navigation-links">
-                <Link
-                to={{
-                  pathname: "/",
-                  hash: "about",
-                }}
-                // href="/#about"
-                rel="noreferrer"
-                className={activesection === "about" ? "active" : ""}
-                onClick={() => setPath("about")}
-              >
-                About us
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "play2earn",
-                }}
-                // href="/#play2earn"
-                rel="noreferrer"
-                className={activesection === "play2earn" ? "active" : ""}
-                onClick={() => setPath("play2earn")}
-              >
-                Play 2 Earn
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "business-modal",
-                }}
-                // href="/#business-modal"
-                rel="noreferrer"
-                className={activesection === "business-modal" ? "active" : ""}
-                onClick={() => setPath("business-modal")}
-              >
-                Business Model
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "dao",
-                }}
-                href="/#dao"
-                rel="noreferrer"
-                className={activesection === "dao" ? "active" : ""}
-                onClick={() => setPath("dao")}
-              >
-                The DAO
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "eco-system",
-                }}
-                // href="/#eco-system"
-                rel="noreferrer"
-                className={activesection === "eco-system" ? "active" : ""}
-                onClick={() => setPath("eco-system")}
-              >
-                Ecosystem
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "road-map",
-                }}
-                // href="/#road-map"
-                rel="noreferrer"
-                className={activesection === "road-map" ? "active" : ""}
-                onClick={() => setPath("road-map")}
-              >
-                Roadmap
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "team",
-                }}
-                // href="/#team"
-                rel="noreferrer"
-                className={activesection === "team" ? "active" : ""}
-                onClick={() => setPath("team")}
-              >
-                Team
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "partnership",
-                }}
-                // href="/#partnership"
-                rel="noreferrer"
-                className={activesection === "partnership" ? "active" : ""}
-                onClick={() => setPath("partnership")}
-              >
-                Partnership
-              </Link>
-              <Link
-                to="/incubator"
-                className={activesection === "incubator" ? "active" : ""}
-                onClick={() => setPath("incubator")}
-              >
-                Incubator
-              </Link>
-              <Link
-                to={{
-                  pathname: "/",
-                  hash: "contactus",
-                }}
-                // href="/#contactus"
-                rel="noreferrer"
-                className={activesection === "contactus" ? "active" : ""}
-                onClick={() => setPath("contactus")}
-              >
-                Contact us
-              </Link>
-                  <div className="header-navigation-actions">
-                    <a href="#" className="button">
-                      <span style={{ fontWeight: "bold" }}>Login to App</span>
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            )}
           </div>
-        )}
+
+          {showHamBurger && (
+            <div className="header-navigation mob-header-navigation">
+              <nav className="header-navigation-links">
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "about",
+                  }}
+                  // href="/#about"
+                  rel="noreferrer"
+                  className={activesection === "about" ? "active" : ""}
+                  onClick={() => setPath("about")}
+                >
+                  About us
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "play2earn",
+                  }}
+                  // href="/#play2earn"
+                  rel="noreferrer"
+                  className={activesection === "play2earn" ? "active" : ""}
+                  onClick={() => setPath("play2earn")}
+                >
+                  Play 2 Earn
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "business-modal",
+                  }}
+                  // href="/#business-modal"
+                  rel="noreferrer"
+                  className={activesection === "business-modal" ? "active" : ""}
+                  onClick={() => setPath("business-modal")}
+                >
+                  Business Model
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "dao",
+                  }}
+                  href="/#dao"
+                  rel="noreferrer"
+                  className={activesection === "dao" ? "active" : ""}
+                  onClick={() => setPath("dao")}
+                >
+                  The DAO
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "eco-system",
+                  }}
+                  // href="/#eco-system"
+                  rel="noreferrer"
+                  className={activesection === "eco-system" ? "active" : ""}
+                  onClick={() => setPath("eco-system")}
+                >
+                  Ecosystem
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "road-map",
+                  }}
+                  // href="/#road-map"
+                  rel="noreferrer"
+                  className={activesection === "road-map" ? "active" : ""}
+                  onClick={() => setPath("road-map")}
+                >
+                  Roadmap
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "team",
+                  }}
+                  // href="/#team"
+                  rel="noreferrer"
+                  className={activesection === "team" ? "active" : ""}
+                  onClick={() => setPath("team")}
+                >
+                  Team
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "partnership",
+                  }}
+                  // href="/#partnership"
+                  rel="noreferrer"
+                  className={activesection === "partnership" ? "active" : ""}
+                  onClick={() => setPath("partnership")}
+                >
+                  Partnership
+                </Link>
+                <Link
+                  to="/incubator"
+                  className={activesection === "incubator" ? "active" : ""}
+                  onClick={() => setPath("incubator")}
+                >
+                  Incubator
+                </Link>
+                <Link
+                  to={{
+                    pathname: "/",
+                    hash: "contactus",
+                  }}
+                  // href="/#contactus"
+                  rel="noreferrer"
+                  className={activesection === "contactus" ? "active" : ""}
+                  onClick={() => setPath("contactus")}
+                >
+                  Contact us
+                </Link>
+              </nav>
+            </div>
+          )}
+        </div>
       </header>
     </Controller>
   );

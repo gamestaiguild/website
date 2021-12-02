@@ -1,7 +1,6 @@
 import React from "react";
 import laptop from "../../assets/laptop.png";
 import laptopIcon from "../../assets/lcd-with-icon.png";
-import herodbg from "../../assets/animation/rectangle28.png";
 import heroimg22 from "../../assets/animation/image22.png";
 import heroimg24 from "../../assets/animation/image24.png";
 import heroimg25 from "../../assets/animation/image25.png";
@@ -14,16 +13,11 @@ import watermark from "../../assets/watermark.png";
 import "../../styles/hero.scss";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
-import { useMediaQuery } from "react-responsive";
 
 const Hero = ({ countDownTime }) => {
-  const is1440 = useMediaQuery({ query: "(max-width: 1440px)" });
-  const is1200 = useMediaQuery({ query: "(max-width: 1200px)" });
-
   return (
     <>
-      {!is1200 ? (
-        <div className="heroSpec cover-spec-all">
+        <div className="heroSpec desktop-hero cover-spec-all">
           <Controller>
             <div className="hero-wrapper">
               <div className="spec-home-background">
@@ -32,8 +26,8 @@ const Hero = ({ countDownTime }) => {
                     <div className="sticky">
                       <Timeline totalProgress={progress} paused>
                         <Tween
-                          from={{ x: "10%", top: "400px", opacity: 0 }}
-                          to={{ x: "10%", top: "10px", opacity: 1 }}
+                          from={{ x: "10%", top: "72%", opacity: 0 }}
+                          to={{ x: "10%", top: "34%", opacity: 1 }}
                         >
                           <div className="animation">
                             <section className="header-middle-section">
@@ -161,7 +155,7 @@ const Hero = ({ countDownTime }) => {
                 <div className="hero-section image-wrapper">
                   <Scene triggerHook="onLeave" duration={400} pin>
                     {(progress) => (
-                      <div className="specials">
+                      
                         <div className="redObj">
                           <Timeline totalProgress={progress} paused>
                             <Tween
@@ -169,9 +163,9 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 10,
                                   position: "absolute",
-                                  top: is1440 ? "81px" : "118px",
-                                  marginLeft: is1440 ? "-109px" : "-134px",
-                                  scale: 0.8,
+                                  top: "62vh",
+                                  marginLeft: "-15%",
+                                  scale: "0.8",
                                   opacity: 1,
                                 },
                               }}
@@ -179,9 +173,9 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 10,
                                   position: "absolute",
-                                  top: is1440 ? "283px" : "362px",
-                                  marginLeft: is1440 ? "45px" : "30px",
-                                  scale: is1440 ? 1.2 : 1.5,
+                                  top: "77%",
+                                  marginLeft: "-7%",
+                                  scale: 1.2,
                                   opacity: 1,
                                 },
                               }}
@@ -201,8 +195,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "-202px" : "-219px",
-                                  marginLeft: is1440 ? "-55px" : "-93px",
+                                  top: "27%",
+                                  marginLeft: "-8%",
                                   scale: 1,
                                   opacity: 1,
                                 },
@@ -211,9 +205,9 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "56px" : "123px",
-                                  marginLeft: is1440 ? "71px" : "66px",
-                                  scale: is1440 ? 1.2 : 1.5,
+                                  top: "44%",
+                                  marginLeft: "-4%",
+                                  scale: 1.4,
                                   opacity: 1,
                                 },
                               }}
@@ -233,8 +227,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "-111px" : "-91px",
-                                  marginLeft: "524px",
+                                  top: "38%",
+                                  marginLeft: "73%",
                                   scale: 0.8,
                                   opacity: 1,
                                 },
@@ -243,8 +237,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "-3px" : "8px",
-                                  marginLeft: is1440 ? "218px" : "240px",
+                                  top: "32%",
+                                  marginLeft: "18%",
                                   scale: 1.5,
                                   opacity: 1,
                                 },
@@ -265,8 +259,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "-50px" : "-28px",
-                                  marginLeft: is1440 ? "-255" : "-269px",
+                                  top: "46%",
+                                  marginLeft: "-36%",
                                   scale: 0.8,
                                   opacity: 1,
                                 },
@@ -275,9 +269,9 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "-30px" : "-15px",
-                                  marginLeft: is1440 ? "316px" : "355px",
-                                  scale: is1440 ? 1.1 : 1,
+                                  top: "28%",
+                                  marginLeft: "30%",
+                                  scale: 1.1,
                                   opacity: 1,
                                 },
                               }}
@@ -297,8 +291,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "-82px" : "-60px",
-                                  marginLeft: is1440 ? "250px" : "231px",
+                                  top: "42%",
+                                  marginLeft: "34%",
                                   scale: 0.8,
                                   opacity: 1,
                                 },
@@ -307,8 +301,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: "38px",
-                                  marginLeft: is1440 ? "300px" : "330px",
+                                  top: "38%",
+                                  marginLeft: "28%",
                                   scale: 1,
                                   opacity: 1,
                                 },
@@ -329,8 +323,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "68px" : "87px",
-                                  marginLeft: is1440 ? "285px" : "262px",
+                                  top: "60%",
+                                  marginLeft: "40%",
                                   scale: 0.7,
                                   opacity: 1,
                                 },
@@ -339,9 +333,9 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 9,
                                   position: "absolute",
-                                  top: is1440 ? "-12px" : "-12px",
-                                  marginLeft: is1440 ? "350px" : "420px",
-                                  scale: is1440 ? 0.8 : 1,
+                                  top: "31%",
+                                  marginLeft: "37%",
+                                  scale: 1,
                                   opacity: 1,
                                 },
                               }}
@@ -361,8 +355,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 8,
                                   position: "absolute",
-                                  top: is1440 ? "14px" : "-108px",
-                                  marginLeft: is1440 ? "-103px" : "329px",
+                                  top: "54%",
+                                  marginLeft: "-14%",
                                   scale: 0.9,
                                   opacity: 1,
                                 },
@@ -371,9 +365,9 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 8,
                                   position: "absolute",
-                                  top: is1440 ? "95px" : "-65px",
-                                  marginLeft: is1440 ? "-28px" : "528px",
-                                  scale: 1,
+                                  top: "46%",
+                                  marginLeft:"-23%",
+                                  scale: 1.3,
                                   opacity: 1,
                                 },
                               }}
@@ -393,8 +387,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 8,
                                   position: "absolute",
-                                  top: is1440 ? "49px" : "74px",
-                                  marginLeft: is1440 ? "496px" : "487px",
+                                  top: "58%",
+                                  marginLeft: "71%",
                                   scale: 1,
                                   opacity: 1,
                                 },
@@ -403,9 +397,9 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 8,
                                   position: "absolute",
-                                  top: is1440 ? "231px" : "296px",
-                                  marginLeft: is1440 ? "659px" : "720px",
-                                  scale: is1440 ? 1.4 : 1,
+                                  top: "68%",
+                                  marginLeft: "87%",
+                                  scale: 1.2,
                                   opacity: 1,
                                 },
                               }}
@@ -431,8 +425,8 @@ const Hero = ({ countDownTime }) => {
                                 css: {
                                   zIndex: 11,
                                   position: "absolute",
-                                  top: "115px",
-                                  marginLeft: "100px",
+                                  top: "48%",
+                                  marginLeft: "-1%",
                                   scale: 1,
                                   opacity: 1,
                                 },
@@ -444,7 +438,6 @@ const Hero = ({ countDownTime }) => {
                             </Tween>
                           </Timeline>
                         </div>
-                      </div>
                     )}
                   </Scene>
                 </div>
@@ -463,8 +456,7 @@ const Hero = ({ countDownTime }) => {
             </div>
           </Controller>
         </div>
-      ) : (
-        <div className="hero-wrapper">
+        <div className="hero-wrapper mob-hero">
           {/* <div className="hero-section hide">
             <img src={herodbg} className="rectangle28" alt="" />
             <img src={heroimg22} className="image22" alt="" />
@@ -592,7 +584,6 @@ const Hero = ({ countDownTime }) => {
             </a>
           </div>
         </div>
-      )}
     </>
   );
 };

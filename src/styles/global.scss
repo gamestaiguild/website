@@ -24,7 +24,7 @@ a {
   cursor: pointer;
 }
 body {
-  background-color: #f5f9fa;
+  // background-color: #f5f9fa;
 }
 
 @font-face {
@@ -708,8 +708,8 @@ img {
     // transition: 200ms ease-in-out;
     background-color: #ffffff;
     z-index: 15;
-    padding: 10px 100px;
-    margin-top: -12px;
+    padding: 10px 0px;
+    margin-top: 0;
 }
 }
 
@@ -3056,6 +3056,7 @@ $slide-width2: 30rem;
     flex-direction: column;
     max-width: 1500px;
   }
+ 
 }
 //icon-list2
 
@@ -6118,6 +6119,10 @@ header.header-visible .button {
   }
 }
 @media (max-width: 1200px) {
+  header.header-visible .button {
+    background: transparent;
+    
+}
   .content .title {
     width: 90%;
     max-width: 100%;

@@ -47,11 +47,11 @@ const Header = (props) => {
       className={
         show || headerVisible
           ? showHamBurger
-            ? "header header-visible burger-open"
-            : "header header-visible new-header-visible"
+            ? "header header-visible burger-open inner-header"
+            : "header header-visible new-header-visible inner-header"
           : showHamBurger
-          ? "header burger-open"
-          : "header"
+          ? "header burger-open inner-header"
+          : "header inner-header"
       }
     >
       <div className="desktop-header header-content responsive-wrapper">

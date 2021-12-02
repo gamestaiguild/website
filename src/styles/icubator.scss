@@ -4,6 +4,11 @@ $slide-count2: 6;
 $slide-width: 30rem;
 $slide-width2: 30rem;
 
+header.inner-header {
+    height: 60px;
+    position: fixed;
+    width: 100%;
+  }
 .incubator-page-container {
     padding-top: 80px;
     height: auto;
@@ -12,8 +17,9 @@ $slide-width2: 30rem;
 .incubator-page-header {
     background: #f5f9fa;
     max-width: 100%;
-    margin: 0 auto;
-    padding-top: 100px;
+    margin: 70px auto 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .incubator-page-header .container {
     max-width: 1400px;
@@ -55,7 +61,7 @@ $slide-width2: 30rem;
     color: #273a41;
     max-width: 1400px;
     text-align: left;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .tabs {
@@ -165,6 +171,7 @@ li.tab-content-list:last-child {
 }
 .project-section {
     margin-top: 100px;
+    background: #fff;
 }
 .project-section .sticky
 {
@@ -269,6 +276,10 @@ li.tab-content-list:last-child {
 
 /******* Project Page *********/
 .project-innerpage {
+   background: #fff;
+}
+.tab-content
+{
     max-width: 1400px;
     margin: 0 auto ;
 }
@@ -362,6 +373,10 @@ li.tab-content-list:last-child {
 }
 @media(max-width: 1440px)
 {
+    .tab-content
+    {
+        max-width: 96%;
+    }
     .incubator-page-header .container,.project-innerpage,.pro-sec,.tabs {
         max-width: 96%;
     }
@@ -405,9 +420,9 @@ li.tab-content-list:last-child {
     }
     
 }
-@media(max-width: 1365px){
+@media(max-width: 1366px){
     .slick-prev {
-        left: 79% !important;
+        left: 84% !important;
         
     } 
 }   
@@ -459,7 +474,7 @@ li.tab-content-list:last-child {
 @media(max-width: 1100px)
 {
     .slick-prev {
-        left: 72% !important;
+        left: 80% !important;
         
     } 
 }

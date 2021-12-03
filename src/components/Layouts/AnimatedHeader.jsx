@@ -125,7 +125,7 @@ const AnimatedHeader = () => {
                       css: {
                         position: "absolute",
                         top: "50vh",
-                        left: "43%",
+                        // left: "43%",
                         scale: 5,
                         opacity: 1,
                         zIndex: -1,

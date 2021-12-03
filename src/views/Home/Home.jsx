@@ -169,9 +169,12 @@ const Home = () => {
       ) : (
         <div className="move">
           {/* <Header /> */}
-          <AnimatedHeader />
 
+          <div className="head-animation-wrapper">
+          <AnimatedHeader />
+          
           <Hero isLoading={isLoading} countDownTime={countDownTime} />
+          </div>
           <AboutUs />
 
           <div className="other-wrapper">

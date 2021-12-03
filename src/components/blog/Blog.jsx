@@ -51,7 +51,7 @@ const Blog = (props) => {
                 <div className="blog-card blog-card-blog">
                   <div className="blog-card-image">
                     <a href="#">
-                      <Scene
+                      {/* <Scene
                         triggerHook="onEnter"
                         duration={600}
                         // pin
@@ -78,7 +78,8 @@ const Blog = (props) => {
                             </Timeline>
                           </div>
                         )}
-                      </Scene>
+                      </Scene> */}
+                      <img className="img" src={One} alt="" />
                     </a>
                     <div className="ripple-cont"></div>
                   </div>
@@ -100,10 +101,9 @@ const Blog = (props) => {
                 <div className="blog-card blog-card-blog">
                   <div className="blog-card-image">
                     <a href="#">
-                      <Scene
+                      {/* <Scene
                         triggerHook="onEnter"
                         duration={600}
-                        // pin
                       >
                         {(progress) => (
                           <div className="">
@@ -121,13 +121,13 @@ const Blog = (props) => {
                                     scale: 1,
                                   },
                                 }}
-                              >
+                              > */}
                                 <img className="img" src={Two} alt="" />
-                              </Tween>
-                            </Timeline>
-                          </div>
-                        )}
-                      </Scene>
+                              {/* </Tween>
+                            </Timeline> */}
+                          {/* </div> */}
+                        {/* )}
+                      </Scene> */}
                     </a>
                     <div className="ripple-cont"></div>
                   </div>
@@ -152,7 +152,7 @@ const Blog = (props) => {
                 <div className="blog-card blog-card-blog">
                   <div className="blog-card-image">
                     <a href="#">
-                      <Scene
+                      {/* <Scene
                         triggerHook="onEnter"
                         duration={600}
                         // pin
@@ -173,13 +173,13 @@ const Blog = (props) => {
                                     scale: 1,
                                   },
                                 }}
-                              >
+                              > */}
                                 <img className="img" src={Three} alt="" />
-                              </Tween>
+                              {/* </Tween>
                             </Timeline>
                           </div>
                         )}
-                      </Scene>
+                      </Scene> */}
                     </a>
                     <div className="ripple-cont"></div>
                   </div>
@@ -204,7 +204,7 @@ const Blog = (props) => {
             <div id="contactus" className="footer-hero">
               <h2 className="footer-border-text">
                 <div className="blog-link">
-                  <Scene
+                  {/* <Scene
                     triggerHook="onEnter"
                     duration={800}
                     // pin
@@ -225,7 +225,7 @@ const Blog = (props) => {
                                 scale: 1,
                               },
                             }}
-                          >
+                          > */}
                             <div className="">
                               <a
                                 href="https://twitter.com/gmestaguild"
@@ -239,9 +239,9 @@ const Blog = (props) => {
                                 />
                               </a>
                             </div>
-                          </Tween>
-                        </Timeline>
-                        <Timeline totalProgress={progress} paused>
+                          {/* </Tween>
+                        </Timeline> */}
+                        {/* <Timeline totalProgress={progress} paused>
                           <Tween
                             from={{
                               css: {
@@ -255,16 +255,16 @@ const Blog = (props) => {
                                 scale: 1,
                               },
                             }}
-                          >
+                          > */}
                             <div className="">Join our community</div>
-                          </Tween>
-                        </Timeline>
+                          {/* </Tween>
+                        </Timeline> */}
                         <a
                           href="https://discord.gg/ganestaguild"
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <Timeline totalProgress={progress} paused>
+                          {/* <Timeline totalProgress={progress} paused>
                             <Tween
                               from={{
                                 css: {
@@ -280,21 +280,21 @@ const Blog = (props) => {
                                   scale: 1,
                                 },
                               }}
-                            >
+                            > */}
                               <img
                                 className="discordBox"
                                 src={discordBox}
                                 alt=""
                               />
-                            </Tween>
-                          </Timeline>
+                            {/* </Tween>
+                          </Timeline> */}
                         </a>
                         <a
                           href="https://t.me/gamestaguild"
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <Timeline totalProgress={progress} paused>
+                          {/* <Timeline totalProgress={progress} paused>
                             <Tween
                               from={{
                                 css: {
@@ -308,18 +308,18 @@ const Blog = (props) => {
                                   scale: 1,
                                 },
                               }}
-                            >
+                            > */}
                               <img
                                 className="teleBox"
                                 src={telegramBox}
                                 alt=""
                               />
-                            </Tween>
-                          </Timeline>
+                            {/* </Tween>
+                          </Timeline> */}
                         </a>
-                      </div>
-                    )}
-                  </Scene>
+                      {/* </div> */}
+                    {/* )}
+                  </Scene> */}
                 </div>
               </h2>
             </div>

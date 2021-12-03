@@ -7,9 +7,16 @@
 }
 
 .header-visible .header-content {
-    padding: 10px 40px !important;
+    padding: 10px 55px !important;
     background-color: #fff;
 }
+
+
+@media(min-width: 2000px){
+    .header-visible .header-content {
+        padding: 10px 100px !important;
+    }
+  }
 
 @media(max-width: 1200px){
     .header-visible .header-content {

@@ -12,7 +12,7 @@ const Header = (props) => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll > 30) {
+    if (winScroll > 50) {
       setShow(true);
     } else {
       setShow(false);
@@ -45,10 +45,10 @@ const Header = (props) => {
   return (
     <header
       className={
-        show || headerVisible
+        show 
           ? showHamBurger
             ? "header header-visible burger-open inner-header"
-            : "header header-visible new-header-visible inner-header"
+            : "header header-visible new-header-visible project-header inner-header"
           : showHamBurger
           ? "header burger-open inner-header"
           : "header inner-header"

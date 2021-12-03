@@ -693,7 +693,7 @@ img {
 
 .header-visible {
   // transition: 200ms ease-in-out;
-  background-color: #ffffff;
+  background-color: transparent;
   z-index: 15;
 
   .header-navigation-links a {
@@ -706,7 +706,7 @@ img {
 
   .header-content {
     // transition: 200ms ease-in-out;
-    background-color: #ffffff;
+    background-color: transparent;
     z-index: 15;
     padding: 10px 0px;
     margin-top: 0;
@@ -716,7 +716,7 @@ img {
 
 .new-header-visible{
   transition: 200ms ease-in-out;
-  background-color: #ffffff;
+  background-color: transparent;
   z-index: 15;
 
   .header-navigation-links a {
@@ -6211,7 +6211,7 @@ header.header-visible .button {
   header.header.burger-open {
     background: #fff;
     height: 100%;
-    z-index: 15;
+    z-index: 999999; //15
     height: 100vh;
   }
   .mob-head {

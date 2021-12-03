@@ -1,51 +1,12 @@
 import React, { useEffect } from "react";
 import BlackGamexCard from "../../components/blackGamexCard";
 import "../../styles/icubator.scss";
-// import proimg from "../../assets/project-image.png";
-// import one from "../../assets/project/one.png";
-// import two from "../../assets/project/two.png";
-// import three from "../../assets/project/three.png";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import IndicatorPagination from "../../components/innerpage-pagination/IndicatorPagination";
 import ProjectsList from "../../components/project/ProjectsList";
 import { projectItemList } from "./projectItemList";
-
-// const projectListObj = [
-//   {
-//     id:1,
-//     project_img: one,
-//     project_name: "SolShicks",
-//     project_content:
-//       "Project desription. We link our incubation projects with these investors enabling you to quickly",
-//   },
-//   {
-//     id:2,
-//     project_img: two,
-//     project_name: "Universe Island",
-//     project_content:
-//       "Project desription. We link our incubation projects with these investors enabling you to quickly",
-//   },
-//   {
-//     id:3,
-//     project_img: three,
-//     project_name: "Crypto vs Zombies",
-//     project_content:
-//       "Project desription. We link our incubation projects with these investors enabling you to quickly",
-//   },
-//   // {
-//   //   project_img: proimg,
-//   //   project_name: "Project name here",
-//   //   project_content:
-//   //     "Project desription. We link our incubation projects with these investors enabling you to quickly",
-//   // },
-//   // {
-//   //   project_img: proimg,
-//   //   project_name: "Project name here",
-//   //   project_content:
-//   //     "Project desription. We link our incubation projects with these investors enabling you to quickly",
-//   // },
-// ];
+import incubatorImage from "../../assets/project/incubator.png";
 
 const Incubator = () => {
   useEffect(() => {
@@ -55,30 +16,27 @@ const Incubator = () => {
 
   return (
     <div className="page-wrapper">
-      <IndicatorPagination title="Incubator" />
-
-      {/* <div className="incubator-page-header">
-          <div className="container">
-            <div className="pagination">
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li className="caret"></li>
-                <li>Incubator</li>
-              </ul>
-            </div>
-            <h2 className="pagination-title">Incubator</h2>
+      <div
+        className="main-incubator-image"
+        style={{ backgroundImage: `url(${incubatorImage})` }}
+      >
+        <div className="incubator-image-container">
+          <IndicatorPagination title="Incubator" />
+          <div className="pagination-title-wrapper">
+            <h1>Incubator</h1>
           </div>
-        </div> */}
+        </div>
+      </div>
 
       <div className="tabs-wrapper">
         <div className="tabs">
           <ul className="tab-list">
             <li className="active">Description</li>
-            <li>Projects [5]</li>
+            <li>Projects [{projectItemList.length}]</li>
           </ul>
           <div className="tab-content">
             <ul>
-              <li className="tab-content-list">
+              <li className="tab-content-list incubator-tab-content">
                 <div className="tab-content-left">
                   <span>01</span>
                   <h2>What We Do</h2>
@@ -254,16 +212,15 @@ const Incubator = () => {
         </Controller>
 
         <div className="project-box-wrapper incubator-project-wrapper">
-          {
-            projectItemList.map((item, index) => (
-              <ProjectsList
-                key={index}
-                img={item.project_img}
-                projectName={item.project_name}
-                projectContent={item.project_content}
-                projectId={item.id}
-              />
-            ))}
+          {projectItemList.map((item, index) => (
+            <ProjectsList
+              key={index}
+              img={item.project_img}
+              projectName={item.project_name}
+              projectContent={item.project_content}
+              projectId={item.id}
+            />
+          ))}
         </div>
       </div>
       <BlackGamexCard

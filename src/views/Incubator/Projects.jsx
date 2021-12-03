@@ -4,13 +4,19 @@ import proimg from "../../assets/project-image.png";
 import "../../styles/project.scss";
 import ProjectsListSlider from "../../components/project/ProjectsListSlider";
 import { projectItemList } from "./projectItemList";
+import ReactHtmlParser from "react-html-parser";
 
 const Projects = (props) => {
   const [projectDetils, setProjectDetils] = useState({
     innerImag: "",
     projectName: "",
     projectId: "",
-    projectImag : '',
+    projectImag: "",
+    project_desc: "",
+    how_owner_earn_from: "",
+    earn_desc: [],
+    why_section: "",
+    why_desc: [],
   });
 
   useEffect(() => {
@@ -20,10 +26,15 @@ const Projects = (props) => {
           innerImag: item.project_inner_img,
           projectName: item.project_name,
           projectId: item.id,
-          projectImag: item.project_img
+          projectImag: item.project_img,
+          project_desc: item.project_desc,
+          how_owner_earn_from: item.how_owner_earn_from,
+          why_section: item.why_section,
+          earn_desc: item.how_owner_earn_from.earn_desc,
+          why_desc: item.why_section.why_desc,
         });
       }
-      return null
+      return null;
     });
     return () => {};
   }, [props]);
@@ -35,11 +46,17 @@ const Projects = (props) => {
 
   return (
     <div className="project-page-container">
-      <IndicatorPagination
-        title={projectDetils && projectDetils.projectName}
-        caret={projectDetils && projectDetils.projectName}
-        proImg = {projectDetils && projectDetils.projectImag}
-      />
+      <div
+        className="main-project-image"
+        style={{ backgroundImage: `url(${projectDetils?.projectImag})` }}
+      >
+        <div className="project-image-container">
+          <IndicatorPagination caret={projectDetils?.projectName} />
+          <div className="pagination-title-wrapper">
+            <h1>{projectDetils?.projectName}</h1>
+          </div>
+        </div>
+      </div>
       <div className="project-innerpage">
         <div className="tab-content">
           <ul>
@@ -47,111 +64,51 @@ const Projects = (props) => {
               <div className="tab-content-left">
                 <img
                   src={
-                    projectDetils && projectDetils?.innerImag
-                      ? projectDetils?.innerImag
-                      : proimg
+                    projectDetils?.innerImag ? projectDetils?.innerImag : proimg
                   }
                   alt=""
                 />
               </div>
               <div className="tab-content-right">
-                <h4>
-                  Gamesta brings value through its experience in the industry.
-                  Specialists in crypto and more prudently GameFi, VMG’s core
-                  team are looking forward to building one of the most
-                  successful guilds ever, one that gives high yields to
-                  investors but at the same time empowers players from all over
-                  the globe.
-                </h4>
-                <p>
-                  Through our previous successes, connections, and experience in
-                  Crypto Projects, we are able to add a unique set of value add
-                  propositions to projects that we incubate.
-                </p>
+                {projectDetils && ReactHtmlParser(projectDetils?.project_desc)}
               </div>
             </li>
 
             <li className="tab-content-list">
               <div className="tab-content-left">
-                <span>02</span>
-                <h2>Strategic & Value Add Investor Network </h2>
+                <span>01</span>
+                <h2>
+                  {projectDetils && projectDetils?.how_owner_earn_from.titel}
+                </h2>
               </div>
               <div className="tab-content-right">
-                <h4>
-                  Gamesta works with a wide range of VC’s in the space, with the
-                  majority of them already invested into the $GSG token &
-                  ecosystem.{" "}
-                </h4>
-                <p>
-                  We link our incubation projects with these investors enabling
-                  you to quickly establish a Cap Table of significance.
-                </p>
-              </div>
-            </li>
-
-            <li className="tab-content-list">
-              <div className="tab-content-left">
-                <span>03</span>
-                <h2>Direct Investment</h2>
-              </div>
-              <div className="tab-content-right">
-                <h4>
-                  We put our money where our mouth is. Any project we incubate,
-                  we will also invest in.
-                </h4>
-              </div>
-            </li>
-
-            <li className="tab-content-list">
-              <div className="tab-content-left">
-                <span>04</span>
-                <h2>VMG Marketing Division</h2>
-              </div>
-              <div className="tab-content-right">
-                <h4>
-                  Using our experience and know how, we can activate our VMG
-                  Marketing team to assist your project, either on a passive
-                  approach or a fully fledged marketing strategy (chargeable),
-                  including:
-                </h4>
                 <ul className="list">
-                  <li>Influencer Management & Allocations</li>
-                  <li>Content Creation (Creative Articles, Video)</li>
-                  <li>Community Management</li>
-                  <li>Social Media Management</li>
-                  <li>Gleam & Telegram BOT Competitions</li>
+                  {projectDetils &&
+                    projectDetils?.earn_desc.map((item, index) => (
+                      <li key={index} className="how_owner_list">
+                        {item.how_owner_desc}
+                      </li>
+                    ))}
                 </ul>
               </div>
             </li>
 
             <li className="tab-content-list">
               <div className="tab-content-left">
-                <span>05</span>
-                <h2>Brand Association</h2>
+                <span>02</span>
+                <h2>{projectDetils && projectDetils.why_section.titel}</h2>
               </div>
               <div className="tab-content-right">
-                <h4>
-                  Gamesta is quickly becoming a behemoth in the crypto industry.{" "}
-                </h4>
-                <p>
-                  Driven by CEO Spencer Tarring’s business accomplishments and
-                  experience, any project we associate with immediately gets an
-                  uplift in credibility.
-                </p>
-              </div>
-            </li>
-
-            <li className="tab-content-list">
-              <div className="tab-content-left">
-                <span>06</span>
-                <h2>CEX, DEX & Launchpad Introductions</h2>
-              </div>
-              <div className="tab-content-right">
-                <h4>
-                  We have connections to all major Launchpads, CEXs & DEX’s, and
-                  will recommend Market Makers for your treasury to ensure a
-                  successful and profitable business strategy.
-                </h4>
+                <div className="list why_list_div">
+                  <ul className="why_list_ul">
+                    {projectDetils &&
+                      projectDetils?.why_desc.map((item, index) => (
+                        <li key={index} className="why_list">
+                          {ReactHtmlParser(item.why_sub_desc)}
+                        </li>
+                      ))}
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>

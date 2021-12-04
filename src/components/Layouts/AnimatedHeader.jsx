@@ -177,49 +177,6 @@ const AnimatedHeader = () => {
                     }}
                   >
                     <div className="desktop-header header-content responsive-wrapper">
-                      {/* <Timeline totalProgress={progress} paused>
-                          <Tween
-                            from={{
-                              css: {
-                                position: "absolute",
-                                top: "75vh",
-                                // top: "1500%",
-                                // marginTop: "93%",
-                                left: "43%",
-                                scale: 5,
-                                opacity: 1,
-                                zIndex: -1,
-                                scrollBehaviour: "smooth"
-                              },
-                            }}
-                            to={{
-                              css: {
-                                position: "relative",
-                                top: "0vh",
-                                // marginTop: "0%",
-                                left: "0%",
-                                scale: 1,
-                                opacity: 1,
-                                zIndex: -1,
-                                scrollBehaviour: "smooth"
-                              },
-                            }}
-                          >
-                            <div className="header-logo">
-                              <a
-                                href="#"
-                                onClick={() => {
-                                  document.body.scrollTop = 0;
-                                  document.documentElement.scrollTop = 0;
-                                }}
-                              >
-                                <div className="logomove">
-                                  <img src={logo} alt="" />
-                                </div>
-                              </a>
-                            </div>
-                          </Tween>
-                        </Timeline> */}
                       <div className="logo-space"></div>
                       <div className="header-navigation">
                         <nav className="header-navigation-links">
@@ -517,6 +474,11 @@ const AnimatedHeader = () => {
                 >
                   Contact us
                 </Link>
+                <div className="header-navigation-actions">
+                <a href="#" className="button">
+                  <span style={{ fontWeight: "bold" }}>Login to App</span>
+                </a>
+              </div>
               </nav>
             </div>
           )}

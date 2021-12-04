@@ -68,7 +68,6 @@
   // align-items: center;
   margin-top: -80px;
   justify-content: center;
-
 }
 
 .spec-home-background::after {
@@ -110,7 +109,7 @@
   }
 }
 
-@media (min-width: 1450px) {
+@media (min-width: 1441px) {
   .spec-home-background {
     height: 132vh;
   }
@@ -120,12 +119,11 @@
   .water-mark {
     padding-left: 223px;
     margin-top: 18px;
-    background-color: transparent; 
-}
+    background-color: transparent;
+  }
 }
 
 @media (min-width: 2001px) {
-
 }
 .mob-hero {
   display: none;
@@ -165,4 +163,16 @@
 
 .hero-section {
   position: relative !important;
+}
+
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1440px) {
+  .header-middle-section {
+    margin-left: -65px !important;
+  }
+}
+
+@media (min-width: 2001px) {
+.header-middle-section {
+  margin-left: -155px;
+}
 }

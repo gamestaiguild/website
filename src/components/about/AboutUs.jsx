@@ -19,6 +19,7 @@ import { Tween, Timeline } from "react-gsap";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 import BrandIconsCarousel from "../BrandIconsCarousel";
+import { useMediaQuery } from "react-responsive";
 
 const ScrollStyled = styled.div`
   .sticky {
@@ -50,6 +51,9 @@ const AboutUs = (props) => {
   const handleVideoStart = () => {
     setIsPlaying(true);
   };
+
+  const is767= useMediaQuery({ query: "(max-width: 767px)"});
+ 
   return (
     <ScrollStyled>
       <Controller>
@@ -67,7 +71,7 @@ const AboutUs = (props) => {
                   rel="noreferrer"
                   className="btn-hover spec-btn-link"
                 >
-                  Get early access{" "}
+                  Get early access
                 </a>
                 <span className="offering">to our connected offerings</span>
               </div>
@@ -114,7 +118,7 @@ const AboutUs = (props) => {
                       // pin
                     >
                       {(progress) => (
-                        <div className="sticky">
+                        <div className={is767 ? "" :"sticky"}>
                           <Timeline totalProgress={progress} paused>
                             <Tween
                               from={{

@@ -256,7 +256,7 @@ const Blog = (props) => {
                               },
                             }}
                           > */}
-                            <div className="">Join our community</div>
+                            <div className="join-community">Join our community</div>
                           {/* </Tween>
                         </Timeline> */}
                         <a

@@ -10,6 +10,9 @@ header.inner-header {
   z-index: 999999;
   padding-top: 10px;
 }
+.page-wrapper {
+  background: white;
+}
 .incubator-page-container {
   padding-top: 80px;
   height: auto;
@@ -211,6 +214,7 @@ li.why_list {
 }
 .tabs-wrapper {
   background: #fff;
+  // background: #f5f9fa;
   position: relative;
 }
 .tabs-wrapper:before {
@@ -218,12 +222,15 @@ li.why_list {
   content: "";
   height: 50px;
   width: 100%;
-  background: #f5f9fa;
+  // background: #f5f9fa;
+  background: #fff;
+
   z-index: 0;
 }
 .project-section {
   margin-top: 100px;
   background: #fff;
+  // background: #f5f9fa;
 }
 .project-section .sticky {
   display: flex;

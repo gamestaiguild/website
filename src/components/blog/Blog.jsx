@@ -230,7 +230,7 @@ const Blog = (props) => {
                           > */}
                             <div className="">
                               <a
-                                href="https://twitter.com/gmestaguild"
+                                href="https://twitter.com/gamestaguild"
                                 target="_blank"
                                 rel="noreferrer"
                               >
@@ -262,7 +262,7 @@ const Blog = (props) => {
                           {/* </Tween>
                         </Timeline> */}
                         <a
-                          href="https://discord.gg/ganestaguild"
+                          href="https://discord.gg/gamestaguild"
                           target="_blank"
                           rel="noreferrer"
                         >

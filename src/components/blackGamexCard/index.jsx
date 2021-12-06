@@ -210,7 +210,7 @@ const BlackGamexCard = (props) => {
                               Dec, likely pricing circa $20,000
                             </p>
                             <a
-                              href="https://bit.ly/gamexcard"
+                              href="https://opensea.io/collection/gamexcards"
                               target="_blank"
                               rel="noreferrer"
                               className="btn-hover"

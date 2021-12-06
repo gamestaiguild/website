@@ -6,6 +6,7 @@ import davidProfile from "../../assets/david.png";
 import jodyProfile from "../../assets/jody.jpg";
 import tomasProfile from "../../assets/tomas.png";
 import jamesProfile from "../../assets/jamesProfile.jpg";
+import AlexProfile from "../../assets/AlexProfile.jpg";
 
 const Team = () => {
   return (
@@ -46,7 +47,7 @@ const Team = () => {
                             },
                           }}
                         >
-                          <img src={davidProfile} alt="" />
+                          <img src={jamesProfile} alt="" />
                         </Tween>
                       </Timeline>
                     </div>
@@ -54,20 +55,18 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>David Silvester</h4>
-                <strong>Head of Research & BD</strong>
+                <h4>James Rodd</h4>
+                <strong>CMO</strong>
                 <p>
-                  David has 8 years experience developing and consulting
-                  businesses in the global start-up scene. He’s an active crypto
-                  trader and VC founder, with a passionate focus on the power of
-                  Blockchain to connect, entertain, and solve world problems. He
-                  has a wealth of academic and business research experience, a
-                  Masters in Service Design (UX/CX), an Oxford University
-                  certification in Blockchain development and an MBA.
+                  James joins Gamesta with two decades of marketing experience,
+                  beginning in international sports and music festivals. This
+                  was followed by a period across South East Asia and beyond
+                  with the pinnacle of luxury hospitality, Four Seasons, before
+                  establishing his lux-brand marketing agency which transitioned
+                  into technology and Gamesta.
                 </p>
               </main>
             </article>
-
             <article className="card-clickable">
               <figure>
                 <Scene triggerHook="onEnter" duration={600}>
@@ -109,6 +108,7 @@ const Team = () => {
                 </p>
               </main>
             </article>
+
             <article className="card-clickable">
               <div style={{ height: 60 }}></div>
               <figure>
@@ -136,7 +136,7 @@ const Team = () => {
                             },
                           }}
                         >
-                          <img src={tomasProfile} alt="" />
+                          <img src={jodyProfile} alt="" />
                         </Tween>
                       </Timeline>
                     </div>
@@ -144,23 +144,77 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>Tomas Wolf</h4>
-                <strong>Head of Gaming</strong>
+                <h4>Jody Taylor</h4>
+                <strong>COO</strong>
                 <p>
-                  Tom is an Active Stock, Commodities and Crypto swing trader,
-                  financial educator and Angel Investor. Since discovering the
-                  potential of crypto gaming he has been utilizing in-game
-                  assets and teams of gamers to produce income for themselves,
-                  and a great return for investors, operating a team of 100+
-                  Indonesians in Bali.
+                  Chief Operating Officer Jody Taylor brings a world of
+                  experience and intuitive skills to the Gamesta group. Strength
+                  in strategic planning and a strong compulsion to create
+                  working solutions in all aspects of operations are well
+                  characterized by years of strategy consulting, change
+                  management and custom operational architectures. Though Jody
+                  is an avid investor in private companies, he is no stranger to
+                  the power of blockchain technologies and their influential
+                  potential over the entertainment sector.
                 </p>
               </main>
             </article>
+
             <article
               className="card-clickable"
               style={{ width: 0, height: 0, display: "none" }}
             ></article>
-            <article className="card-clickable"></article>
+
+            <article className="card-clickable" style={{ marginTop: "0px"}}>
+              <figure>
+                <Scene
+                  triggerHook="onEnter"
+                  duration={800}
+                  // pin
+                >
+                  {(progress) => (
+                    <div className="">
+                      <Timeline totalProgress={progress} paused>
+                        <Tween
+                          from={{
+                            css: {
+                              opacity: 0,
+                              scale: 3,
+                              transform: "rotate(45deg)",
+                              marginRight: "-500px",
+                            },
+                          }}
+                          to={{
+                            css: {
+                              opacity: 1,
+                              scale: 1,
+                              transform: "rotate(0deg)",
+                              marginRight: "0px",
+                            },
+                          }}
+                        >
+                          <img src={davidProfile} alt="" />
+                        </Tween>
+                      </Timeline>
+                    </div>
+                  )}
+                </Scene>
+              </figure>
+              <main>
+                <h4>David Silvester</h4>
+                <strong>Head of Research & BD</strong>
+                <p>
+                  David has 8 years experience developing and consulting
+                  businesses in the global start-up scene. He’s an active crypto
+                  trader and VC founder, with a passionate focus on the power of
+                  Blockchain to connect, entertain, and solve world problems. He
+                  has a wealth of academic and business research experience, a
+                  Masters in Service Design (UX/CX), an Oxford University
+                  certification in Blockchain development and an MBA.
+                </p>
+              </main>
+            </article>
+
             <article className="card-clickable">
               <figure>
                 <Scene
@@ -189,7 +243,7 @@ const Team = () => {
                             },
                           }}
                         >
-                          <img src={jamesProfile} alt="" />
+                          <img src={tomasProfile} alt="" />
                         </Tween>
                       </Timeline>
                     </div>
@@ -197,15 +251,15 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>James Rodd</h4>
-                <strong>CMO</strong>
+                <h4>Tomas Wolf</h4>
+                <strong>Head of Gaming</strong>
                 <p>
-                  James joins Gamesta with two decades of marketing experience,
-                  beginning in international sports and music festivals. This
-                  was followed by a period across South East Asia and beyond
-                  with the pinnacle of luxury hospitality, Four Seasons, before
-                  establishing his lux-brand marketing agency which transitioned
-                  into technology and Gamesta.
+                  Tom is an Active Stock, Commodities and Crypto swing trader,
+                  financial educator and Angel Investor. Since discovering the
+                  potential of crypto gaming he has been utilizing in-game
+                  assets and teams of gamers to produce income for themselves,
+                  and a great return for investors, operating a team of 100+
+                  Indonesians in Bali.
                 </p>
               </main>
             </article>
@@ -237,7 +291,7 @@ const Team = () => {
                             },
                           }}
                         >
-                          <img src={jodyProfile} alt="" />
+                          <img src={AlexProfile} alt="" />
                         </Tween>
                       </Timeline>
                     </div>
@@ -245,40 +299,21 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>Jody Taylor</h4>
-                <strong>COO</strong>
+                <h4>Aleksandar Loncar</h4>
+                <strong>Head of AI</strong>
                 <p>
-                  Chief Operating Officer Jody Taylor brings a world of
-                  experience and intuitive skills to Vous Media Group. Strength
-                  in strategic planning and a strong compulsion to create
-                  working solutions in all aspects of operations are well
-                  characterized by years of strategy consulting, change
-                  management and custom operational architectures. Though Jody
-                  is an avid investor in private companies, he is no stranger to
-                  the power of blockchain technologies and their influential
-                  potential over the entertainment sector. Jody is in the right
-                  place to move VMG forward.
+                  Aleksandar is a machine learning engineer, a passionate
+                  mathematician and algorithm engineer with strong analytical
+                  and problem-solving skills. He started as a software engineer
+                  and, over the years, found himself in the data science field,
+                  especially in deep learning and AI.
                 </p>
               </main>
             </article>
+
+            {/* <article className="card-clickable"></article>
             <article className="card-clickable"></article>
-            <article className="card-clickable">
-              {/* <figure>
-                <img src={spencerProfile} alt="" />
-              </figure>
-              <main>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                  convallis sodales erat vel accumsan. Nam eget massa nec sem
-                  vulputate ullamcorper vel quis justo. Duis rhoncus tempor
-                  tempus. Nulla facilisi. Maecenas nulla ante, lacinia ac
-                  consectetur non, aliquet sollicitudin libero. Quisque congue
-                  odio sodales dui fermentum ac laoreet mauris eleifend. Nulla
-                  facilisi. Phasellus vel erat a ante pharetra pharetra.
-                </p>
-              </main> */}
-            </article>
-            <article className="card-clickable"></article>
+            <article className="card-clickable"></article> */}
           </section>
         </div>
       </div>

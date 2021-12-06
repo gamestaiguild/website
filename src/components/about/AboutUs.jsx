@@ -163,7 +163,7 @@ const AboutUs = (props) => {
                   </div>
                 )}
               </div>
-              <p>
+              <p className="video-content">
                 Based out of Bali, Indonesia, we are empowering under privileged
                 players through the play 2 earn revolution
               </p>

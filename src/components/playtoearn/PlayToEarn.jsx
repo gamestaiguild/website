@@ -110,12 +110,12 @@ const PlayToEarn = () => {
                     <span>
                       <img src={nftIcon} alt="" />
                     </span>
-                    <p className="pte-card-title">NFT’s</p>
+                    
                   </div>
                 </div>
                 <div className="pte-card-body">
-                  <div>
-                    <div></div>
+                  <div className="pte-card-content">
+                    <h4 className="pte-card-title">NFT’s</h4>
                     <p>
                       In-game asset ownership through the use of NFT’s provides
                       additional value to the players when the asset is used in
@@ -137,12 +137,12 @@ const PlayToEarn = () => {
                     <span>
                       <img src={tokenIcon}  alt="" />
                     </span>
-                    <h4 className="pte-card-title">Token Dynamics</h4>
+                    
                   </div>
                 </div>
                 <div className="pte-card-body">
-                  <div>
-                    <div></div>
+                  <div className="pte-card-content">
+                  <h4 className="pte-card-title">Token Dynamics</h4>
                     <p>
                       The play 2 earn model enables game developers to create
                       value in unique tokens associated with the game.
@@ -160,12 +160,12 @@ const PlayToEarn = () => {
                     <span>
                       <img src={gameIcon} alt="" />
                     </span>
-                    <h4 className="pte-card-title">Empowerment</h4>
+                    
                   </div>
                 </div>
                 <div className="pte-card-body">
-                  <div>
-                    <div></div>
+                  <div className="pte-card-content">
+                    <h4 className="pte-card-title">Empowerment</h4>
                     <p>
                       Play 2 Earn is revolutionary as it debases the value of a
                       player's time regardless of their means, wealth and
@@ -186,12 +186,12 @@ const PlayToEarn = () => {
                     <span>
                       <img src={pieIcon} alt=""/>
                     </span>
-                    <h4 className="pte-card-title">Scholarships</h4>
+                    
                   </div>
                 </div>
                 <div className="pte-card-body">
-                  <div>
-                    <div></div>
+                  <div className="pte-card-content">
+                  <h4 className="pte-card-title">Scholarships</h4>
                     <p>
                       Due to the play 2 earn models’ effectiveness, NFT values
                       are high, meaning barriers of entry exist for those with

@@ -2280,11 +2280,11 @@ $slide-width2: 30rem;
 }
 
 .carousel__dots {
-  display: inline-block;
-  left: 50%;
-  margin-top: 2rem;
-  position: absolute;
-  transform: translateX(-50%);
+  // display: inline-block;
+  // left: 50%;
+  // margin-top: -11px;
+  // position: absolute;
+  // transform: translateX(-50%);
 
   .dot {
     background: #e4e9eb;
@@ -8484,3 +8484,8 @@ header.header-visible .button {
     width: 20px;
   }
 }
+
+
+.spec-tla-btn {
+  min-width: 118px !important;
+ }

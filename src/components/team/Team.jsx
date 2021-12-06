@@ -5,7 +5,7 @@ import spencerProfile from "../../assets/spencer_taring.png";
 import davidProfile from "../../assets/david.png";
 import jodyProfile from "../../assets/jody.jpg";
 import tomasProfile from "../../assets/tomas.png";
-import belloProfile from "../../assets/bello.png";
+import jamesProfile from "../../assets/jamesProfile.jpg";
 
 const Team = () => {
   return (
@@ -145,7 +145,7 @@ const Team = () => {
               </figure>
               <main>
                 <h4>Tomas Wolf</h4>
-                <strong>COO</strong>
+                <strong>Head of Gaming</strong>
                 <p>
                   Tom is an Active Stock, Commodities and Crypto swing trader,
                   financial educator and Angel Investor. Since discovering the
@@ -189,7 +189,7 @@ const Team = () => {
                             },
                           }}
                         >
-                          <img src={belloProfile} alt="" />
+                          <img src={jamesProfile} alt="" />
                         </Tween>
                       </Timeline>
                     </div>
@@ -197,17 +197,15 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>Bello Andreas</h4>
-                <strong>CTO</strong>
+                <h4>James Rodd</h4>
+                <strong>CMO</strong>
                 <p>
-                  Bello has a wealth of experience in coding, with a deep
-                  understanding of C ,C++, Javascript, VBA, Java, Python, Rust
-                  languages (to name a few). Since 2018 Bello moved his focus
-                  into Solidity, PHP, & HTML 5, to follow his vision of creating
-                  advanced web3.0 applications integrated with the blockchain.
-                  His role in Gamesta is to ensure delivery of the Smart
-                  Contracts, Web App, and technical infrastructure for the
-                  Guild.
+                  James joins Gamesta with two decades of marketing experience,
+                  beginning in international sports and music festivals. This
+                  was followed by a period across South East Asia and beyond
+                  with the pinnacle of luxury hospitality, Four Seasons, before
+                  establishing his lux-brand marketing agency which transitioned
+                  into technology and Gamesta.
                 </p>
               </main>
             </article>

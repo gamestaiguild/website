@@ -313,16 +313,24 @@ const AnimatedHeader = () => {
                           </Link>
                         </nav>
                         <div className="header-navigation-actions">
-                          <a href="#" className="button">
+                        {/* <a href="#" className="button">
                             <span>Login to App</span>
+                          </a> */}
+                          <a
+                            href="https://contest.gamesta.ai"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button spec-tla-btn"
+                          >
+                            <span>Contribute to TLA</span>
                           </a>
                         </div>
                       </div>
 
-                      <a href="#" className="button">
+                      {/* <a href="" target="_blank" rel="noreferrer" className="button">
                         <i className="ph-list-bold"></i>
                         <span>Menu</span>
-                      </a>
+                      </a> */}
                     </div>
                   </Tween>
                 </Timeline>
@@ -475,10 +483,20 @@ const AnimatedHeader = () => {
                   Contact us
                 </Link>
                 <div className="header-navigation-actions">
-                <a href="#" className="button">
+                {/* <a href="#" className="button">
                   <span style={{ fontWeight: "bold" }}>Login to App</span>
-                </a>
-              </div>
+                </a> */}
+                  <a
+                    href="https://contest.gamesta.ai"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="button spec-tla-btn"
+                  >
+                    <span style={{ fontWeight: "bold" }}>
+                      Contribute to TLA
+                    </span>
+                  </a>
+                </div>
               </nav>
             </div>
           )}

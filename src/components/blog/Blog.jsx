@@ -8,8 +8,10 @@ import twitterBox from "../../assets/twitterBox.svg";
 import discordBox from "../../assets/discordBox.svg";
 import telegramBox from "../../assets/telegramBox.svg";
 
-import { Controller, Scene } from "react-scrollmagic";
-import { Tween, Timeline } from "react-gsap";
+import { Controller,
+  //  Scene 
+  } from "react-scrollmagic";
+// import { Tween, Timeline } from "react-gsap";
 import styled from "styled-components";
 
 const ScrollStyled = styled.div`

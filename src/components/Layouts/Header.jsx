@@ -188,16 +188,17 @@ const Header = (props) => {
             </Link>
           </nav>
           <div className="header-navigation-actions">
-            <a href="#" className="button">
+          {/* <a href="#" className="button">
               <span>Login to App</span>
-            </a>
+            </a> */}
+          <a href="https://contest.gamesta.ai" target="_blank" rel="noreferrer" className="button spec-tla-btn"><span style={{ fontWeight: "bold" }}>Contribute to TLA</span></a>
           </div>
         </div>
 
-        <a href="#" className="button">
+        {/* <a href="#" className="button">
           <i className="ph-list-bold"></i>
           <span>Menu</span>
-        </a>
+        </a> */}
       </div>
 
       <div className="mob-header header-content responsive-wrapper">
@@ -342,9 +343,10 @@ const Header = (props) => {
                 Contact us
               </Link>
               <div className="header-navigation-actions">
-                <a href="#" className="button">
+              {/* <a href="#" className="button">
                   <span style={{ fontWeight: "bold" }}>Login to App</span>
-                </a>
+                </a> */}
+              <a href="https://contest.gamesta.ai" target="_blank" rel="noreferrer" className="button spec-tla-btn"><span style={{ fontWeight: "bold" }}>Contribute to TLA</span></a>
               </div>
             </nav>
           </div>

@@ -8712,9 +8712,9 @@ header.header-visible .button {
 
 
 /************** About Section ****************/
-#about
-{
+#about {
   position: relative;
+  z-index: 99;
 }
 .other-wrapper::before {
   position: absolute;

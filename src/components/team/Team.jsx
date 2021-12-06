@@ -98,7 +98,7 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>Spencer Taring</h4>
+                <h4>Spencer Tarring</h4>
                 <strong>CEO</strong>
                 <span className="linkedin-link"><a href="https://www.linkedin.com/in/spencer-tarring-b6218220" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
                 <p>

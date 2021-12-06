@@ -29,7 +29,7 @@ const Hero = ({ countDownTime }) => {
                     <div className="sticky">
                       <Timeline totalProgress={progress} paused>
                         <Tween
-                          from={{ x: "10%", top: "75%", opacity: 0 }}
+                          from={{ x: "10%", top: "85%", opacity: 0 }}
                           to={{ x: "10%", top: "34%", opacity: 1 }}
                         >
                           <div className="animation">

@@ -32,6 +32,7 @@ const AnimatedHeader = () => {
 
   useEffect(() => {
     setActivesection(window.location.hash.trim().replace("#", ""));
+    return () => {}
   }, []);
 
   const setPath = (path) => {

@@ -139,6 +139,7 @@ const Home = () => {
         return (n < 10 ? "0" : "") + n;
       }
     }
+    return {}
   }, [isLoading]);
 
   const handleModelClose = () => {
@@ -160,6 +161,7 @@ const Home = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
+    return {}
   }, []);
 
   return (

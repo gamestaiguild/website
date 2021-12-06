@@ -7,6 +7,8 @@ import jodyProfile from "../../assets/jody.jpg";
 import tomasProfile from "../../assets/tomas.png";
 import jamesProfile from "../../assets/jamesProfile.jpg";
 import AlexProfile from "../../assets/AlexProfile.jpg";
+import linkedInIcon from "../../assets/linkedin.png"
+import '../../styles/teams.scss'
 
 const Team = () => {
   return (
@@ -57,6 +59,7 @@ const Team = () => {
               <main>
                 <h4>James Rodd</h4>
                 <strong>CMO</strong>
+                <span className="linkedin-link"><a href="https://www.linkedin.com/in/james-rodd-b3b59aa" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
                 <p>
                   James joins Gamesta with two decades of marketing experience,
                   beginning in international sports and music festivals. This
@@ -97,6 +100,7 @@ const Team = () => {
               <main>
                 <h4>Spencer Taring</h4>
                 <strong>CEO</strong>
+                <span className="linkedin-link"><a href="https://www.linkedin.com/in/spencer-tarring-b6218220" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
                 <p>
                   Founder of VMG & DopeWarz, Spencer comes with a wealth of
                   experience in both startups & crypto, having exited 5+
@@ -146,6 +150,7 @@ const Team = () => {
               <main>
                 <h4>Jody Taylor</h4>
                 <strong>COO</strong>
+                <span className="linkedin-link"><a href="https://www.linkedin.com/in/jodyjtaylor" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
                 <p>
                   Chief Operating Officer Jody Taylor brings a world of
                   experience and intuitive skills to the Gamesta group. Strength
@@ -203,6 +208,7 @@ const Team = () => {
               <main>
                 <h4>David Silvester</h4>
                 <strong>Head of Research & BD</strong>
+                <span className="linkedin-link"><a href="https://www.linkedin.com/in/david-silvester" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
                 <p>
                   David has 8 years experience developing and consulting
                   businesses in the global start-up scene. He’s an active crypto
@@ -253,6 +259,7 @@ const Team = () => {
               <main>
                 <h4>Tomas Wolf</h4>
                 <strong>Head of Gaming</strong>
+                <span className="linkedin-link"><a href="https://www.linkedin.com/in/tom-wolf-962a5697" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
                 <p>
                   Tom is an Active Stock, Commodities and Crypto swing trader,
                   financial educator and Angel Investor. Since discovering the
@@ -301,6 +308,7 @@ const Team = () => {
               <main>
                 <h4>Aleksandar Loncar</h4>
                 <strong>Head of AI</strong>
+                <span className="linkedin-link"><a href="https://www.linkedin.com/in/aleksandar-loncar" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
                 <p>
                   Aleksandar is a machine learning engineer, a passionate
                   mathematician and algorithm engineer with strong analytical

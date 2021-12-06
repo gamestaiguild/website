@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import card2 from "../assets/card2.png";
 
 const StakedNft = () => {

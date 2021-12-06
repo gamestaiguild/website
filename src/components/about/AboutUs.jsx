@@ -9,6 +9,10 @@ import gameStnLogo from "../../assets/game-station.png";
 import oxBullLogo from "../../assets/oxbull.png";
 import polyLogo from "../../assets/poly.png";
 import poster from "../../assets/poster.png";
+import OpenSeaIcon from "../../assets/openSeaIcon.png";
+import CopperIcon from "../../assets/copperIcon.svg";
+
+
 // import copper from "../assets/images/copper.png";
 import playIcon from "../../assets/playIcon.png";
 
@@ -53,6 +57,8 @@ const AboutUs = (props) => {
   };
 
   const is767= useMediaQuery({ query: "(max-width: 767px)"});
+  const is1060 = useMediaQuery({ query: "(max-width: 1060px)" });
+
  
   return (
     <ScrollStyled>
@@ -76,7 +82,7 @@ const AboutUs = (props) => {
                 <span className="offering">to our connected offerings</span>
               </div>
             </div>
-            <ul
+           {!is1060 && <ul
               className="logo-list desktop-logo-list"
               style={{ zIndex: 200 }}
             >
@@ -95,10 +101,16 @@ const AboutUs = (props) => {
               <li className="logo-list-item">
                 <img src={polyLogo} alt="" />
               </li>
-            </ul>
-            <div className="mobile-logo-list">
+              <li className="logo-list-item" style={{width: "174px"}}>
+                <img src={OpenSeaIcon} alt="" />
+              </li>
+              <li className="logo-list-item">
+                <img src={CopperIcon} alt="" />
+              </li>
+            </ul>}
+          {is1060 &&  <div className="mobile-logo-list">
               <BrandIconsCarousel />
-            </div>
+            </div>}
             <div>
               <div className="video-container">
                 <ReactPlayer

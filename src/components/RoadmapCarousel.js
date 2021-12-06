@@ -377,10 +377,12 @@ const RoadmapCarousel = () => {
 
   useEffect(() => {
     if (isTicking) sleep(300).then(() => setIsTicking(false));
+    return () => {}
   }, [isTicking]);
 
   useEffect(() => {
     setActiveIdx((length - (items[0] % length)) % length) // prettier-ignore
+    return () => {}
   }, [items]);
 
   return (

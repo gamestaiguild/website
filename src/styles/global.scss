@@ -9,7 +9,6 @@
   --c-background-tertiary: #ecf3fe;
   --c-background-quaternary: #e9ecf4;
 }
-@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
 body,
 h1,
 h2,
@@ -4585,9 +4584,9 @@ footer {
   height: 472px !important;
 }
 // Logo lists carousel
-.mobile-logo-list {
-  display: none;
-}
+// .mobile-logo-list {
+//   display: none;
+// }
 .InfiniteCarouselSlide img {
   width: auto !important;
 }
@@ -4601,12 +4600,12 @@ footer {
 }
 
 @media (max-width: 1060px) {
-  .mobile-logo-list {
-    display: block;
-  }
-  .desktop-logo-list {
-    display: none;
-  }
+  // .mobile-logo-list {
+  //   display: block;
+  // }
+  // .desktop-logo-list {
+  //   display: none;
+  // }
   .logo-list-item {
     width: 100%;
     height: 70px;

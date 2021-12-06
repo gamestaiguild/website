@@ -5,6 +5,10 @@ import gameStnLogo from "../assets/game-station.png";
 import oxBullLogo from "../assets/oxbull.png";
 import polyLogo from "../assets/poly.png";
 import InfiniteCarousel from 'react-leaf-carousel';
+import OpenSeaIcon from "../assets/openSeaIcon.png";
+import CopperIcon from "../assets/copperIcon.svg";
+
+
 const _items = [
   {
      logo: enjLogo
@@ -20,6 +24,12 @@ const _items = [
   },
   {
      logo: polyLogo
+  },
+  {
+    logo: OpenSeaIcon
+  },
+  {
+    logo: CopperIcon
   }
 ];
 const CarouselSlideItem = ({item}) => {
@@ -33,9 +43,7 @@ const CarouselSlideItem = ({item}) => {
   );
 };
 const BrandIconsCarousel = () => {
-   
     return (
-   
     <InfiniteCarousel
     arrows={false}
     breakpoints={[

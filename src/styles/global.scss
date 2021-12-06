@@ -407,7 +407,7 @@ section {
     font-style: normal;
     font-size: 16px;
     font-weight: 400;
-    width: 450px;
+    width: 453px;
     color: #ffff;
     font-family: "euclidnormal";
   }
@@ -555,7 +555,7 @@ section {
     position: relative !important;
   }
   .discordBox {
-    transform: translate(-291%, 0%) !important;
+    transform: translate(-291%, 0%);
     margin-top: -135px !important;
     margin-left: 949px !important;
   }
@@ -4380,8 +4380,8 @@ article figure {
 
 .discordBox {
   position: absolute;
-  top: 292%;
-  right: 21%;
+  top: 271%;
+  right: 32%;
   transform: translate(-50%, 0%);
   margin-top: -250px;
   margin-left: 900px;
@@ -5511,6 +5511,9 @@ header.header-visible .button {
   .footer-column a.some-list-link:hover svg {
     opacity: 0.8;
   }
+  .discordBox{
+    right: 27%;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -5692,6 +5695,9 @@ header.header-visible .button {
   }
   .eco-container .players-winning-text {
     margin-left: 19%;
+  }
+  .discordBox{
+    right: 20%;
   }
 }
 
@@ -5984,6 +5990,9 @@ header.header-visible .button {
   .sub-des .inline-list {
     width: auto;
   }
+  .discordBox {
+    right: 15%;
+  }
 }
 @media (max-width: 1300px) {
   .content {
@@ -6013,7 +6022,7 @@ header.header-visible .button {
     left: 29%;
   }
   .discordBox {
-    right: 42px;
+    right: 13%;
   }
   .footer-content.responsive-wrapper {
     display: flex;
@@ -6565,6 +6574,10 @@ header.header-visible .button {
   .token-content .spec-btn-link {
     margin-top: 30px;
   }
+  .discordBox {
+    right: 9%;
+    top: 135%;
+  }
 }
 @media (max-width: 1024px) {
   .get-ready {
@@ -6670,11 +6683,14 @@ header.header-visible .button {
   }
   .twitterBox {
     top: -30%;
-    left: 30%;
+    left: 42%;
   }
   .discordBox {
-    right: -34px;
+    // right: -34px;
+    // width: 16%;
+    right: 13%;
     width: 16%;
+    top: 75%;
   }
   .footer-hero:before {
     width: 270px;
@@ -6839,7 +6855,16 @@ header.header-visible .button {
     margin-top: 40px;
     margin-left: 0 !important;
   }
+  .discordBox {
+    right: 0%; //-38%
+    top: 94%;
+  }
+  .twitterBox{
+    top: -30%;
+    left: 40%;
+  }
 }
+
 @media (max-width: 767px) {
   .sub-hero {
     max-width: 1300px;
@@ -8425,7 +8450,7 @@ header.header-visible .button {
     line-height: 1.2;
   }
   .discordBox {
-    right: -185px;
+    right: 100px;
     width: 16%;
     top: 150px;
     margin-top: -50px;
@@ -8434,6 +8459,7 @@ header.header-visible .button {
   .twitterBox {
     top: -110px;
     // left: 173px;
+    // width: 16%;
     position: absolute;
     transform: translate(0, 0);
     transform: scale(0.5);
@@ -8441,6 +8467,7 @@ header.header-visible .button {
   .teleBox {
     top: 32%;
     left: 22%;
+    width: 16%;
     transform: scale(0.6);
   }
   .footer-hero:before {
@@ -8488,3 +8515,46 @@ header.header-visible .button {
 .spec-tla-btn {
   min-width: 118px !important;
  }
+
+ @media (max-width: 480px){ 
+  .join-community{
+    font-size: 30px;
+    margin-left: 15px
+  }
+  .discordBox {
+      right: 3%;
+      width: 16%;
+      top: 130px;
+      margin-top: -50px;
+      margin-left: 325px;
+  }
+  .teleBox{
+    top: 72%;
+    left: 10%;
+    width: 16%;
+  }
+  .twitterBox{
+    top: -125px;
+    left: -8%;
+    width: 50%;
+  }
+ }
+
+ @media (max-width: 375px) {
+   .join-community{
+    font-size: 20px;
+   }
+  .discordBox {
+    right: 5% !important;
+    width: 16%;
+    top: 130px;
+    margin-top: -50px;
+    margin-left: 325px;
+  }
+  .teleBox {
+    top: 50%;
+    left: 20%;
+    width: 16%;
+  }
+}
+ 

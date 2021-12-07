@@ -3,6 +3,7 @@ import one from "../../assets/project/one.png";
 import two from "../../assets/project/two.png";
 import three from "../../assets/project/three.png";
 import projectOneInner from '../../assets/project/projectOne.png'
+import RendezVerseInner from '../../assets/project/RendezVerseInner.png'
 
 export const projectItemList = [
   {
@@ -43,9 +44,23 @@ export const projectItemList = [
     id: '2',
     project_img: two,
     project_name: "RendezVerse",
+    project_inner_img: RendezVerseInner,
     project_content:
       "The AI powered metaverse for trade shows, conferences and corporate meetings.",
-    project_desc: '<h4> RendezVerse mission is simple: to be the leading fantasy NFT PvP and P2E gaming ecosystem on the Solana blockchain.</h4> <h4>We built our game around adorable SolChick NFT collectibles, where players use their SolChicks as their characters in a unique gaming metaverse.</h4> <p>We believe with the right team and passion, we can revolutionise the industry.</p>',
+    project_desc: '<h4> RendezVerse will be a fully explorable extended reality (XR) environment bridging the gap between physical and digital in a seamless experience using the latest VR technology. Cryptographic protocols and blockchain will be used to manage digital real estate, value transfer and distribution of incentives all powered by the $RDVR token.</h4> <p>Crucially there will be an extra layer of technology underpinning the platform’s functionality, our AI and proprietary matchmaking technology will also be embedded into the platform. </p>',
+    // meet2Earn_model: {
+    //   title: 'Meet2Earn model',
+    //   meet2Earn_model_desc: [{
+    //     desc_model: '<p>The core business model for trade shows and to a lesser extent for B2B conferences. Is based on suppliers of goods and services connecting/meeting with the buyers of those goods and services. In simple terms these events monetise the suppliers need to meet buyers.</p>'
+    //   }, {
+    //     desc_model: '<p>In RendezVerse we can use $RDNV tokens to drive a meet2earn model. This is where event organisers can incentivise buyers to engage with suppliers more frequently and thus increase the return on time for all attendees.</p>'
+    //   }, {
+    //     desc_model: '<p>Our meet2earn programme also builds communities of buyers that have a personal interest in $RDNV’s success: Thus making RendezVerse an even more attractive venue to host their events.</p>'
+    //   }, {
+    //     desc_model: '<p>So, it follows that the higher quality the buyers an event attracts, the greater the event’s power to charge suppliers to attend.</p>'
+    //   }
+    //   ]
+    // },
     how_owner_earn_from: {
       titel: 'How Owners Earn from RendezVerse',
       earn_desc: [{

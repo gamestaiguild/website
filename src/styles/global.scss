@@ -4031,7 +4031,7 @@ article figure {
     /* #273A41 */
     color: #273a41;
     text-align: left;
-    max-width: 290px;
+    max-width: 295px;
   }
 
   p {
@@ -5563,7 +5563,10 @@ header.header-visible .button {
     opacity: 0.8;
   }
   .discordBox{
-    right: 27%;
+    right: 26%;
+  }
+  .twitterBox{
+    left: 43%;
   }
 }
 
@@ -5995,7 +5998,7 @@ header.header-visible .button {
     padding-bottom: 40px;
   }
   .discordBox {
-    right: 9%;
+    right: 17%;
   }
   .teleBox {
     top: 150%;
@@ -6908,8 +6911,8 @@ header.header-visible .button {
     margin-left: 0 !important;
   }
   .discordBox {
-    right: 0%; //-38%
-    top: 94%;
+    right: 15%; //-38%
+    top: 81%;
   }
   .twitterBox{
     top: -30%;
@@ -7185,7 +7188,7 @@ header.header-visible .button {
   .footer-border-text .blog-link {
     font-size: 30px;
     text-align: center;
-    display: flex;
+    // display: flex;
   }
   .teleBox {
     top: 97%;
@@ -7696,6 +7699,10 @@ header.header-visible .button {
     margin-right: 0;
     text-align: center;
     font-size: 16px;
+    margin: 5px
+  }
+  .token-container .spec-btn-link{
+    margin: 5px;
   }
   .token-content .des {
     font-size: 16px;
@@ -8592,27 +8599,27 @@ header.header-visible .button {
   .join-community {
     max-width: 300px;
     margin: 0 auto;
-    font-size: 36px;
+    font-size: 46px;
     line-height: 1.2;
   }
   .discordBox {
-    right: 100px;
+    right: 4%;
     width: 16%;
-    top: 150px;
+    top: 116%;
     margin-top: -50px;
     margin-left: 325px;
   }
   .twitterBox {
     top: -110px;
-    // left: 173px;
-    // width: 16%;
+    left : 38%;
+    width: 26%;
     position: absolute;
     transform: translate(0, 0);
     transform: scale(0.5);
   }
   .teleBox {
-    top: 32%;
-    left: 22%;
+    top: 88%;
+    left: 35%;
     width: 16%;
     transform: scale(0.6);
   }
@@ -8707,7 +8714,7 @@ header.header-visible .button {
     font-size: 20px;
    }
   .discordBox {
-    right: 5% !important;
+    right: 10% !important;
     width: 16%;
     top: 130px;
     margin-top: -50px;

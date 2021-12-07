@@ -140,7 +140,7 @@ const ProjectsListSlider = (props) => {
               <h2 className="project-title">{item.project_name}</h2>
               <p className="project-content">{item.project_content}</p>
               {!item.isComingSoon &&<div className="project-btn-wrapper">
-                <Link to={`/project/${item.id}`}>Read more</Link>
+                <Link to={`/project/${item.id}`} onClick={() => window.scrollTo(0, 0)}>Read more</Link>
               </div>}
             </div>
           </div>

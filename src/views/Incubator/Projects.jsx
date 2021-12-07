@@ -18,11 +18,13 @@ const Projects = (props) => {
     earn_desc: [],
     why_section: "",
     why_desc: [],
+    // meet2Earn_model : '',
+    // meet2Earn_model_desc :[]
   });
 
   useEffect(() => {
        let id = props.match.params.id
-    if(id === '2' || id === '3'){
+    if(id === '2'  || id === '3'){
       history.push('/incubator')
     }
   }, [])
@@ -36,10 +38,12 @@ const Projects = (props) => {
           projectId: item.id,
           projectImag: item.project_img,
           project_desc: item.project_desc,
-          how_owner_earn_from: item.how_owner_earn_from,
-          why_section: item.why_section,
-          earn_desc: item.how_owner_earn_from.earn_desc,
-          why_desc: item.why_section.why_desc,
+          how_owner_earn_from: item?.how_owner_earn_from,
+          why_section: item?.why_section,
+          earn_desc: item?.how_owner_earn_from?.earn_desc,
+          why_desc: item?.why_section?.why_desc,
+          // meet2Earn_model: item?.meet2Earn_model,
+          // meet2Earn_model_desc: item?.meet2Earn_model_desc
         });
       }
       return null;
@@ -82,7 +86,7 @@ const Projects = (props) => {
               </div>
             </li>
 
-            <li className="tab-content-list">
+            {projectDetils?.how_owner_earn_from.titel && <li className="tab-content-list">
               <div className="tab-content-left">
                 <span>01</span>
                 <h2>
@@ -99,7 +103,26 @@ const Projects = (props) => {
                     ))}
                 </ul>
               </div>
-            </li>
+            </li>}
+
+            {/* {projectDetils?.meet2Earn_model.title && <li className="tab-content-list">
+              <div className="tab-content-left">
+                <span>01</span>
+                <h2>
+                  {projectDetils && projectDetils?.meet2Earn_model.title}
+                </h2>
+              </div>
+              <div className="tab-content-right">
+                <ul className="list">
+                  {projectDetils &&
+                    projectDetils?.meet2Earn_model_desc.map((item, index) => (
+                      <li key={index} className="how_owner_list">
+                        {ReactHtmlParser(item.desc_model)}
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            </li>} */}
 
             <li className="tab-content-list">
               <div className="tab-content-left">

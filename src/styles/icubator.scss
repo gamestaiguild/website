@@ -30,6 +30,8 @@ header.inner-header {
 .incubator-page-header .container {
   max-width: 1400px;
   margin: 0 auto;
+  margin-left: 6%;
+  margin-top: 3%;
 }
 .pagination ul {
   display: flex;
@@ -584,6 +586,8 @@ li.why_list {
   margin: 0 auto;
   max-width: 1400px;
   padding-bottom: 40px;
+  margin-top: 2%;
+  margin-left: 6%;
 }
 .pagination-title-wrapper h1 {
   font-style: normal;
@@ -600,7 +604,9 @@ li.why_list {
   padding-bottom: 60px;
 }
 .main-project-image .pagination-title-wrapper {
-  margin-top: 200px;
+  // margin-top: 200px;
+  margin-top: 13%;
+  margin-left: 6%;
 }
 
 .main-project-image {
@@ -612,7 +618,7 @@ li.why_list {
   height: 440px;
   width: 110%;
   background: #ffffff;
-  bottom: 0px;
+  bottom: -2px;
   left: -20px;
   clip-path: polygon(100% 71%, 0 100%, 100% 100%);
 }
@@ -649,7 +655,31 @@ li.why_list {
     height: 215px;
     position: relative;
 }
-
+@media (min-width:2560px){
+  .main-project-image {
+    height: 55vh;
+  }
+  .main-project-image:after {
+    height: 55vh;
+}
+}
+@media (min-width: 2000px){
+  .after-black-sec{
+    margin-bottom: -5%;
+  }
+  .project-page-container{
+    margin-bottom: -5%;
+  }
+  .footer{
+    background-color: #fff;
+  }
+}
+@media (max-width :2000px){
+  .footer-hero{
+    margin-bottom: 10%;
+  }
+  
+}
 @media (max-width: 1440px) {
   .tab-content {
     max-width: 1174px;
@@ -696,8 +726,14 @@ li.why_list {
   .slick-prev {
     left: 80% !important;
   }
+  .project-box-wrapper {
+    margin-bottom: 1%;
+  }
 }
 @media (max-width: 1366px) {
+  .project-box-wrapper {
+    margin-bottom: -1%;
+  }
   .slick-prev {
     left: 84% !important;
   }
@@ -990,6 +1026,7 @@ li.why_list {
   }
   .tab-content ul {
     margin-top: 0;
+    margin-bottom: 0px;
   }
   .project-box-wrapper {
     margin: 0 auto 0;
@@ -1021,6 +1058,7 @@ li.why_list {
     margin: 0 auto 30px;
     max-width: 96%;
     padding-bottom: 20px;
+    margin-left: 5%;
   }
   .project-image-container {
     padding-top: 60px;
@@ -1056,7 +1094,10 @@ li.tab-content-list {
 }
 .footer {
   padding-top: 100px !important;
-  
+  background-color: #fff;  
+}
+.footer-hero{
+  margin-bottom: 0%;
 }
 }
 

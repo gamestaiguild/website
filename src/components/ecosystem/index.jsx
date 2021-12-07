@@ -236,7 +236,7 @@ const EcoSystem = () => {
                       }}
                       to={{
                         css: {
-                          marginLeft: "0px",
+                          marginLeft: "10px",
                           opacity: 1,
                           scale: 1,
                         },

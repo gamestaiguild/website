@@ -3508,6 +3508,9 @@ $slide-width2: 30rem;
   align-items: center;
   text-align: center;
   // justify-items: center;
+  @media (max-width: 480px) {
+    min-height: 56em !important;
+  }
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -3565,6 +3568,10 @@ $slide-width2: 30rem;
     order: 0;
     flex-grow: 0;
     margin: 12px 0px;
+
+    @media(max-width: 420px){
+      margin: 0;
+    }
   }
 
   .des {
@@ -7421,7 +7428,7 @@ header.header-visible .button {
     margin-left: 0;
   }
   .roadmap-carousel__inner .flex-container {
-    margin-top: 55px;
+    margin-top: 38px;
   }
   .get-ready {
     margin-top: 0px !important;
@@ -7433,7 +7440,7 @@ header.header-visible .button {
     width: 80px;
   }
   .roadmap-carousel__inner {
-    height: 49em;
+    height: 56em;
   }
   .roadmap-carousel__container {
     overflow: visible;
@@ -8385,7 +8392,7 @@ header.header-visible .button {
   }
 
   .light-gradient {
-    margin: 50px auto;
+    // margin: 50px auto;
   }
   .roadmap-carousel {
     padding-left: 60px;

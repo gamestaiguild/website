@@ -1,7 +1,7 @@
 
 import one from "../../assets/project/one.png";
 import two from "../../assets/project/two.png";
-import three from "../../assets/project/three.png";
+import cryptZombiePoster from "../../assets/project/cryptZombiePoster.png";
 import projectOneInner from '../../assets/project/projectOne.png'
 import RendezVerseInner from '../../assets/project/RendezVerseInner.png'
 
@@ -88,7 +88,7 @@ export const projectItemList = [
   },
   {
     id: '3',
-    project_img: three,
+    project_img: cryptZombiePoster,
     project_name: "Crypto vs Zombies",
     project_content:
       "Free teaching platform to teach existing developers or complete newcomers the ins and out of programming for the Blockchain.",

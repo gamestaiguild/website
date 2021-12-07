@@ -78,18 +78,18 @@ const _items = [
         two: "Voting systems and web3.0 upgrades to enable governance from token holders"
       },
       title3: {
+        title: "Lending",
+        one: "Upgraded smart contracts to enable lending to and from the treasuries NFT asset base",
+        two: "Other guilds can lend to Gamesta through the smart contracts and vice versa creating a ‘sub-lease’.",
+      },
+      title4: {
         title: "Staking",
         one: "Staking platforms",
         two: "Strategic investments given allocation in seed round",
       },
-      title4: {
+      title5: {
         title: "A.I. Implementation",
         one: "Machine Learning algorithms mature, activated in live scenarios",
-      },
-      title5: {
-        title: "Lending",
-        one: "Upgraded smart contracts to enable lending to and from the treasuries NFT asset base",
-        two: "Other guilds can lend to Gamesta through the smart contracts and vice versa creating a ‘sub-lease’.",
       }
     },
   },
@@ -190,7 +190,7 @@ const CarouselSlideItem = ({ pos, idx, activeIdx }) => {
               </svg>
               <span>{item.player?.title5?.one}</span>
             </p>
-            <p className="des">
+           {item.player?.title5.two && <p className="des">
               <svg
                 width="16"
                 height="16"
@@ -204,7 +204,7 @@ const CarouselSlideItem = ({ pos, idx, activeIdx }) => {
                 />
               </svg>
               <span> {item.player?.title5?.two}</span>
-            </p>
+            </p>}
           </article>
           <article className="roadmap-box">
             <h1 className="title">{item.player?.title3?.title}</h1>

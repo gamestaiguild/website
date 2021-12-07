@@ -133,14 +133,15 @@ const ProjectsListSlider = (props) => {
         <div key={index}>
           <div className="project-box">
             <div className="project-image">
-              <img src={item.project_img} alt="" />
+              <img className={item.isComingSoon ? "blur-poster" : ""} src={item.project_img} alt="" />
+              {item.isComingSoon && <h1 className="coming-soon">Coming Soon...</h1>}
             </div>
             <div className="project-desc">
               <h2 className="project-title">{item.project_name}</h2>
               <p className="project-content">{item.project_content}</p>
-              <div className="project-btn-wrapper">
+              {!item.isComingSoon &&<div className="project-btn-wrapper">
                 <Link to={`/project/${item.id}`}>Read more</Link>
-              </div>
+              </div>}
             </div>
           </div>
         </div>

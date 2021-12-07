@@ -2,12 +2,17 @@ import React from "react";
 import gameControllerBackground from "../../assets/gameControllerHero.png";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
+import '../../styles/gamebanner.scss'
+import { useMediaQuery } from "react-responsive";
 
 const GameBanner = () => {
+
+  const is3100 = useMediaQuery({ query: "(min-width: 3100px)" });
+  
   return (
     <div>
       <Controller>
-        <div className="sub-hero">
+        <div className="sub-hero spec-gamebanner">
           <div className="inner">
             <Scene triggerHook="onEnter" duration={800}>
               {(progress) => (
@@ -121,6 +126,7 @@ const GameBanner = () => {
                           css: {
                             opacity: 0,
                             scale: 2,
+                            translateY: "0px",
                             marginTop: "300px",
                           },
                         }}
@@ -128,6 +134,7 @@ const GameBanner = () => {
                           css: {
                             opacity: 1,
                             scale: 1,
+                            translateY: is3100 ? "-40px": "0px",
                             marginTop: "0px",
                           },
                         }}

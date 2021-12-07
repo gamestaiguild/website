@@ -27,7 +27,7 @@ const ScrollStyled = styled.div`
   }
 `;
 
-const Incubators = (props) => {
+const Incubators = () => {
   return (
     <ScrollStyled>
       <Controller>
@@ -61,7 +61,6 @@ const Incubators = (props) => {
               </div>
             )}
           </Scene>
-
           <h2 className="incubator-border-text">Incubator </h2>
         </div>
         <span className="Incubator-bottom-border"></span>
@@ -75,7 +74,7 @@ const Incubators = (props) => {
                 }}
               >
                 Gamesta brings value through its experience in the industry.
-                Specialists in crypto and more prudently GameFi, VMG’s core team
+                Specialists in crypto and more prudently GameFi, GAMESTA’s core team
                 are looking forward to building one of the most successful
                 guilds ever, one that gives high yields to investors but at the
                 same time empowers players from all over the globe.

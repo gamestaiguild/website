@@ -79,11 +79,14 @@ const Dao = () => {
               <div className="dao-wrapper">
                 <div className="dao-content">
                   <p className="des">
-                    We are currently closing the allocations in the seed round
+                    We were delighted to close the private round allocation at
+                    <span> $6.4 million </span> allowing us to commence the build of our asset
+                    base and efficient smart contract system.
+                    {/* We are currently closing the allocations in the seed round
                     before starting our private rounds allocations, and are
                     looking to raise <span> $8,000,000 USD</span> to assist in
                     building a world class asset base and efficient smart
-                    contract system.
+                    contract system. */}
                   </p>
                   <p className="sub-des">
                     This will enable us to create a DAO which will make key

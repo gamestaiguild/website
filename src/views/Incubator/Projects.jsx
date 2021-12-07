@@ -5,6 +5,7 @@ import "../../styles/project.scss";
 import ProjectsListSlider from "../../components/project/ProjectsListSlider";
 import { projectItemList } from "./projectItemList";
 import ReactHtmlParser from "react-html-parser";
+import { history } from '../../common/history'
 
 const Projects = (props) => {
   const [projectDetils, setProjectDetils] = useState({
@@ -18,6 +19,13 @@ const Projects = (props) => {
     why_section: "",
     why_desc: [],
   });
+
+  useEffect(() => {
+       let id = props.match.params.id
+    if(id === '2' || id === '3'){
+      history.push('/incubator')
+    }
+  }, [])
 
   useEffect(() => {
     projectItemList.map((item) => {

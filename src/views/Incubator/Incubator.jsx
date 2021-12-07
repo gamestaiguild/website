@@ -219,6 +219,7 @@ const Incubator = () => {
               projectName={item.project_name}
               projectContent={item.project_content}
               projectId={item.id}
+              isComingSoon={item.isComingSoon}
             />
           ))}
         </div>

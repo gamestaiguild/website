@@ -1103,7 +1103,7 @@ img {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1152,7 +1152,7 @@ header.header-visible .button:hover {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: 4rem;
@@ -1876,6 +1876,25 @@ header.header-visible .button:hover {
     border-top: 1px solid #d2f0fb;
   }
 }
+
+@media(min-width: 2500px){
+  .basic-container::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 12%;
+    transform: skewY(6deg);
+    transform-origin: 100%;
+    z-index: -1;
+    background: #fff;
+    border-top: 1px solid #d2f0fb;
+  } 
+}
+
+
 // .basic-container > * {
 //   transform: skewY(6deg);
 //   transform: skewY(-6deg);
@@ -4331,6 +4350,7 @@ article figure {
   background-image: url("../assets/footerBg.png");
   // margin-top: 100px;
   height: 500px;
+  margin-bottom: 100px;
   h1 {
     font-family: "neuenormal";
     font-size: 36px;
@@ -4342,6 +4362,10 @@ article figure {
     font-size: 13px;
     font-weight: 400;
     color: #38484e;
+  }
+
+  @media(max-width: 768px){
+    margin-bottom: 0px;
   }
 }
 
@@ -4779,6 +4803,15 @@ header.header-visible .button {
 }
 
 @media (min-width: 2001px) {
+
+
+  .masonry-container .card-clickable:nth-child(5),
+  .masonry-container .card-clickable:nth-child(6) {
+    margin-top: -150px;
+    padding-bottom: 90px;
+  }
+
+
   .carousel-hero .carousel-hero-border {
     display: none;
   }
@@ -5102,8 +5135,13 @@ header.header-visible .button {
     font-size: 1rem;
   }
   footer {
-    padding: 10% 0px 30px;
+    padding: 10% 0px 2% 2%;
+    min-height: 29vh;
   }
+  .footer-content {
+    position: absolute;
+    top: 58%;
+}
   .footer-column a {
     margin-bottom: 20px;
     color: #fff;
@@ -5123,6 +5161,7 @@ header.header-visible .button {
     flex-wrap: nowrap;
   }
 }
+
 @media (max-width: 2000px) {
   .incubator-hero {
     position: relative;
@@ -5473,8 +5512,13 @@ header.header-visible .button {
     justify-content: center;
     border: 1px solid #eef3f5;
     border-radius: 4px;
-    margin-right: auto;
+    // margin-right: auto;
+    margin-right: 25px;
     margin-left: 0;
+
+    @media(max-width: 1200px) {
+      margin-right: auto;
+    }
   }
   .investors-grid {
     display: flex;
@@ -5522,6 +5566,7 @@ header.header-visible .button {
     right: 27%;
   }
 }
+
 
 @media (max-width: 1600px) {
   .sub-hero .sub-image-wrapper p {

@@ -288,6 +288,7 @@ li.why_list {
 .project-box-wrapper .project-box {
   width: auto;
 }
+
 .project-image img {
   width: 100%;
   object-fit: cover;
@@ -646,6 +647,7 @@ li.why_list {
 }
 .project-image {
     height: 215px;
+    position: relative;
 }
 
 @media (max-width: 1440px) {
@@ -686,7 +688,7 @@ li.why_list {
     z-index: 99;
   }
   .footer {
-    margin-top: 0;
+    // margin-top: 0;
   }
   .project-section .sticky {
     width: 50%;
@@ -1081,4 +1083,17 @@ li.tab-content-list {
   .header-navigation-links {
     margin-left: 0rem !important;
   }
+}
+
+
+.coming-soon {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  color: #000000;
+  font-family: 'neuebold';
+}
+
+.blur-poster {
+  opacity: 0.5;
 }

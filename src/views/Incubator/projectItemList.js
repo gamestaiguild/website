@@ -68,7 +68,8 @@ export const projectItemList = [
       {
         why_sub_desc: '<span>Extensive partnerships with market leading blockchain institutions ensuring broad scale and seamless experience. </span><p>Within only a few weeks RendezVerse has secured partnerships with Chainlink, Brave, Grape, Altura and five secondary marketplaces</p>'
       }]
-    }
+    },
+    isComingSoon: true
   },
   {
     id: '3',
@@ -99,6 +100,7 @@ export const projectItemList = [
       {
         why_sub_desc: '<span>Extensive partnerships with market leading blockchain institutions ensuring broad scale and seamless experience. </span><p>Within only a few weeks Crypto vs Zombies has secured partnerships with Chainlink, Brave, Grape, Altura and five secondary marketplaces</p>'
       }]
-    }
+    },
+    isComingSoon: true
   },
 ];

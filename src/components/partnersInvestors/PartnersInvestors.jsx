@@ -6,10 +6,12 @@ import novLogo from "../../assets/nov.png";
 import vmgLogo from "../../assets/vmg.png";
 import critIcon from "../../assets/crit.png";
 import ghafIcon from "../../assets/ghaf.png";
+import MCVLogo from "../../assets/MCV_Logo.png";
 import legionIcon from "../../assets/legion.png";
 import lpiIcon from "../../assets/lpi.png";
 import bluewheelIcon from "../../assets/bluewheel.png";
 import bcaIcon from "../../assets/bca.png";
+import grizzlyCapitallogo from "../../assets/grizzlyCapitallogo.png"
 import brotherIcon from "../../assets/brother.png";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
@@ -115,6 +117,16 @@ const PartnersInvestors = () => {
           <article className="investors-card">
             <figure>
               <img src={brotherIcon} alt="" />
+            </figure>
+          </article>
+          <article className="investors-card">
+            <figure>
+              <img src={MCVLogo} alt="" />
+            </figure>
+          </article>
+          <article className="investors-card">
+            <figure>
+              <img src={grizzlyCapitallogo} alt="" />
             </figure>
           </article>
         </div>

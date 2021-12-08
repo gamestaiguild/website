@@ -181,6 +181,7 @@ li.tab-content-list:last-child {
   list-style: disc;
   padding-left: 20px;
   margin-top: 10px;
+  color: #273A41;
 }
 .tab-content ul.list .why_list {
   margin-bottom: 15px;
@@ -394,7 +395,7 @@ li.why_list {
   top: auto !important;
 }
 .slick-prev {
-  left: 82% !important;
+  left: 88% !important;
   bottom: -30px !important;
   top: auto !important;
   z-index: 99;
@@ -596,7 +597,7 @@ li.why_list {
   line-height: 120%;
   font-feature-settings: "ss01" on, "salt" on;
   color: #ffffff;
-  font-family: "neuebold";
+  font-family: "Conv_NeueMachina-Medium";
 }
 .main-incubator-image,
 .main-project-image {
@@ -655,6 +656,30 @@ li.why_list {
     height: 215px;
     position: relative;
 }
+.tab-content-right .more-content .marketplace-content {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 130%;
+  color: #273a41;
+  font-family: "euclidnormal";
+  margin: 0px;
+  margin-bottom: 20px;
+}
+.tab-content-right .more-content p .change-color{
+  color: #00B3E8;
+}
+.tab-content-right .more-content p.bottom-space {
+  margin-bottom: 4%;
+}
+.tab-content-right .more-content p {
+  font-family: 'euclidnormal';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 120%;
+  color: #273A41;
+}
 @media (min-width:2560px){
   .main-project-image {
     height: 55vh;
@@ -673,12 +698,17 @@ li.why_list {
   .footer{
     background-color: #fff;
   }
+  .project-box-wrapper{
+    margin-bottom: 18%;
+  }
 }
 @media (max-width :2000px){
   .footer-hero{
     margin-bottom: 10%;
   }
-  
+  .project-box-wrapper{
+    margin-bottom: 4%;
+  }
 }
 @media (max-width: 1440px) {
   .tab-content {
@@ -724,18 +754,18 @@ li.why_list {
     width: 50%;
   }
   .slick-prev {
-    left: 80% !important;
+    left: 87.5% !important;
   }
   .project-box-wrapper {
-    margin-bottom: 1%;
+    margin-bottom: 5%;
   }
 }
 @media (max-width: 1366px) {
   .project-box-wrapper {
-    margin-bottom: -1%;
+    margin-bottom: 5%;
   }
   .slick-prev {
-    left: 84% !important;
+    left: 86% !important;
   }
 }
 @media (max-width: 1200px) {
@@ -743,7 +773,7 @@ li.why_list {
     max-width: 96%;
   }
   .slick-prev {
-    left: 76% !important;
+    left: 85% !important;
   }
   .tab-content-left {
     width: 40%;
@@ -785,7 +815,7 @@ li.why_list {
 }
 @media (max-width: 1100px) {
   .slick-prev {
-    left: 80% !important;
+    left: 84% !important;
   }
 }
 @media (max-width: 1024px) {

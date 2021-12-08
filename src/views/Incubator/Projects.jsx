@@ -5,7 +5,6 @@ import "../../styles/project.scss";
 import ProjectsListSlider from "../../components/project/ProjectsListSlider";
 import { projectItemList } from "./projectItemList";
 import ReactHtmlParser from "react-html-parser";
-import { history } from '../../common/history'
 
 const Projects = (props) => {
   const [projectDetils, setProjectDetils] = useState({
@@ -14,20 +13,8 @@ const Projects = (props) => {
     projectId: "",
     projectImag: "",
     project_desc: "",
-    how_owner_earn_from: "",
-    earn_desc: [],
-    why_section: "",
-    why_desc: [],
-    // meet2Earn_model : '',
-    // meet2Earn_model_desc :[]
+    extraFields: [],
   });
-
-  useEffect(() => {
-       let id = props.match.params.id
-    if(id === '2'  || id === '3'){
-      history.push('/incubator')
-    }
-  }, [])
 
   useEffect(() => {
     projectItemList.map((item) => {
@@ -38,12 +25,7 @@ const Projects = (props) => {
           projectId: item.id,
           projectImag: item.project_img,
           project_desc: item.project_desc,
-          how_owner_earn_from: item?.how_owner_earn_from,
-          why_section: item?.why_section,
-          earn_desc: item?.how_owner_earn_from?.earn_desc,
-          why_desc: item?.why_section?.why_desc,
-          // meet2Earn_model: item?.meet2Earn_model,
-          // meet2Earn_model_desc: item?.meet2Earn_model_desc
+          extraFields: item?.extraFields,
         });
       }
       return null;
@@ -86,62 +68,41 @@ const Projects = (props) => {
               </div>
             </li>
 
-            {projectDetils?.how_owner_earn_from.titel && <li className="tab-content-list">
-              <div className="tab-content-left">
-                <span>01</span>
-                <h2>
-                  {projectDetils && projectDetils?.how_owner_earn_from.titel}
-                </h2>
-              </div>
-              <div className="tab-content-right">
-                <ul className="list">
-                  {projectDetils &&
-                    projectDetils?.earn_desc.map((item, index) => (
-                      <li key={index} className="how_owner_list">
-                        {item.how_owner_desc}
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </li>}
+            {projectDetils &&
+              projectDetils.extraFields.map((items, index) => (
+                <li className="tab-content-list" key={index}>
+                  <div className="tab-content-left">
+                    <span>{`0${index + 1}`} </span>
+                    <h2>{items.fieldTitle}</h2>
+                  </div>
+                  <div className="tab-content-right">
+                    <div className="more-content">
+                      {items?.moreContent &&
+                        items?.moreContent.map((item, i) =>
+                          ReactHtmlParser(item.content)
+                        )}
+                    </div>
 
-            {/* {projectDetils?.meet2Earn_model.title && <li className="tab-content-list">
-              <div className="tab-content-left">
-                <span>01</span>
-                <h2>
-                  {projectDetils && projectDetils?.meet2Earn_model.title}
-                </h2>
-              </div>
-              <div className="tab-content-right">
-                <ul className="list">
-                  {projectDetils &&
-                    projectDetils?.meet2Earn_model_desc.map((item, index) => (
-                      <li key={index} className="how_owner_list">
-                        {ReactHtmlParser(item.desc_model)}
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </li>} */}
-
-            <li className="tab-content-list">
-              <div className="tab-content-left">
-                <span>02</span>
-                <h2>{projectDetils && projectDetils.why_section.titel}</h2>
-              </div>
-              <div className="tab-content-right">
-                <div className="list why_list_div">
-                  <ul className="why_list_ul">
-                    {projectDetils &&
-                      projectDetils?.why_desc.map((item, index) => (
-                        <li key={index} className="why_list">
-                          {ReactHtmlParser(item.why_sub_desc)}
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              </div>
-            </li>
+                    <ul
+                      className={items.liChangeStyle ? "why_list_ul" : "list"}
+                    >
+                      {items.extraContent &&
+                        items.extraContent.map((item, i) => (
+                          <li
+                            key={i}
+                            className={
+                              items.liChangeStyle
+                                ? "why_list"
+                                : `how_owner_list`
+                            }
+                          >
+                            {ReactHtmlParser(item.content)}
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

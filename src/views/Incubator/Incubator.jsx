@@ -93,7 +93,7 @@ const Incubator = () => {
               <li className="tab-content-list">
                 <div className="tab-content-left">
                   <span>04</span>
-                  <h2>VMG Marketing Division</h2>
+                  <h2>GAMESTA Marketing Division</h2>
                 </div>
                 <div className="tab-content-right">
                   <h4>

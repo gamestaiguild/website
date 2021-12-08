@@ -108,7 +108,7 @@ export const projectItemList = [
     project_name: "Crypto vs Zombies",
     project_content:
       "The first Compete-to-Earn, Competitive Crypto Tower Defence game, built on the Binance Smart Chain (BSC).",
-    project_desc: '<h4> Crypto VsZombie is the first Compete-to-Earn, Competitive Crypto Tower Defence game, built on the Binance Smart Chain (BSC).  It is rooted in Tower Defence, where players defend a base or territory against multiple waves of opponents. </h4> <p>While blockchain technology enables players to acquire digital goods that make the game profitable, the gamification process fosters an atmosphere conducive to learning and broad adoption.</p> <p>Our diverse team of game developers has formulated a good fusion of both game elements. </p>',
+    project_desc: '<h4> CryptoVsZombie is the first Compete-to-Earn, Competitive Crypto Tower Defence game, built on the Binance Smart Chain (BSC).  It is rooted in Tower Defence, where players defend a base or territory against multiple waves of opponents. </h4> <p>While blockchain technology enables players to acquire digital goods that make the game profitable, the gamification process fosters an atmosphere conducive to learning and broad adoption.</p> <p>Our diverse team of game developers has formulated a good fusion of both game elements. </p>',
     extraFields: [
       {
         fieldTitle: "Vision & Mission",

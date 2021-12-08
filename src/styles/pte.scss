@@ -227,6 +227,10 @@
       color: #273a41;
       z-index: 22;
     }
+
+    @media(max-width: 768px){
+      padding-left: 10%;
+    }
   }
 
   .pte-game-list {

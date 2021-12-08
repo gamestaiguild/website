@@ -14,7 +14,7 @@ const GameBanner = () => {
       <Controller>
         <div className="sub-hero spec-gamebanner">
           <div className="inner">
-            <Scene triggerHook="onEnter" duration={800}>
+            <Scene triggerHook="onEnter" duration={600}>
               {(progress) => (
                 <div className="sticky">
                   <div>
@@ -33,7 +33,7 @@ const GameBanner = () => {
                             opacity: 1,
                             scale: 1,
                             // transform: "rotate(360deg)",
-                            marginLeft: "300px",
+                            marginLeft: "0px",
                           },
                         }}
                       >

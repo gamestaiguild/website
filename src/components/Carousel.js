@@ -131,7 +131,7 @@ const Carousel = () => {
   }, [items]);
 
   return (
-    <div className="carousel__wrap">
+    <div className="carousel__wrap spec-value-proposition-carousel">
       <div className="carousel__inner">
         <div className="carousel__container">
           <ul className="carousel__slide-list">

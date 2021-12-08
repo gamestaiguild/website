@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import laptop from "../../assets/laptop.png";
 import laptopIcon from "../../assets/lcd-with-icon.png";
 import heroimg22 from "../../assets/animation/image22.png";
@@ -14,10 +14,16 @@ import "../../styles/hero.scss";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 import { useMediaQuery } from "react-responsive";
+import Copper from '../../assets/copper.png';
+import ArrowRight from '../../assets/arrow-right.png';
+import tesla from '../../assets/tesla.png';
+
 
 const Hero = ({ countDownTime }) => {
 
   const is1440 = useMediaQuery({ query: "(max-width: 1440px)" });
+
+  const [isCoundownActive, setisCoundownActive] = useState(true)
   return (
     <>
         <div className="heroSpec desktop-hero cover-spec-all">
@@ -115,7 +121,7 @@ const Hero = ({ countDownTime }) => {
                                     </a>
                                   </ul>
                                 </div>
-                                <div className="countdown-des">
+                                {/* <div className="countdown-des">
                                   COPPER LAUNCH AUCTION Countdown
                                   <div id="countdown">
                                     <div id="tiles">
@@ -135,9 +141,36 @@ const Hero = ({ countDownTime }) => {
                                     <li className="countdown-list-item">Min</li>
                                     <li className="countdown-list-item">Sec</li>
                                   </ul>
-                                </div>
-                                <div className="get-ready">
-                                  <p>Get Ready to Unleash GameFi Together</p>
+                                </div> */}
+                                 <div className="countdown-des spec-countdown-des">
+                                   <div className="copper-wrapper">
+                                    <img src={Copper} alt="" />
+                                   </div>
+                                   <p className="launch-text">Launch Auction starts in</p>
+                                  <div id="countdown">
+                                    <div id="tiles">
+                                      <span>{countDownTime.days}</span>
+                                      <span>{countDownTime.hours}</span>
+                                      <span>{countDownTime.minutes}</span>
+                                      <span>{countDownTime.seconds}</span>
+                                    </div>
+                                  </div>
+                                  <ul className="inline-list">
+                                    <li className="countdown-list-item">Days</li>
+                                    <li className="countdown-list-item">Hours</li>
+                                    <li className="countdown-list-item">Min</li>
+                                    <li className="countdown-list-item">Sec</li>
+                                  </ul>
+                                  <div className="button-wrapper">
+                                    <a href="https://contest.gamesta.ai" target="_blank" rel="noreferrer">
+                                       Contribute  <img src={ArrowRight} alt="" />
+                                    </a>
+                                    <p>and win a Tesla car!</p>
+                                  </div>
+                                  <div className="tesla">
+                                    <img src={tesla} alt="" className="tesla-img" />
+                                  </div>
+                                 
                                 </div>
                               </div>
                               <div className="image-wrapper">
@@ -445,7 +478,7 @@ const Hero = ({ countDownTime }) => {
                   </Scene>
                 </div>
               </div>
-              <div className="water-mark">
+             {!isCoundownActive && <div className="water-mark">
                 <p>FLP using Copperlaunch</p>
                 <img src={watermark} alt="water-mark" />
                 <a
@@ -455,7 +488,7 @@ const Hero = ({ countDownTime }) => {
                 >
                   More info
                 </a>
-              </div>
+              </div>}
             </div>
           </Controller>
         </div>
@@ -550,7 +583,7 @@ const Hero = ({ countDownTime }) => {
                   </a>
                 </ul>
               </div>
-              <div className="countdown-des">
+              {/* <div className="countdown-des">
                 COPPER LAUNCH AUCTION Countdown
                 <div id="countdown">
                   <div id="tiles">
@@ -566,7 +599,37 @@ const Hero = ({ countDownTime }) => {
                   <li className="countdown-list-item">Min</li>
                   <li className="countdown-list-item">Sec</li>
                 </ul>
-              </div>
+              </div> */}
+               <div className="countdown-des spec-countdown-des">
+                                   <div className="copper-wrapper">
+                                    <img src={Copper} alt="" />
+                                   </div>
+                                   <p className="launch-text">Launch Auction starts in</p>
+                                  <div id="countdown">
+                                    <div id="tiles">
+                                      <span>{countDownTime.days}</span>
+                                      <span>{countDownTime.hours}</span>
+                                      <span>{countDownTime.minutes}</span>
+                                      <span>{countDownTime.seconds}</span>
+                                    </div>
+                                  </div>
+                                  <ul className="inline-list">
+                                    <li className="countdown-list-item">Days</li>
+                                    <li className="countdown-list-item">Hours</li>
+                                    <li className="countdown-list-item">Min</li>
+                                    <li className="countdown-list-item">Sec</li>
+                                  </ul>
+                                  <div className="button-wrapper">
+                                    <a href="https://contest.gamesta.ai" target="_blank" rel="noreferrer">
+                                       Contribute  <img src={ArrowRight} alt="" />
+                                    </a>
+                                    <p>and win a Tesla car!</p>
+                                  </div>
+                                  <div className="tesla">
+                                    <img src={tesla} alt="" className="tesla-img" />
+                                  </div>
+                                 
+                                </div>
               <div className="get-ready">
                 <p>Get Ready to Unleash GameFi Together</p>
               </div>

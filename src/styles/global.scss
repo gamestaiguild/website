@@ -372,6 +372,7 @@ section {
   text-align: left;
   overflow: hidden;
   position: relative;
+  height: fit-content;
   // padding-left: 70px;
 
   .title {
@@ -387,6 +388,10 @@ section {
     max-width: 721px;
     padding-left: 89px;
     font-feature-settings: "ss01" on, "salt" on;
+
+    @media(max-width: 1440px){
+      max-width: 621px;
+    }
   }
   .des {
     margin-top: 40px;

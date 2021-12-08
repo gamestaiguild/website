@@ -7,6 +7,7 @@ import { projectItemList } from "./projectItemList";
 import ReactHtmlParser from "react-html-parser";
 
 const Projects = (props) => {
+  const [isProject, setIsProject] = useState([]);
   const [projectDetils, setProjectDetils] = useState({
     innerImag: "",
     projectName: "",
@@ -38,74 +39,97 @@ const Projects = (props) => {
     return () => {};
   }, []);
 
+  useEffect(() => {
+    let id = props.match.params.id;
+    let res = projectItemList.filter((item) => {
+      return item.id === id;
+    });
+    setIsProject(res);
+    return () => {};
+  }, [props.match.params.id]);
+
   return (
     <div className="project-page-container">
-      <div
-        className="main-project-image"
-        style={{ backgroundImage: `url(${projectDetils?.projectImag})` }}
-      >
-        <div className="project-image-container">
-          <IndicatorPagination caret={projectDetils?.projectName} />
-          <div className="pagination-title-wrapper">
-            <h1>{projectDetils?.projectName}</h1>
+      {isProject.length !== 0 ? (
+        <>
+          <div
+            className="main-project-image"
+            style={{ backgroundImage: `url(${projectDetils?.projectImag})` }}
+          >
+            <div className="project-image-container">
+              <IndicatorPagination caret={projectDetils?.projectName} />
+              <div className="pagination-title-wrapper">
+                <h1>{projectDetils?.projectName}</h1>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div className="project-innerpage">
-        <div className="tab-content">
-          <ul>
-            <li className="tab-content-list">
-              <div className="tab-content-left">
-                <img
-                  src={
-                    projectDetils?.innerImag ? projectDetils?.innerImag : proimg
-                  }
-                  alt=""
-                />
-              </div>
-              <div className="tab-content-right">
-                {projectDetils && ReactHtmlParser(projectDetils?.project_desc)}
-              </div>
-            </li>
-
-            {projectDetils &&
-              projectDetils.extraFields.map((items, index) => (
-                <li className="tab-content-list" key={index}>
+          <div className="project-innerpage">
+            <div className="tab-content">
+              <ul>
+                <li className="tab-content-list">
                   <div className="tab-content-left">
-                    <span>{`0${index + 1}`} </span>
-                    <h2>{items.fieldTitle}</h2>
+                    <img
+                      src={
+                        projectDetils?.innerImag
+                          ? projectDetils?.innerImag
+                          : proimg
+                      }
+                      alt=""
+                    />
                   </div>
                   <div className="tab-content-right">
-                    <div className="more-content">
-                      {items?.moreContent &&
-                        items?.moreContent.map((item, i) =>
-                          ReactHtmlParser(item.content)
-                        )}
-                    </div>
-
-                    <ul
-                      className={items.liChangeStyle ? "why_list_ul" : "list"}
-                    >
-                      {items.extraContent &&
-                        items.extraContent.map((item, i) => (
-                          <li
-                            key={i}
-                            className={
-                              items.liChangeStyle
-                                ? "why_list"
-                                : `how_owner_list`
-                            }
-                          >
-                            {ReactHtmlParser(item.content)}
-                          </li>
-                        ))}
-                    </ul>
+                    {projectDetils &&
+                      ReactHtmlParser(projectDetils?.project_desc)}
                   </div>
                 </li>
-              ))}
-          </ul>
+
+                {projectDetils &&
+                  projectDetils.extraFields.map((items, index) => (
+                    <li className="tab-content-list" key={index}>
+                      <div className="tab-content-left">
+                        <span>{`0${index + 1}`} </span>
+                        <h2>{items.fieldTitle}</h2>
+                      </div>
+                      <div className="tab-content-right">
+                        <div className="more-content">
+                          {items?.moreContent &&
+                            items?.moreContent.map((item, i) =>
+                              ReactHtmlParser(item.content)
+                            )}
+                        </div>
+
+                        <ul
+                          className={
+                            items.liChangeStyle ? "why_list_ul" : "list"
+                          }
+                        >
+                          {items.extraContent &&
+                            items.extraContent.map((item, i) => (
+                              <li
+                                key={i}
+                                className={
+                                  items.liChangeStyle
+                                    ? "why_list"
+                                    : `how_owner_list`
+                                }
+                              >
+                                {ReactHtmlParser(item.content)}
+                              </li>
+                            ))}
+                        </ul>
+                      </div>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="not-found">
+          <h1>Project Not Found</h1>
+          <h2>please select from below projects</h2>
         </div>
-      </div>
+      )}
       <div className="pro-sec">
         <h2 className="project-wrapper-title">Other projects</h2>
         <div className="project-box-wrapper">

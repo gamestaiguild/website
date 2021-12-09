@@ -24,6 +24,7 @@ import RoadMap from "../../components/roadMap/RoadMpa";
 import Team from "../../components/team/Team";
 import AnimatedHeader from "../../components/Layouts/AnimatedHeader";
 import Hero from "../../components/hero";
+import CopperLaunch from "../../components/copperlaunch";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -229,6 +230,8 @@ const Home = () => {
           {ShowAccouncement && (
             <AnnouncementModel handleModelClose={handleModelClose} />
           )}
+
+          <CopperLaunch countDownTime={countDownTime}/>
         </div>
       )}
     </>

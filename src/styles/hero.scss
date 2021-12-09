@@ -210,6 +210,8 @@
     color: #FFE600 !important;
     background: rgba(255, 124, 96, 0.4) !important;
     border-radius: 8px !important;
+    width: 84px;
+  margin-right: 9px;
   }
   .countdown-list-item {
     width: 84px;
@@ -262,6 +264,19 @@
 }
 
 
+.header-middle-section .copper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-middle-section #countdown #tiles {
+  position: absolute;
+  z-index: 1;
+  left: 5px;
+  right: 0;
+  margin: auto;
+}
+
 
 @media(max-width: 1200px)
 {
@@ -286,6 +301,13 @@
 .spec-countdown-des .countdown-list-item {
   margin-top: -60px !important;
 }
+.hero-wrapper .content {
+  width: 100%;
+  justify-content: flex-end;
+  z-index: 1;
+  text-align: left;
+  overflow: visible;
+}
 }
 
 
@@ -295,11 +317,7 @@
     background-size: 92% 100%;
     
 }
-  .spec-countdown-des .tesla {
-    position: absolute;
-    bottom: -62px;
-    right: 0;
-  }
+  
   .spec-countdown-des .button-wrapper a {
     width: 159px;
     height: 43px;
@@ -317,7 +335,18 @@
   text-align: left;
   padding-left: 8px;
 }
-
+.spec-countdown-des .tesla {
+  position: absolute;
+  bottom: -62px;
+  right: -40px;
+}
+.spec-countdown-des .tesla .tesla-img {
+  transform: scale(0.9);
+}
+.spec-countdown-des {
+  
+  box-shadow: none;
+}
 }
 
 @media(max-width: 480px)
@@ -336,10 +365,76 @@
   max-width: 76px;
 }
 .spec-countdown-des .countdown-list-item {
-  width: 57px;
+  width:78px;
   color: #fff;
 }
 ul.inline-list {
+  margin-left: 0px;
+}
+.spec-countdown-des {
+  width: 329px !important;
+  height: 227px !important;
+  margin: 0 auto !important;
+}
+.spec-countdown-des .launch-text {
+  font-size: 23px;
+  margin-top: 10px;
+  margin-bottom: 21px;
+}
+.spec-countdown-des .button-wrapper {
+  margin-left: 24px;
+  transform: scale(0.8);
+  margin-left: -40px;
+}
+.spec-countdown-des .tesla .tesla-img {
+  transform: scale(0.7);
+}
+.spec-countdown-des .tesla {
+  position: absolute;
+  bottom: -64px;
+  right: -31px;
+}
+#countdown {
+   transform: scale(0.9);
   margin-left: -12px;
+}
+.spec-countdown-des .countdown-list-item {
+  margin-top: 0px !important;
+}
+}
+
+
+@media(max-width: 400px)
+{
+  .spec-countdown-des {
+    width: 100% !important;
+    height: 227px !important;
+    max-width: 329px !important;
+    margin-left: -10px !important;
+}
+}
+
+@media(max-width:374px)
+{
+  .spec-countdown-des {
+    width: 100% !important;
+    height: 227px !important;
+    max-width: 290px !important;
+    margin-left: -10px !important;
+}
+#countdown {
+  transform: scale(0.8);
+  margin-left: -30px;
+}
+.spec-countdown-des .countdown-list-item {
+  width: 70px;
+  color: #fff;
+}
+.spec-countdown-des .button-wrapper {
+  transform: scale(0.7);
+  margin-left: -70px;
+}
+.spec-countdown-des .launch-text {
+  font-size: 20px;
 }
 }

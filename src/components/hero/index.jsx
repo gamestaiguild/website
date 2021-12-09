@@ -630,9 +630,9 @@ const Hero = ({ countDownTime }) => {
                                   </div>
                                  
                                 </div>
-              <div className="get-ready">
+              {/* <div className="get-ready">
                 <p>Get Ready to Unleash GameFi Together</p>
-              </div>
+              </div> */}
             </div>
             <div className="image-wrapper">
               <img src={laptopIcon} alt="" className="mobile-image" />

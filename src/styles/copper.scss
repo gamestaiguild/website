@@ -60,6 +60,9 @@
       font-feature-settings: "ss01" on, "salt" on;
       color: #e3360c;
       font-family: "euclidnormal";
+      &:hover{
+        opacity: 0.8;
+      }
       img {
         margin-left: 20px;
         width: 21px;
@@ -160,4 +163,142 @@
     margin-right: 25px;
     margin-left: 75px;
   }
+}
+
+
+
+@media(max-width: 1366px)
+{
+  .footer-copper-container .copper-wrapper {
+    margin-left: 20px !important;
+}
+.footer-copper-container {
+  justify-content: flex-start;
+  
+}
+.footer-copper-container .launch-text {
+  font-size: 24px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.footer-copper-container .tesla .tesla-img {
+  right: -20px;
+}
+.footer-copper-container #countdown #tiles > span {
+  margin-top: 33px;
+  
+}
+.footer-copper-container .button-wrapper {
+  transform: scale(0.8);
+  margin-left: -20px;
+}
+.footer-copper-container .tesla {
+  position: absolute;
+  bottom: 28px;
+  right: 40px;
+}
+}
+
+@media(max-width:1200px)
+{
+  .footer-copper-container .launch-text {
+    font-size: 19px;
+    margin-right: 15px;
+    margin-left: 15px;
+    max-width: 149px;
+}
+}
+
+@media(max-width:1024px)
+{
+  .footer-copper-container .tesla {
+   right: 17px;
+    transform: scale(0.9);
+}
+}
+
+@media(max-width: 991px)
+{
+  .footer-copper-container .launch-text {
+    font-size: 19px;
+    margin-right: 0;
+    margin-left: 0;
+    max-width: 129px;
+}
+.footer-copper-container .tesla p {
+  margin-top: -70px;
+}
+.footer-copper-container .tesla .tesla-img {
+ top: -168px;
+  
+}
+.footer-copper-container .button-wrapper {
+  margin-top: 43px;
+}
+.footer-copper-container .tesla {
+  bottom: 9px;
+  
+}
+}
+
+@media(max-width: 767px)
+{
+  .contdown-cover {
+    position: absolute;
+    top: -90px;
+    background:url("/assets/red-background.png");
+    padding-left: 9px;
+    border-radius: 15px;
+}
+.footer-copper-container .button-wrapper a img {
+  margin-left: 7px;
+  width: 21px;
+}
+}
+
+
+@media(max-width: 480px){
+  .contdown-cover {
+    padding-left: 0;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+  }
+  #countdown #tiles {
+    width: 260px;
+    
+}
+.footer-copper-container .contdown-cover .inline-list {
+  width: 260px;
+  margin-left: -15px;
+}
+.footer-copper-container .tesla .tesla-img {
+  right: -34px;
+  top: -168px;
+  transform: scale(0.9) !important;
+}
+.footer-copper-container .launch-text {
+  font-size: 15px;
+  max-width: 105px;
+}
+.footer-copper-container {
+  width: 95% !important;
+}
+
+}
+
+@media(max-width: 374px)
+{
+  #countdown {
+    transform: scale(0.8);
+    margin-left: -15px;
+  }
+  .footer-copper-container .tesla .tesla-img {
+    right: -44px;
+    top: -153px;
+    transform: scale(0.9) !important;
+}
+.footer-copper-container .tesla p {
+  font-size: 13px;
+  
+}
 }

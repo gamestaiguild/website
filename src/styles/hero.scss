@@ -237,6 +237,10 @@
       line-height: 130%;
       font-feature-settings: 'ss01' on, 'salt' on;
       color: #E3360C;
+      transition: 0.3s all ease-in-out;
+      &:hover{
+        opacity: 0.8;
+      }
       img{
         margin-left: 20px;
         width: 21px;

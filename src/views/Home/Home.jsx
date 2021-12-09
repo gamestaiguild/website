@@ -25,18 +25,47 @@ import Team from "../../components/team/Team";
 import AnimatedHeader from "../../components/Layouts/AnimatedHeader";
 import Hero from "../../components/hero";
 import CopperLaunch from "../../components/copperlaunch";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const [ShowAccouncement, setShowAccouncement] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [footerCopperVisible, setFooterCopperVisible] = useState(false)
+  const [isCoundownActive, setisCoundownActive] = useState(true);
   const [countDownTime, setcountDownTime] = useState({
     days: "",
     hours: "",
     minutes: "",
     seconds: "",
   });
+  const [countDownTimeleft, setcountDownTimeleft] = useState({
+    days: "",
+    hours: ""
+  });
+
+  const is2500 = useMediaQuery({ query: "(min-width: 2500px)" });
+
+
+  const listenToScroll = () => {
+    
+    const limit = is2500 ? 1500 : 1199
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    if (winScroll > limit) {
+      setFooterCopperVisible(true);
+    } else {
+      setFooterCopperVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => {
+      window.removeEventListener("scroll", listenToScroll);
+    };
+  }, []);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -99,7 +128,7 @@ const Home = () => {
 
   useEffect(() => {
     if (!isLoading) {
-      // 2pm UTC 15th Dec
+      // 2pm UTC 16th Dec
       var target_date = new Date("2021-12-16T14:00:00Z");
 
       // December 15, 2021 14:00:00
@@ -128,6 +157,10 @@ const Home = () => {
 
         // format countdown string + set tag value
 
+        if(days === 0 && hours === 0 && minutes === 0 && seconds === 0){
+          setisCoundownActive(false)
+        }
+
         setcountDownTime({
           days,
           hours,
@@ -142,6 +175,41 @@ const Home = () => {
     }
     return {}
   }, [isLoading]);
+
+  useEffect(() => {
+    if (!isLoading && !isCoundownActive) {
+      // 19th Dec 2pm utc
+      var target_date = new Date("2021-12-19T14:00:00Z");
+
+      var days, hours; 
+
+      getCountdown();
+
+      setInterval(function () {
+        getCountdown();
+      }, 1000);
+
+      function getCountdown() {
+        var current_date = new Date().getTime();
+        var seconds_left = (target_date - current_date) / 1000;
+
+        days = pad(parseInt(seconds_left / 86400));
+        seconds_left = seconds_left % 86400;
+
+        hours = pad(parseInt(seconds_left / 3600));
+
+        setcountDownTimeleft({
+          days,
+          hours
+        });
+      }
+
+      function pad(n) {
+        return (n < 10 ? "0" : "") + n;
+      }
+    }
+    return {}
+  }, [isLoading, isCoundownActive]);
 
   const handleModelClose = () => {
     setShowAccouncement(false);
@@ -176,7 +244,7 @@ const Home = () => {
           <div className="head-animation-wrapper">
           <AnimatedHeader />
           
-          <Hero isLoading={isLoading} countDownTime={countDownTime} />
+          <Hero isLoading={isLoading} countDownTime={isCoundownActive ? countDownTime : countDownTimeleft} isCoundownActive={isCoundownActive} />
           </div>
           <AboutUs />
 
@@ -231,7 +299,7 @@ const Home = () => {
             <AnnouncementModel handleModelClose={handleModelClose} />
           )}
 
-          <CopperLaunch countDownTime={countDownTime}/>
+        {footerCopperVisible &&  <CopperLaunch countDownTime={isCoundownActive ? countDownTime : countDownTimeleft} isCoundownActive={isCoundownActive} />}
         </div>
       )}
     </>

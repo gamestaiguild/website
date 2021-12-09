@@ -44,8 +44,8 @@ const Incubator = () => {
                 <div className="tab-content-right">
                   <h4>
                     Gamesta brings value through its experience in the industry.
-                    Specialists in crypto and more prudently GameFi, VMG’s core
-                    team are looking forward to building one of the most
+                    Specialists in crypto and more prudently GameFi, GAMESTA’s
+                    core team are looking forward to building one of the most
                     successful guilds ever, one that gives high yields to
                     investors but at the same time empowers players from all
                     over the globe.
@@ -67,7 +67,7 @@ const Incubator = () => {
                   <h4>
                     Gamesta works with a wide range of VC’s in the space, with
                     the majority of them already invested into the $GSG token &
-                    ecosystem.{" "}
+                    ecosystem.
                   </h4>
                   <p>
                     We link our incubation projects with these investors
@@ -97,10 +97,10 @@ const Incubator = () => {
                 </div>
                 <div className="tab-content-right">
                   <h4>
-                    Using our experience and know how, we can activate our VMG
-                    Marketing team to assist your project, either on a passive
-                    approach or a fully fledged marketing strategy (chargeable),
-                    including:
+                    Using our experience and know how, we can activate our
+                    GAMESTA Marketing team to assist your project, either on a
+                    passive approach or a fully fledged marketing strategy
+                    (chargeable), including:
                   </h4>
                   <ul className="list">
                     <li>Influencer Management & Allocations</li>
@@ -120,7 +120,7 @@ const Incubator = () => {
                 <div className="tab-content-right">
                   <h4>
                     Gamesta is quickly becoming a behemoth in the crypto
-                    industry.{" "}
+                    industry.
                   </h4>
                   <p>
                     Driven by CEO Spencer Tarring’s business accomplishments and

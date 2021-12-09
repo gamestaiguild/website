@@ -98,6 +98,79 @@
   margin-top: -265px;
 }
 
+
+.live-logo {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.live-wrapper {
+  width: 36%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 124, 96, 0.4);
+    padding: 5px 10px;
+}
+
+.live-wrapper p {
+  font-size: 21px;
+  color: #ffe600;
+  font-family: "neuenormal";
+  text-align: center;
+}
+
+.live-logo img {
+  transform: scale(1);
+}
+.live-auction #countdown
+{
+  width: 60%;
+  margin-top: 0;
+  padding-top: 0;
+}
+.live-auction #tiles {
+  display: flex;
+  align-items: center;
+}
+.live-auction {
+  display: flex;
+  align-items: center;
+  margin-top: 17px;
+  margin-bottom: 30px;
+}
+.hours,.days {
+  cursor: pointer;
+  margin-right: 0;
+  text-align: center;
+  width: 86px;
+  font-size: 12px;
+  text-transform: lowercase;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+
+.days-box,.hours-box {
+    height: 68px !important;
+    line-height: 68px !important;
+    position: relative;
+}
+
+.days {
+  position: absolute;
+  bottom: -51px;
+  left: -9px;
+}
+.hours {
+  position: absolute;
+  left: -7px;
+  bottom: -51px;
+}
 @media (max-width: 1440px) {
   .spec-home-background {
     height: 147vh;
@@ -112,7 +185,7 @@
 
 @media (min-width: 1441px) {
   .spec-home-background {
-    height: 132vh;
+    height: 138vh;
   }
   .spec-home-background::after {
     height: 133vh;
@@ -166,6 +239,12 @@
   .image-wrapper img.mobile-image {
     display: flex;
   }
+  .live-auction {
+    width: 100%;
+  }
+  .live-auction #countdown {
+    top: 0 !important;
+  }
 }
 
 .hero-section {
@@ -195,7 +274,8 @@
   border-radius: 16px;
   padding: 21px 17px 16px;
   position: relative;
-  box-shadow: 0px 2px 5px #ff9686;
+  // box-shadow: 0px 2px 5px #ff9686;
+  box-shadow: 0px 2px 28px -5px #ff9686;
   .launch-text {
     font-style: normal;
     font-weight: 500;
@@ -312,8 +392,19 @@
   text-align: left;
   overflow: visible;
 }
+.live-auction .live-wrapper {
+  width: 35%;
+  margin-left: 0;
 }
-
+}
+@media(max-width: 1024px)
+{
+  
+  .live-wrapper {
+    width: 42%;
+    margin-left: 0;
+}
+}
 
 @media(max-width: 767px)
 {
@@ -341,8 +432,8 @@
 }
 .spec-countdown-des .tesla {
   position: absolute;
-  bottom: -62px;
-  right: -40px;
+  bottom: -42px;
+  right: -20px;
 }
 .spec-countdown-des .tesla .tesla-img {
   transform: scale(0.9);
@@ -351,10 +442,40 @@
   
   box-shadow: none;
 }
+.live-wrapper {
+  width: 32%;
+  margin-left: 8px;
+}
+.live-auction #countdown p {
+  width: 43px;
+}
+.live-auction .live-wrapper {
+  width: 35%;
+  margin-left: 11px;
+}
+.spec-countdown-des {
+  width: 96% !important;
+  max-width: 430px;
+  margin-left: -10px !important;
+}
 }
 
 @media(max-width: 480px)
 {
+  .live-auction .live-wrapper {
+    width: 33%;
+    margin-left: 3px;
+}
+.live-wrapper p {
+  font-size: 15px;
+ 
+}
+
+
+.live-auction #countdown p {
+  width: 50px;
+  font-size: 18px;
+}
   #countdown #tiles {
     position: static;
     z-index: 1;
@@ -405,6 +526,13 @@ ul.inline-list {
 .spec-countdown-des .countdown-list-item {
   margin-top: 0px !important;
 }
+#countdown #tiles {
+  width: 340px;
+}
+.live-auction {
+  margin-top: 0 !important;
+
+}
 }
 
 
@@ -428,7 +556,7 @@ ul.inline-list {
 }
 #countdown {
   transform: scale(0.8);
-  margin-left: -30px;
+  margin-left: -19px;
 }
 .spec-countdown-des .countdown-list-item {
   width: 70px;
@@ -440,5 +568,31 @@ ul.inline-list {
 }
 .spec-countdown-des .launch-text {
   font-size: 20px;
+}
+#countdown #tiles {
+  width: 340px; 
+}
+.content .sub-des, .content .countdown-des {
+  margin-top: 10px !important;
+  margin: 10px auto !important;
+}
+.days-box, .hours-box {
+  width: 70px !important;
+}
+
+}
+
+
+@media(max-width: 339px)
+{
+  .spec-countdown-des {
+    padding: 21px 8px 16px;
+}
+.days-box, .hours-box {
+    width: 69px !important;
+}
+.live-auction .live-wrapper {
+  width: 29%;
+  margin-left: 11px;
 }
 }

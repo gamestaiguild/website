@@ -41,7 +41,7 @@ const Blog = (props) => {
     <ScrollStyled>
       <Controller>
         <div style={{ background: "white", width: "100%", height: "100%" }}>
-          <div style={{ height: 100 }}></div>
+          <div className="blank-div" style={{ height: 100 }}></div>
           <div className="blog-skew-hero">
             <div className="blog-grid">
               <article className="blog-box" style={{ alignItems: "start" }}>

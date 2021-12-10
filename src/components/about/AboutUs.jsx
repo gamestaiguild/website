@@ -92,18 +92,18 @@ const AboutUs = (props) => {
               <li className="logo-list-item">
                 <img src={equLogo} alt="" />
               </li>
-              <li className="logo-list-item">
+              {/* <li className="logo-list-item">
                 <img src={gameStnLogo} alt="" />
-              </li>
+              </li> */}
               <li className="logo-list-item">
                 <img src={oxBullLogo} alt="" />
               </li>
               <li className="logo-list-item">
                 <img src={polyLogo} alt="" />
               </li>
-              <li className="logo-list-item" style={{width: "174px"}}>
+              {/* <li className="logo-list-item" style={{width: "174px"}}>
                 <img src={OpenSeaIcon} alt="" />
-              </li>
+              </li> */}
               <li className="logo-list-item">
                 <img src={CopperIcon} alt="" />
               </li>

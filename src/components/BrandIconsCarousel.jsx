@@ -16,18 +16,18 @@ const _items = [
   {
      logo: equLogo
   },
-  {
-     logo: gameStnLogo
-  },
+  // {
+  //    logo: gameStnLogo
+  // },
   {
      logo: oxBullLogo
   },
   {
      logo: polyLogo
   },
-  {
-    logo: OpenSeaIcon
-  },
+  // {
+  //   logo: OpenSeaIcon
+  // },
   {
     logo: CopperIcon
   }

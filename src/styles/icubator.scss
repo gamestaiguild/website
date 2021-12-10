@@ -638,8 +638,8 @@ li.why_list {
   position: absolute;
   content: "";
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: 0.9;
-  height: 200px;
+  opacity: 0.8;
+  height: 100%;
   top: 0;
   z-index: 99999;
   width: 100%;
@@ -704,7 +704,7 @@ li.why_list {
 .slick-slider {
   display: flex !important;
   flex-wrap: wrap !important;
-  justify-content: flex-end !important;
+  justify-content: flex-start !important;
 }
 .slick-prev {
   position: static !important;

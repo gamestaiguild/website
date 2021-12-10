@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Header = (props) => {
-  const { headerVisible } = props;
+  const { headerVisible, onChangeHamBurger } = props;
   const [show, setShow] = useState(false);
   const [activesection, setActivesection] = useState("");
   const [showHamBurger, setShowHamBurger] = useState(false);
@@ -36,16 +36,21 @@ const Header = (props) => {
   const setPath = (path) => {
     setActivesection(path);
     setShowHamBurger(false);
+    if (showHamBurger) {
+      onChangeHamBurger();
+    }
   };
 
   const handlehamburger = () => {
     setShowHamBurger(!showHamBurger);
+    onChangeHamBurger();
   };
 
   return (
     <header
+      id="header"
       className={
-        show 
+        show
           ? showHamBurger
             ? "header header-visible burger-open inner-header"
             : "header header-visible new-header-visible project-header inner-header"
@@ -188,10 +193,17 @@ const Header = (props) => {
             </Link>
           </nav>
           <div className="header-navigation-actions">
-          {/* <a href="#" className="button">
+            {/* <a href="#" className="button">
               <span>Login to App</span>
             </a> */}
-          <a href="https://contest.gamesta.ai" target="_blank" rel="noreferrer" className="button spec-tla-btn"><span style={{ fontWeight: "bold" }}>Contribute to TLA</span></a>
+            <a
+              href="https://contest.gamesta.ai"
+              target="_blank"
+              rel="noreferrer"
+              className="button spec-tla-btn"
+            >
+              <span style={{ fontWeight: "bold" }}>Contribute to TLA</span>
+            </a>
           </div>
         </div>
 
@@ -343,10 +355,17 @@ const Header = (props) => {
                 Contact us
               </Link>
               <div className="header-navigation-actions">
-              {/* <a href="#" className="button">
+                {/* <a href="#" className="button">
                   <span style={{ fontWeight: "bold" }}>Login to App</span>
                 </a> */}
-              <a href="https://contest.gamesta.ai" target="_blank" rel="noreferrer" className="button spec-tla-btn"><span style={{ fontWeight: "bold" }}>Contribute to TLA</span></a>
+                <a
+                  href="https://contest.gamesta.ai"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="button spec-tla-btn"
+                >
+                  <span style={{ fontWeight: "bold" }}>Contribute to TLA</span>
+                </a>
               </div>
             </nav>
           </div>

@@ -44,6 +44,11 @@ const Home = () => {
     days: "",
     hours: ""
   });
+  const [isHamBurger, setIsHamBurger] = useState(false)
+
+  const onChangeHamBurger = () =>{
+    setIsHamBurger(!isHamBurger)
+  }
 
   const is2500 = useMediaQuery({ query: "(min-width: 2500px)" });
 
@@ -238,11 +243,11 @@ const Home = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="move">
+        <div className={isHamBurger ? 'move stop-scroller' : "move"}>
           {/* <Header /> */}
 
           <div className="head-animation-wrapper">
-          <AnimatedHeader />
+          <AnimatedHeader onChangeHamBurger={onChangeHamBurger} />
           
           <Hero isLoading={isLoading} countDownTime={isCoundownActive ? countDownTime : countDownTimeleft} isCoundownActive={isCoundownActive} />
           </div>

@@ -7,7 +7,7 @@ import { projectItemList } from "./projectItemList";
 import ReactHtmlParser from "react-html-parser";
 
 const Projects = (props) => {
-  const [isProject, setIsProject] = useState([]);
+  const [isProject, setIsProject] = useState([null]);
   const [projectDetils, setProjectDetils] = useState({
     innerImag: "",
     projectName: "",
@@ -45,8 +45,25 @@ const Projects = (props) => {
       return item.id === id;
     });
     setIsProject(res);
+    if (res.length === 0) {
+      addNotFoundHeader();
+    }
     return () => {};
   }, [props.match.params.id]);
+
+  const addNotFoundHeader = () => {
+    var el = document.getElementById("header");
+    el.classList.add("header-visible");
+  };
+
+  useEffect(() => {
+    if (isProject && isProject.length === 0) {
+      window.addEventListener("scroll", addNotFoundHeader);
+    }
+    return () => {
+      window.removeEventListener("scroll", addNotFoundHeader);
+    };
+  }, [isProject]);
 
   return (
     <div className="project-page-container">

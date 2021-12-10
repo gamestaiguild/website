@@ -5,7 +5,8 @@ import { Tween, Timeline } from "react-gsap";
 import { Link } from "react-router-dom";
 import "../../styles/animationheader.scss";
 
-const AnimatedHeader = () => {
+const AnimatedHeader = (props) => {
+  const { onChangeHamBurger } = props;
   const [show, setShow] = useState(false);
   const [activesection, setActivesection] = useState("");
   const [showHamBurger, setShowHamBurger] = useState(false);
@@ -32,16 +33,20 @@ const AnimatedHeader = () => {
 
   useEffect(() => {
     setActivesection(window.location.hash.trim().replace("#", ""));
-    return () => {}
+    return () => {};
   }, []);
 
   const setPath = (path) => {
     setActivesection(path);
     setShowHamBurger(false);
+    if (showHamBurger) {
+      onChangeHamBurger();
+    }
   };
 
   const handlehamburger = () => {
     setShowHamBurger(!showHamBurger);
+    onChangeHamBurger();
   };
 
   let htmlIdValue = window.location.hash.trim().replace("#", "");
@@ -314,7 +319,7 @@ const AnimatedHeader = () => {
                           </Link>
                         </nav>
                         <div className="header-navigation-actions">
-                        {/* <a href="#" className="button">
+                          {/* <a href="#" className="button">
                             <span>Login to App</span>
                           </a> */}
                           <a
@@ -484,7 +489,7 @@ const AnimatedHeader = () => {
                   Contact us
                 </Link>
                 <div className="header-navigation-actions">
-                {/* <a href="#" className="button">
+                  {/* <a href="#" className="button">
                   <span style={{ fontWeight: "bold" }}>Login to App</span>
                 </a> */}
                   <a

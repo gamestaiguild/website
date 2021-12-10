@@ -5,6 +5,7 @@ import Home from "../views/Home/Home";
 import { Switch, Route } from "react-router-dom";
 import Incubator from "../views/Incubator/Incubator";
 import Projects from "../views/Incubator/Projects";
+import PageNotFound from "../components/pageNotFound";
 
 const Routes = () => {
   return (
@@ -26,6 +27,7 @@ const Routes = () => {
         layout={LandingPageLayout}
         component={Projects}
       />
+      <Route path={'*'} component={PageNotFound} />
     </Switch>
   );
 };

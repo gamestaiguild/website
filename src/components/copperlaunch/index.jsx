@@ -8,12 +8,13 @@ import live2 from "../../assets/live2.png";
 import live3 from "../../assets/live3.png";
 
 const CopperLaunch = (props) => {
-  const { countDownTime, isCoundownActive } = props;
+  const { countDownTime, isCoundownActive, isAuctionFinished } = props;
 
   const [liveImage, setliveImage] = useState(live1);
 
-  const liveImages = [live1, live2, live3];
   useEffect(() => {
+  const liveImages = [live1, live2, live3];
+
     if (!isCoundownActive) {
       let index = 0;
       setInterval(() => {
@@ -32,9 +33,9 @@ const CopperLaunch = (props) => {
         <img src={Copper} alt="" />
       </div>
       <p className="launch-text">
-        {isCoundownActive ? "Launch Auction starts in" : "Launch Auction"}
+        {isCoundownActive ? "Launch Auction starts in": isAuctionFinished ? "Auction Finished" : "Launch Auction"}
       </p>
-      <div className="contdown-cover">
+    {!isAuctionFinished && <> <div className="contdown-cover">
         {isCoundownActive ? (
           <div id="countdown">
             <div id="tiles">
@@ -84,7 +85,7 @@ const CopperLaunch = (props) => {
       <div className="tesla">
         <img src={tesla} alt="" className="tesla-img" />
         <p>and win a Tesla car!</p>
-      </div>
+      </div></>}
     </div>
   );
 };

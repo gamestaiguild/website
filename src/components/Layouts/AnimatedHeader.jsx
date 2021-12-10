@@ -17,7 +17,7 @@ const AnimatedHeader = (props) => {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll > 400) {
+    if (winScroll > 450) {
       setShow(true);
     } else {
       setShow(false);
@@ -149,8 +149,8 @@ const AnimatedHeader = (props) => {
                     }}
                   >
                     <div className="header-logo">
-                      <a
-                        href="#"
+                      <Link
+                        to="/"
                         onClick={() => {
                           document.body.scrollTop = 0;
                           document.documentElement.scrollTop = 0;
@@ -159,7 +159,7 @@ const AnimatedHeader = (props) => {
                         <div className="logomove">
                           <img src={logo} alt="" />
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </Tween>
                 </Timeline>
@@ -347,11 +347,13 @@ const AnimatedHeader = (props) => {
         <div className="mob-header header-content responsive-wrapper">
           <div className="mob-head">
             <div className="header-logo">
-              <a href="#">
+              <Link to="/" onClick={() => {
+                document.body.scrollTop = 0
+                 document.documentElement.scrollTop = 0}}>
                 <div>
                   <img src={logo} alt="" />
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="hemburger-container">
               <div className="three col">

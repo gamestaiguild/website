@@ -5,11 +5,11 @@ import React, {  useState } from "react";
 import intro from "../../assets/intro.mp4";
 import enjLogo from "../../assets/enj.png";
 import equLogo from "../../assets/equ.png";
-import gameStnLogo from "../../assets/game-station.png";
+// import gameStnLogo from "../../assets/game-station.png";
 import oxBullLogo from "../../assets/oxbull.png";
 import polyLogo from "../../assets/poly.png";
 import poster from "../../assets/poster.png";
-import OpenSeaIcon from "../../assets/openSeaIcon.png";
+// import OpenSeaIcon from "../../assets/openSeaIcon.png";
 import CopperIcon from "../../assets/copperIcon.svg";
 
 

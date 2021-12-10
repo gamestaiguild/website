@@ -9,7 +9,7 @@ import heroimg31 from "../../assets/animation/image31.png";
 import heroimg34 from "../../assets/animation/image34.png";
 import heroimg39 from "../../assets/animation/image39.png";
 import heroimg41 from "../../assets/animation/image41.png";
-import watermark from "../../assets/watermark.png";
+// import watermark from "../../assets/watermark.png";
 import "../../styles/hero.scss";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
@@ -22,13 +22,14 @@ import live2 from "../../assets/live2.png";
 import live3 from "../../assets/live3.png";
 
 const Hero = (props) => {
-  const { countDownTime, isCoundownActive } = props;
+  const { countDownTime, isCoundownActive, isAuctionFinished } = props;
   const is1440 = useMediaQuery({ query: "(max-width: 1440px)" });
 
   const [liveImage, setliveImage] = useState(live1);
 
-  const liveImages = [live1, live2, live3];
+
   useEffect(() => {
+    const liveImages = [live1, live2, live3];
     if (!isCoundownActive) {
       let index = 0;
       setInterval(() => {
@@ -166,9 +167,9 @@ const Hero = (props) => {
                                 <p className="launch-text">
                                   {isCoundownActive
                                     ? "Launch Auction starts in"
-                                    : "Launch Auction"}
+                                    : isAuctionFinished ? "Auction Finished" : "Launch Auction"}
                                 </p>
-                                {isCoundownActive ? (
+                               {!isAuctionFinished && <>{isCoundownActive ? (
                                   <div id="countdown">
                                     <div id="tiles">
                                       <span>{countDownTime.days}</span>
@@ -224,7 +225,7 @@ const Hero = (props) => {
                                     alt=""
                                     className="tesla-img"
                                   />
-                                </div>
+                                </div></>}
                               </div>
                             </div>
                             <div className="image-wrapper">
@@ -631,9 +632,9 @@ const Hero = (props) => {
                                 <p className="launch-text">
                                   {isCoundownActive
                                     ? "Launch Auction starts in"
-                                    : "Launch Auction"}
+                                    : isAuctionFinished ? "Auction Finished" : "Launch Auction"}
                                 </p>
-                                {isCoundownActive ? (
+                                {!isAuctionFinished && <>{isCoundownActive ? (
                                   <div id="countdown">
                                     <div id="tiles">
                                       <span>{countDownTime.days}</span>
@@ -689,7 +690,7 @@ const Hero = (props) => {
                                     alt=""
                                     className="tesla-img"
                                   />
-                                </div>
+                                </div></>}
                               </div>
             {/* <div className="get-ready">
                 <p>Get Ready to Unleash GameFi Together</p>

@@ -7,7 +7,7 @@ import Three from "../../assets/gamestaBlog3.png";
 import twitterBox from "../../assets/twitterBox.svg";
 import discordBox from "../../assets/discordBox.svg";
 import telegramBox from "../../assets/telegramBox.svg";
-
+import { Link } from "react-router-dom";
 import { Controller,
    Scene 
   } from "react-scrollmagic";
@@ -52,7 +52,7 @@ const Blog = (props) => {
               <div className="blog-inline-box">
                 <div className="blog-card blog-card-blog">
                   <div className="blog-card-image">
-                    <a href="#">
+                    <Link to="/">
                       <Scene
                         triggerHook="onEnter"
                         duration={600}
@@ -82,12 +82,12 @@ const Blog = (props) => {
                         )}
                       </Scene>
                       {/* <img className="img" src={One} alt="" /> */}
-                    </a>
+                    </Link>
                     <div className="ripple-cont"></div>
                   </div>
                   <div className="blog-table">
                     <h4 className="blog-card-caption">
-                      <a href="#">Introducing Gamesta — A.I. Powered Guild</a>
+                      <Link to="/">Introducing Gamesta — A.I. Powered Guild</Link>
                     </h4>
 
                     <h6 className="blog-category ">4 days ago</h6>
@@ -102,7 +102,7 @@ const Blog = (props) => {
               <div className="blog-inline-box">
                 <div className="blog-card blog-card-blog">
                   <div className="blog-card-image">
-                    <a href="#">
+                    <Link to="/">
                       <Scene
                         triggerHook="onEnter"
                         duration={600}
@@ -130,15 +130,15 @@ const Blog = (props) => {
                           </div>
                         )}
                       </Scene> 
-                    </a>
+                    </Link>
                     <div className="ripple-cont"></div>
                   </div>
                   <div className="blog-table">
                     <h4 className="blog-card-caption">
-                      <a href="#">
+                      <Link to="/">
                         Gamesta, A.I. powered Game-Fi guild announce private
                         round sale
-                      </a>
+                      </Link>
                     </h4>
 
                     <h6 className="blog-category ">4 days ago</h6>
@@ -153,7 +153,7 @@ const Blog = (props) => {
               <div className="blog-inline-box">
                 <div className="blog-card blog-card-blog">
                   <div className="blog-card-image">
-                    <a href="#">
+                    <Link to="/">
                       <Scene
                         triggerHook="onEnter"
                         duration={600}
@@ -182,15 +182,15 @@ const Blog = (props) => {
                           </div>
                         )}
                       </Scene>
-                    </a>
+                    </Link>
                     <div className="ripple-cont"></div>
                   </div>
                   <div className="blog-table">
                     <h4 className="blog-card-caption">
-                      <a href="#">
+                      <Link to="/">
                         Gamesta, A.I. powered Game-Fi guild partner with Legion
                         Ventures
-                      </a>
+                      </Link>
                     </h4>
 
                     <h6 className="blog-category ">4 days ago</h6>

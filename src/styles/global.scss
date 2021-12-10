@@ -748,6 +748,7 @@ img {
   }
 }
 
+
 @media (max-width: 1200px) {
   .header-visible {
     .header-content {
@@ -761,6 +762,7 @@ img {
   display: flex;
   align-items: center;
   font-size: 13px;
+  padding: 10px 55px !important;
   & > a {
     display: none;
   }
@@ -769,6 +771,7 @@ img {
     & > a {
       display: inline-flex;
     }
+    padding: 0 !important;
   }
 }
 

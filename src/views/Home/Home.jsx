@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Carousel from "../../components/Carousel";
-import AnnouncementModel from "../../components/modals/AnnouncementModal";
+// import AnnouncementModel from "../../components/modals/AnnouncementModal";
 import Loader from "../../components/loader/Loader";
 import Footer from "../../components/Layouts/Footer";
 import PlayToEarn from "../../components/playtoearn/PlayToEarn";
@@ -30,9 +30,9 @@ import { useMediaQuery } from "react-responsive";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  const [ShowAccouncement, setShowAccouncement] = useState(false);
+  // const [ShowAccouncement, setShowAccouncement] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [footerCopperVisible, setFooterCopperVisible] = useState(false)
+  const [footerCopperVisible, setFooterCopperVisible] = useState(false);
   const [isCoundownActive, setisCoundownActive] = useState(true);
   const [countDownTime, setcountDownTime] = useState({
     days: "",
@@ -42,7 +42,7 @@ const Home = () => {
   });
   const [countDownTimeleft, setcountDownTimeleft] = useState({
     days: "",
-    hours: ""
+    hours: "",
   });
   const [isHamBurger, setIsHamBurger] = useState(false)
 
@@ -50,27 +50,29 @@ const Home = () => {
     setIsHamBurger(!isHamBurger)
   }
 
+  const [isAuctionFinished, setIsAuctionFinished] = useState(false);
+
   const is2500 = useMediaQuery({ query: "(min-width: 2500px)" });
+  const is1200 = useMediaQuery({ query: "(min-width: 1200px)" });
 
-
-  const listenToScroll = () => {
-    
-    const limit = is2500 ? 1500 : 1199
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    if (winScroll > limit) {
-      setFooterCopperVisible(true);
-    } else {
-      setFooterCopperVisible(false);
-    }
-  };
 
   useEffect(() => {
+    const listenToScroll = () => {
+      const limit = is2500 ? 1500 : 1199;
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      if (winScroll > limit) {
+        setFooterCopperVisible(true);
+      } else {
+        setFooterCopperVisible(false);
+      }
+    };
+
     window.addEventListener("scroll", listenToScroll);
     return () => {
       window.removeEventListener("scroll", listenToScroll);
     };
-  }, []);
+  }, [is2500]);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -117,7 +119,6 @@ const Home = () => {
       "(max-width: 799px)": function () {
         // The ScrollTriggers created inside these functions are segregated and get
         // reverted/killed when the media query doesn't match anymore.
-
         return function () {
           gsap.kill();
         };
@@ -132,22 +133,45 @@ const Home = () => {
   });
 
   useEffect(() => {
-    if (!isLoading) {
+    if (!isLoading && is1200) {
+      window.scrollBy(0, 400);
+      window.scrollBy({
+        top: 400,
+        left: 0,
+        behavior: 'smooth'
+      });
+
+      // var x = 1;
+      // var y = 10;
+      // setInterval(function () {
+      //   if(x < 475){
+      //     window.scroll(0, x);
+      //     x = x + 75;
+      //   }
+      // }, y);
+    }
+  }, [isLoading]);
+
+  useEffect(() => {
+    if (!isLoading && isCoundownActive) {
       // 2pm UTC 16th Dec
       var target_date = new Date("2021-12-16T14:00:00Z");
 
-      // December 15, 2021 14:00:00
-      //  + 1000 * 3600 * 48; // set the countdown date
-      var days, hours, minutes, seconds; // variables for time units
+      if (target_date.getTime() < new Date().getTime()) {
+        setisCoundownActive(false);
+      }
 
-      getCountdown();
+      var days, hours, minutes, seconds;
 
-      setInterval(function () {
+      if (isCoundownActive) {
         getCountdown();
-      }, 1000);
+
+        setInterval(function () {
+          getCountdown();
+        }, 1000);
+      }
 
       function getCountdown() {
-        // find the amount of "seconds" between now and target
         var current_date = new Date().getTime();
         var seconds_left = (target_date - current_date) / 1000;
 
@@ -160,10 +184,13 @@ const Home = () => {
         minutes = pad(parseInt(seconds_left / 60));
         seconds = pad(parseInt(seconds_left % 60));
 
-        // format countdown string + set tag value
-
-        if(days === 0 && hours === 0 && minutes === 0 && seconds === 0){
-          setisCoundownActive(false)
+        if (
+          days === "00" &&
+          hours === "00" &&
+          minutes === "00" &&
+          seconds === "00"
+        ) {
+          setisCoundownActive(false);
         }
 
         setcountDownTime({
@@ -178,21 +205,26 @@ const Home = () => {
         return (n < 10 ? "0" : "") + n;
       }
     }
-    return {}
-  }, [isLoading]);
+    return {};
+  }, [isLoading, isCoundownActive]);
 
   useEffect(() => {
-    if (!isLoading && !isCoundownActive) {
+    if (!isLoading && !isAuctionFinished && !isCoundownActive) {
       // 19th Dec 2pm utc
       var target_date = new Date("2021-12-19T14:00:00Z");
+      var days, hours, minutes, seconds;
 
-      var days, hours; 
+      if (target_date.getTime() < new Date().getTime()) {
+        setIsAuctionFinished(true);
+      }
 
-      getCountdown();
-
-      setInterval(function () {
+      if (!isAuctionFinished) {
         getCountdown();
-      }, 1000);
+
+        setInterval(function () {
+          getCountdown();
+        }, 1000);
+      }
 
       function getCountdown() {
         var current_date = new Date().getTime();
@@ -201,11 +233,23 @@ const Home = () => {
         days = pad(parseInt(seconds_left / 86400));
         seconds_left = seconds_left % 86400;
 
+        minutes = pad(parseInt(seconds_left / 60));
+        seconds = pad(parseInt(seconds_left % 60));
+
         hours = pad(parseInt(seconds_left / 3600));
+
+        if (
+          days === "00" &&
+          hours === "00" &&
+          minutes === "00" &&
+          seconds === "00"
+        ) {
+          setIsAuctionFinished(true);
+        }
 
         setcountDownTimeleft({
           days,
-          hours
+          hours,
         });
       }
 
@@ -213,12 +257,12 @@ const Home = () => {
         return (n < 10 ? "0" : "") + n;
       }
     }
-    return {}
-  }, [isLoading, isCoundownActive]);
+    return {};
+  }, [isLoading, isCoundownActive, isAuctionFinished]);
 
-  const handleModelClose = () => {
-    setShowAccouncement(false);
-  };
+  // const handleModelClose = () => {
+  //   setShowAccouncement(false);
+  // };
 
   // useEffect(() => {
   //   if (window.sessionStorage.getItem('user')) {
@@ -231,11 +275,17 @@ const Home = () => {
   //   }
   // }, [])
 
-  useEffect(() => {
+  const updateLoadingStatus = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-    return {}
+  };
+
+  useEffect(() => {
+    updateLoadingStatus();
+    return () => {
+      setIsLoading(true);
+    };
   }, []);
 
   return (
@@ -247,9 +297,15 @@ const Home = () => {
           {/* <Header /> */}
 
           <div className="head-animation-wrapper">
-          <AnimatedHeader onChangeHamBurger={onChangeHamBurger} />
-          
-          <Hero isLoading={isLoading} countDownTime={isCoundownActive ? countDownTime : countDownTimeleft} isCoundownActive={isCoundownActive} />
+            <AnimatedHeader onChangeHamBurger={onChangeHamBurger} />
+            <Hero
+              isLoading={isLoading}
+              countDownTime={
+                isCoundownActive ? countDownTime : countDownTimeleft
+              }
+              isAuctionFinished={isAuctionFinished}
+              isCoundownActive={isCoundownActive}
+            />
           </div>
           <AboutUs />
 
@@ -263,48 +319,35 @@ const Home = () => {
               style={{ width: "100%", height: "100%" }}
             >
               <BusinessModel />
-
               <ValueProposition />
-
               <Carousel />
-
               <Dao />
             </div>
 
             <EcoSystem />
             <BlackGamexCard />
-            {/* //token */}
-
             <Tokenomics />
-
-            {/* //techinal */}
-
             <RoadMap />
-
-            {/* //team */}
-
             <Team />
-
-            {/* Advisors */}
             <Advisors />
-
-            {/* //investors */}
-
             <PartnersInvestors />
-
-            {/* //Incubator */}
             <Incubators />
-
-            {/* //blog */}
             <Blog />
-
             <Footer />
           </div>
-          {ShowAccouncement && (
+          {/* {ShowAccouncement && (
             <AnnouncementModel handleModelClose={handleModelClose} />
-          )}
+          )} */}
 
-        {footerCopperVisible &&  <CopperLaunch countDownTime={isCoundownActive ? countDownTime : countDownTimeleft} isCoundownActive={isCoundownActive} />}
+          {footerCopperVisible && (
+            <CopperLaunch
+              countDownTime={
+                isCoundownActive ? countDownTime : countDownTimeleft
+              }
+              isAuctionFinished={isAuctionFinished}
+              isCoundownActive={isCoundownActive}
+            />
+          )}
         </div>
       )}
     </>

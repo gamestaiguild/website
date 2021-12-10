@@ -1,11 +1,11 @@
 import React from "react";
 import enjLogo from "../assets/enj.png";
 import equLogo from "../assets/equ.png";
-import gameStnLogo from "../assets/game-station.png";
+// import gameStnLogo from "../assets/game-station.png";
 import oxBullLogo from "../assets/oxbull.png";
 import polyLogo from "../assets/poly.png";
 import InfiniteCarousel from 'react-leaf-carousel';
-import OpenSeaIcon from "../assets/openSeaIcon.png";
+// import OpenSeaIcon from "../assets/openSeaIcon.png";
 import CopperIcon from "../assets/copperIcon.svg";
 
 

@@ -132,23 +132,26 @@ const Home = () => {
     });
   });
 
+  
+ 
+  // useEffect(() => {
+  //   setActivesection(htmlIdValue);
+  //   if (htmlIdValue) {
+  //     const titleElement = document.getElementById(htmlIdValue);
+  //     titleElement.scrollIntoView({ behavior: "smooth" });
+  //   }
+  //   return () => {};
+  // }, [htmlIdValue]);
+
   useEffect(() => {
-    if (!isLoading && is1200) {
+    let htmlIdValue = window.location.hash.trim().replace("#", "");
+    if (!isLoading && is1200 && !htmlIdValue) {
       window.scrollBy(0, 400);
       window.scrollBy({
         top: 400,
         left: 0,
         behavior: 'smooth'
       });
-
-      // var x = 1;
-      // var y = 10;
-      // setInterval(function () {
-      //   if(x < 475){
-      //     window.scroll(0, x);
-      //     x = x + 75;
-      //   }
-      // }, y);
     }
   }, [isLoading]);
 
@@ -333,7 +336,7 @@ const Home = () => {
             <PartnersInvestors />
             <Incubators />
             <Blog />
-            <Footer />
+            <Footer isHomeFooter/>
           </div>
           {/* {ShowAccouncement && (
             <AnnouncementModel handleModelClose={handleModelClose} />

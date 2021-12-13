@@ -30,6 +30,12 @@
   justify-content: center;
   flex: 1;
 
+   .not-found-wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+
   h1 {
     font-size: 200px;
   }

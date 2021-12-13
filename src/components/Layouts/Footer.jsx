@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-const Footer = () => {
+const Footer = ({isHomeFooter}) => {
   return (
-    <footer className="footer">
+    <footer className={isHomeFooter ? "footer footer-padding" : "footer"}>
       <div className="footer-content responsive-wrapper">
         <div className="footer-column">
           <h2 className="footer-heading">

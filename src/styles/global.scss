@@ -1030,7 +1030,7 @@ img {
   z-index: 4;
 
   .community-title {
-    max-width: 838px;
+    max-width:1000px;
     margin: 0 auto;
     color: #273a41;
     font-size: 36px;
@@ -1332,9 +1332,10 @@ header.header-visible .button:hover {
   div {
     display: flex;
     align-items: center;
+    width: 100%;
 
     span {
-      width: 64px;
+      width :20%;
       height: 64px;
       border-radius: 8px;
       display: inline-flex;
@@ -1364,6 +1365,7 @@ header.header-visible .button:hover {
   flex-grow: 0;
   // margin: 0px 27px;
   font-family: "euclidnormal";
+  width: 80%;
 }
 
 .card-title {
@@ -4420,7 +4422,7 @@ footer {
   height: 100%;
   z-index: 4;
   padding: 10% 0px;
-  padding-bottom: 150px !important;
+  // padding-bottom: 150px !important;
   margin-top: 100px;
   background: url("../assets/footer-bg.png") no-repeat;
   background-size: cover;
@@ -4451,6 +4453,10 @@ footer {
   //   z-index: -1;
   //   background: #1b1f21;
   // }
+}
+
+.footer-padding {
+  padding-bottom: 150px !important;
 }
 
 .footer-content {

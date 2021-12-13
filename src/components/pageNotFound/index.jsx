@@ -11,7 +11,7 @@ const PageNotFound = () => {
         </Link>
       </div>
       <div className="page-not-found-conten">
-        <h1>404</h1>
+        <div className="not-found-wrapper"><h1>4</h1><h1 style={{color: "#FFFFFF"}}>0</h1><h1>4</h1></div>
         <p>Page Not Found</p>
         <a href="/">Go To Home Page</a>
       </div>

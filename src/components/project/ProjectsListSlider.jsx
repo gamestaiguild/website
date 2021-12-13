@@ -37,8 +37,8 @@ import { projectItemList } from "../../views/Incubator/projectItemList";
 // ];
 
 const ProjectsListSlider = (props) => {
-    const { projectId } = props;
-  
+  const { projectId } = props;
+
   const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
     <button
       {...props}
@@ -95,7 +95,7 @@ const ProjectsListSlider = (props) => {
     prevArrow: <SlickArrowLeft />,
     nextArrow: <SlickArrowRight />,
     speed: 500,
-    slidesToShow:  projectItemList.length > 3 ? 3 : 2,
+    slidesToShow: projectItemList.length > 3 ? 3 : 2,
     slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
@@ -128,24 +128,44 @@ const ProjectsListSlider = (props) => {
 
   return (
     <Slider {...settings}>
-      {projectItemList.map((item, index) => (
-        item.id !== projectId &&
-        <div key={index}>
-          <div className="project-box">
-            <div className="project-image">
-              <img className={item.isComingSoon ? "blur-poster" : ""} src={item.project_img} alt="" />
-              {item.isComingSoon && <h1 className="coming-soon">Coming Soon...</h1>}
+      {projectItemList.map(
+        (item, index) =>
+          item.id !== projectId && (
+            <div key={index}>
+              <div className="project-box">
+                <div className="project-image">
+                  <img
+                    className={item.isComingSoon ? "blur-poster" : ""}
+                    src={item.project_img}
+                    alt=""
+                  />
+                  {item.isComingSoon && (
+                    <h1 className="coming-soon">Coming Soon...</h1>
+                  )}
+                  {item.ribbon && (
+                    <div className="ribbon">
+                      <div className="txt">Incubated by GAMESTA</div>
+                    </div>
+                  )}
+                </div>
+                <div className="project-desc">
+                  <h2 className="project-title">{item.project_name}</h2>
+                  <p className="project-content">{item.project_content}</p>
+                  {!item.isComingSoon && (
+                    <div className="project-btn-wrapper">
+                      <Link
+                        to={`/project/${item.id}`}
+                        onClick={() => window.scrollTo(0, 0)}
+                      >
+                        Read more
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
-            <div className="project-desc">
-              <h2 className="project-title">{item.project_name}</h2>
-              <p className="project-content">{item.project_content}</p>
-              {!item.isComingSoon &&<div className="project-btn-wrapper">
-                <Link to={`/project/${item.id}`} onClick={() => window.scrollTo(0, 0)}>Read more</Link>
-              </div>}
-            </div>
-          </div>
-        </div>
-      ))}
+          )
+      )}
     </Slider>
   );
 };

@@ -52,6 +52,7 @@ export const projectItemList = [
     project_name: "RendezVerse",
     project_inner_img: RendezVerseInner,
     // isComingSoon: true,
+    ribbon:true,
     project_content:
       "The AI powered metaverse for trade shows, conferences and corporate meetings.",
     project_desc: '<h4> RendezVerse will be a fully explorable extended reality (XR) environment bridging the gap between physical and digital in a seamless experience using the latest VR technology. Cryptographic protocols and blockchain will be used to manage digital real estate, value transfer and distribution of incentives all powered by the $RDVR token.</h4> <p>Crucially there will be an extra layer of technology underpinning the platform’s functionality, our AI and proprietary matchmaking technology will also be embedded into the platform. </p>',

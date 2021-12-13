@@ -220,6 +220,7 @@ const Incubator = () => {
               projectContent={item.project_content}
               projectId={item.id}
               isComingSoon={item.isComingSoon}
+              ribbon={item?.ribbon}
             />
           ))}
         </div>

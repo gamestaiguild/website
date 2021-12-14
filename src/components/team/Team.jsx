@@ -7,8 +7,9 @@ import jodyProfile from "../../assets/jody.jpg";
 import tomasProfile from "../../assets/tomas.png";
 import jamesProfile from "../../assets/jamesProfile.jpg";
 import AlexProfile from "../../assets/AlexProfile.jpg";
-import linkedInIcon from "../../assets/linkedin.png"
-import '../../styles/teams.scss'
+import sanjayProfile from "../../assets/sanjayProfile.jpeg";
+import linkedInIcon from "../../assets/linkedin.png";
+import "../../styles/teams.scss";
 
 const Team = () => {
   return (
@@ -49,7 +50,7 @@ const Team = () => {
                             },
                           }}
                         >
-                          <img src={jamesProfile} alt="" />
+                          <img src={jodyProfile} alt="" />
                         </Tween>
                       </Timeline>
                     </div>
@@ -57,16 +58,19 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>James Rodd</h4>
-                <strong>CMO</strong>
-                <span className="linkedin-link"><a href="https://www.linkedin.com/in/james-rodd-b3b59aa" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
+                <h4>Jody Taylor</h4>
+                <strong>COO</strong>
+                <span className="linkedin-link">
+                  <a
+                    href="https://www.linkedin.com/in/jodyjtaylor"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={linkedInIcon} alt="" />
+                  </a>
+                </span>
                 <p>
-                  James joins Gamesta with two decades of marketing experience,
-                  beginning in international sports and music festivals. This
-                  was followed by a period across South East Asia and beyond
-                  with the pinnacle of luxury hospitality, Four Seasons, before
-                  establishing his lux-brand marketing agency which transitioned
-                  into technology and Gamesta.
+                Chief Operating Officer Jody Taylor brings a world of experience and intuitive skills to the  G A M E  S T A group. Strength in strategic planning and a strong compulsion to create working solutions in all aspects of operations are well characterized by years of strategy consulting, change management and custom operational architectures. Though Jody is an avid investor in private companies, he is no stranger to the power of blockchain technologies and their influential potential over the entertainment sector.
                 </p>
               </main>
             </article>
@@ -100,7 +104,15 @@ const Team = () => {
               <main>
                 <h4>Spencer Tarring</h4>
                 <strong>CEO</strong>
-                <span className="linkedin-link"><a href="https://www.linkedin.com/in/spencer-tarring-b6218220" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
+                <span className="linkedin-link">
+                  <a
+                    href="https://www.linkedin.com/in/spencer-tarring-b6218220"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={linkedInIcon} alt="" />
+                  </a>
+                </span>
                 <p>
                   Founder of VMG & DopeWarz, Spencer comes with a wealth of
                   experience in both startups & crypto, having exited 5+
@@ -140,7 +152,7 @@ const Team = () => {
                             },
                           }}
                         >
-                          <img src={jodyProfile} alt="" />
+                          <img src={sanjayProfile} alt="" />
                         </Tween>
                       </Timeline>
                     </div>
@@ -148,19 +160,77 @@ const Team = () => {
                 </Scene>
               </figure>
               <main>
-                <h4>Jody Taylor</h4>
-                <strong>COO</strong>
-                <span className="linkedin-link"><a href="https://www.linkedin.com/in/jodyjtaylor" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
+                <h4>Sanjay Jadhav</h4>
+                <strong>CTO</strong>
+                <span className="linkedin-link">
+                  <a
+                    href="#"
+                    // target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={linkedInIcon} alt="" />
+                  </a>
+                </span>
                 <p>
-                  Chief Operating Officer Jody Taylor brings a world of
-                  experience and intuitive skills to the Gamesta group. Strength
-                  in strategic planning and a strong compulsion to create
-                  working solutions in all aspects of operations are well
-                  characterized by years of strategy consulting, change
-                  management and custom operational architectures. Though Jody
-                  is an avid investor in private companies, he is no stranger to
-                  the power of blockchain technologies and their influential
-                  potential over the entertainment sector.
+                  Sanjay is a serial techpreneur with 20+ years’ expertise in
+                  building scalable disruptive products $MMM honing in on
+                  Blockchain, AI, AR & Big Data. He is passionate about solving
+                  real world problems with a customer-centric approach and
+                  excels in developing & leading high performance, collaborative
+                  and distributed multicultural teams. He is an avid M&A
+                  strategist and crypto trader/investor.
+                </p>
+              </main>
+            </article>
+
+            <article className="card-clickable">
+              <div style={{ height: 60 }}></div>
+              <figure>
+                <Scene triggerHook="onEnter" duration={600}>
+                  {(progress) => (
+                    <div className="">
+                      <Timeline totalProgress={progress} paused>
+                        <Tween
+                          from={{
+                            css: {
+                              opacity: 0,
+                              scale: 3,
+                              transform: "rotate(45deg)",
+                              marginRight: "-500px",
+                              marginTop: "0px",
+                            },
+                          }}
+                          to={{
+                            css: {
+                              opacity: 1,
+                              scale: 1,
+                              transform: "rotate(0deg)",
+                              marginRight: 0,
+                              marginTop: "0px",
+                            },
+                          }}
+                        >
+                          <img src={jamesProfile} alt="" />
+                        </Tween>
+                      </Timeline>
+                    </div>
+                  )}
+                </Scene>
+              </figure>
+              <main>
+                <h4>James Rodd</h4>
+                <strong>CMO</strong>
+                <span className="linkedin-link">
+                  <a
+                    href="https://www.linkedin.com/in/james-rodd-b3b59aa"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={linkedInIcon} alt="" />
+                  </a>
+                </span>
+                <p>
+                James joins GAMESTA with two decades of marketing experience, beginning in international sports and music festivals. This was followed by a period across South East Asia and beyond with the pinnacle of luxury hospitality, Four Seasons, before establishing his lux-brand marketing agency which transitioned into technology and GAMESTA.
                 </p>
               </main>
             </article>
@@ -170,7 +240,7 @@ const Team = () => {
               style={{ width: 0, height: 0, display: "none" }}
             ></article>
 
-            <article className="card-clickable" style={{ marginTop: "0px"}}>
+            <article className="card-clickable" style={{ marginTop: "0px" }}>
               <figure>
                 <Scene
                   triggerHook="onEnter"
@@ -208,7 +278,15 @@ const Team = () => {
               <main>
                 <h4>David Silvester</h4>
                 <strong>Head of Research & BD</strong>
-                <span className="linkedin-link"><a href="https://www.linkedin.com/in/david-silvester" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
+                <span className="linkedin-link">
+                  <a
+                    href="https://www.linkedin.com/in/david-silvester"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={linkedInIcon} alt="" />
+                  </a>
+                </span>
                 <p>
                   David has 8 years experience developing and consulting
                   businesses in the global start-up scene. He’s an active crypto
@@ -259,7 +337,15 @@ const Team = () => {
               <main>
                 <h4>Tomas Wolf</h4>
                 <strong>Head of Gaming</strong>
-                <span className="linkedin-link"><a href="https://www.linkedin.com/in/tom-wolf-962a5697" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
+                <span className="linkedin-link">
+                  <a
+                    href="https://www.linkedin.com/in/tom-wolf-962a5697"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={linkedInIcon} alt="" />
+                  </a>
+                </span>
                 <p>
                   Tom is an Active Stock, Commodities and Crypto swing trader,
                   financial educator and Angel Investor. Since discovering the
@@ -308,7 +394,15 @@ const Team = () => {
               <main>
                 <h4>Aleksandar Loncar</h4>
                 <strong>Head of AI</strong>
-                <span className="linkedin-link"><a href="https://www.linkedin.com/in/aleksandar-loncar" target="_blank" rel="noreferrer"><img src={linkedInIcon} alt="" /></a></span>
+                <span className="linkedin-link">
+                  <a
+                    href="https://www.linkedin.com/in/aleksandar-loncar"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={linkedInIcon} alt="" />
+                  </a>
+                </span>
                 <p>
                   Aleksandar is a machine learning engineer, a passionate
                   mathematician and algorithm engineer with strong analytical

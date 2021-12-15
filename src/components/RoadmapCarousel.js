@@ -79,7 +79,7 @@ const _items = [
       },
       title3: {
         title: "Lending",
-        one: "Upgraded smart contracts to enable lending to and from the treasuries NFT asset base",
+        one: "Upgraded smart contracts to enable lending to and from the treasuries NFT in-game asset base",
         two: "Other guilds can lend to Gamesta through the smart contracts and vice versa creating a ‘sub-lease’.",
       },
       title4: {

@@ -153,7 +153,7 @@ const Home = () => {
         behavior: 'smooth'
       });
     }
-  }, [isLoading]);
+  }, [isLoading, is1200]);
 
   useEffect(() => {
     if (!isLoading && isCoundownActive) {

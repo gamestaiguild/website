@@ -1695,7 +1695,9 @@ header.header-visible .button:hover {
   overflow: visible !important;
   transform: skewY(-6deg);
 }
-
+.summary span:first-child img {
+    width: 50px;
+}
 .sub-hero {
   margin: auto;
   text-align: center;
@@ -2044,7 +2046,7 @@ summary {
   }
 
   span:first-child {
-    width: 4rem;
+    width: 50px;
     height: auto;
     border-radius: 10px;
     display: flex;
@@ -2052,7 +2054,7 @@ summary {
     align-items: flex-start;
     justify-content: flex-start;
     margin-right: 1.25em;
-    margin-right: 0;
+    margin-right: 20px;
     svg {
       width: 2.25rem;
       height: 2.25rem;

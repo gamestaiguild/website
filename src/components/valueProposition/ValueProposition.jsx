@@ -37,14 +37,14 @@ const ValueProposition = () => {
             </Scene>
             <span className="carousel-hero-border"></span>
             <p>
-              The guild effectively connects investors and players together,
-              enabling both parties to profit from the exploding GameFi market.
+              The guild effectively connects token holders and players together,
+              enabling both parties to profit from the exploding play-to-earn model.
             </p>
             <strong>
               Gamesta brings value through its experience in the industry.
-              Specialists in crypto and more prudently GameFi, VMG’s core team
+              Specialists in crypto and more prudently GameFi, Gamesta’s core team
               are looking forward to building one of the most successful guilds
-              ever, one that gives high yields to investors but at the same time
+              ever, one that gives high rewards to token holders but at the same time
               empowers players from all over the globe.
             </strong>
           </div>

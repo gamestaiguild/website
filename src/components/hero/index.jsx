@@ -27,7 +27,6 @@ const Hero = (props) => {
 
   const [liveImage, setliveImage] = useState(live1);
 
-
   useEffect(() => {
     const liveImages = [live1, live2, live3];
     if (!isCoundownActive) {
@@ -63,7 +62,7 @@ const Hero = (props) => {
                                 A.I. Powered Guild for NFT Gaming
                               </h1>
                               <p className="des">
-                                Gamesta enabling investors to connect and
+                                Gamesta enables token holders to connect and
                                 empower thousands of under privileged players
                                 throughout the World
                               </p>
@@ -167,65 +166,82 @@ const Hero = (props) => {
                                 <p className="launch-text">
                                   {isCoundownActive
                                     ? "Launch Auction starts in"
-                                    : isAuctionFinished ? "Auction Finished" : "Launch Auction"}
+                                    : isAuctionFinished
+                                    ? "Auction Finished"
+                                    : "Launch Auction"}
                                 </p>
-                               {!isAuctionFinished && <>{isCoundownActive ? (
-                                  <div id="countdown">
-                                    <div id="tiles">
-                                      <span>{countDownTime.days}</span>
-                                      <span>{countDownTime.hours}</span>
-                                      <span>{countDownTime.minutes}</span>
-                                      <span>{countDownTime.seconds}</span>
-                                    </div>
-                                  </div>
-                                ) : (
-                                  <div className="live-auction">
-                                    <div className="live-wrapper">
-                                      <div className="live-logo">
-                                        <img src={liveImage} alt="" />
+                                {!isAuctionFinished && (
+                                  <>
+                                    {isCoundownActive ? (
+                                      <div id="countdown">
+                                        <div id="tiles">
+                                          <span>{countDownTime.days}</span>
+                                          <span>{countDownTime.hours}</span>
+                                          <span>{countDownTime.minutes}</span>
+                                          <span>{countDownTime.seconds}</span>
+                                        </div>
                                       </div>
-                                      <p>Live Now!</p>
-                                    </div>
-                                    <div id="countdown">
-                                      <div id="tiles">
-                                        <p>Time left:</p>
-                                        <span className="days-box">
-                                          {countDownTime.days}
-                                          <span className="days">Days</span>
-                                        </span>
-                                        <span className="hours-box">
-                                          {countDownTime.hours}
-                                          <span className="hours">Hours</span>
-                                        </span>
+                                    ) : (
+                                      <div className="live-auction">
+                                        <div className="live-wrapper">
+                                          <div className="live-logo">
+                                            <img src={liveImage} alt="" />
+                                          </div>
+                                          <p>Live Now!</p>
+                                        </div>
+                                        <div id="countdown">
+                                          <div id="tiles">
+                                            <p>Time left:</p>
+                                            <span className="days-box">
+                                              {countDownTime.days}
+                                              <span className="days">Days</span>
+                                            </span>
+                                            <span className="hours-box">
+                                              {countDownTime.hours}
+                                              <span className="hours">
+                                                Hours
+                                              </span>
+                                            </span>
+                                          </div>
+                                        </div>
                                       </div>
+                                    )}
+                                    {isCoundownActive && (
+                                      <ul className="inline-list">
+                                        <li className="countdown-list-item">
+                                          Days
+                                        </li>
+                                        <li className="countdown-list-item">
+                                          Hours{" "}
+                                        </li>
+                                        <li className="countdown-list-item">
+                                          Min
+                                        </li>
+                                        <li className="countdown-list-item">
+                                          Sec
+                                        </li>
+                                      </ul>
+                                    )}
+                                    <div className="button-wrapper">
+                                      <a
+                                        href="https://contest.gamesta.ai"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                      >
+                                        Contribute{" "}
+                                        <img src={ArrowRight} alt="" />
+                                      </a>
+                                      <p>and win a Tesla car!</p>
                                     </div>
-                                  </div>
+                                    <div className="tesla">
+                                      <img
+                                        src={tesla}
+                                        alt=""
+                                        className="tesla-img"
+                                      />
+                                    </div>
+                                  </>
                                 )}
-                                {isCoundownActive && (
-                                  <ul className="inline-list">
-                                    <li className="countdown-list-item">Days</li>
-                                    <li className="countdown-list-item">Hours </li>
-                                    <li className="countdown-list-item">Min</li>
-                                    <li className="countdown-list-item">Sec</li>
-                                  </ul>
-                                )}
-                                <div className="button-wrapper">
-                                  <a
-                                    href="https://contest.gamesta.ai"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                  >
-                                    Contribute <img src={ArrowRight} alt="" />
-                                  </a>
-                                  <p>and win a Tesla car!</p>
-                                </div>
-                                <div className="tesla">
-                                  <img
-                                    src={tesla}
-                                    alt=""
-                                    className="tesla-img"
-                                  />
-                                </div></>}
                               </div>
                             </div>
                             <div className="image-wrapper">
@@ -533,7 +549,7 @@ const Hero = (props) => {
           <div className="content">
             <h1 className="title">A.I. Powered Guild for NFT Gaming</h1>
             <p className="des">
-              Gamesta enabling investors to connect and empower thousands of
+              Gamesta enables token holders to connect and empower thousands of
               under privileged players throughout the World
             </p>
             <div className="sub-des header-btn-wrapper-top">
@@ -625,73 +641,75 @@ const Hero = (props) => {
                   <li className="countdown-list-item">Sec</li>
                 </ul>
               </div> */}
-             <div className="countdown-des spec-countdown-des">
-                                <div className="copper-wrapper">
-                                  <img src={Copper} alt="" />
-                                </div>
-                                <p className="launch-text">
-                                  {isCoundownActive
-                                    ? "Launch Auction starts in"
-                                    : isAuctionFinished ? "Auction Finished" : "Launch Auction"}
-                                </p>
-                                {!isAuctionFinished && <>{isCoundownActive ? (
-                                  <div id="countdown">
-                                    <div id="tiles">
-                                      <span>{countDownTime.days}</span>
-                                      <span>{countDownTime.hours}</span>
-                                      <span>{countDownTime.minutes}</span>
-                                      <span>{countDownTime.seconds}</span>
-                                    </div>
-                                  </div>
-                                ) : (
-                                  <div className="live-auction">
-                                    <div className="live-wrapper">
-                                      <div className="live-logo">
-                                        <img src={liveImage} alt="" />
-                                      </div>
-                                      <p>Live Now!</p>
-                                    </div>
-                                    <div id="countdown">
-                                      <div id="tiles">
-                                        <p>Time left:</p>
-                                        <span className="days-box">
-                                          {countDownTime.days}
-                                          <span className="days">Days</span>
-                                        </span>
-                                        <span className="hours-box">
-                                          {countDownTime.hours}
-                                          <span className="hours">Hours</span>
-                                        </span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                )}
-                                {isCoundownActive && (
-                                  <ul className="inline-list">
-                                    <li className="countdown-list-item">Days</li>
-                                    <li className="countdown-list-item">Hours </li>
-                                    <li className="countdown-list-item">Min</li>
-                                    <li className="countdown-list-item">Sec</li>
-                                  </ul>
-                                )}
-                                <div className="button-wrapper">
-                                  <a
-                                    href="https://contest.gamesta.ai"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                  >
-                                    Contribute <img src={ArrowRight} alt="" />
-                                  </a>
-                                  <p>and win a Tesla car!</p>
-                                </div>
-                                <div className="tesla">
-                                  <img
-                                    src={tesla}
-                                    alt=""
-                                    className="tesla-img"
-                                  />
-                                </div></>}
-                              </div>
+            <div className="countdown-des spec-countdown-des">
+              <div className="copper-wrapper">
+                <img src={Copper} alt="" />
+              </div>
+              <p className="launch-text">
+                {isCoundownActive
+                  ? "Launch Auction starts in"
+                  : isAuctionFinished
+                  ? "Auction Finished"
+                  : "Launch Auction"}
+              </p>
+              {!isAuctionFinished && (
+                <>
+                  {isCoundownActive ? (
+                    <div id="countdown">
+                      <div id="tiles">
+                        <span>{countDownTime.days}</span>
+                        <span>{countDownTime.hours}</span>
+                        <span>{countDownTime.minutes}</span>
+                        <span>{countDownTime.seconds}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="live-auction">
+                      <div className="live-wrapper">
+                        <div className="live-logo">
+                          <img src={liveImage} alt="" />
+                        </div>
+                        <p>Live Now!</p>
+                      </div>
+                      <div id="countdown">
+                        <div id="tiles">
+                          <p>Time left:</p>
+                          <span className="days-box">
+                            {countDownTime.days}
+                            <span className="days">Days</span>
+                          </span>
+                          <span className="hours-box">
+                            {countDownTime.hours}
+                            <span className="hours">Hours</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {isCoundownActive && (
+                    <ul className="inline-list">
+                      <li className="countdown-list-item">Days</li>
+                      <li className="countdown-list-item">Hours </li>
+                      <li className="countdown-list-item">Min</li>
+                      <li className="countdown-list-item">Sec</li>
+                    </ul>
+                  )}
+                  <div className="button-wrapper">
+                    <a
+                      href="https://contest.gamesta.ai"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Contribute <img src={ArrowRight} alt="" />
+                    </a>
+                    <p>and win a Tesla car!</p>
+                  </div>
+                  <div className="tesla">
+                    <img src={tesla} alt="" className="tesla-img" />
+                  </div>
+                </>
+              )}
+            </div>
             {/* <div className="get-ready">
                 <p>Get Ready to Unleash GameFi Together</p>
               </div> */}

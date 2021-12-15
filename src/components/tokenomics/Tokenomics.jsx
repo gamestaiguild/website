@@ -44,7 +44,7 @@ const Tokenomics = () => {
             There will be a max supply of &nbsp;
             <span className="des-highlight">1,000,000,000 GSG </span>
             tokens, with <span className="green">14%</span> of them being sold
-            in a private & public sale to raise the initial capital to invest
+            in a private & public sale to raise the initial capital to spend
             into in-game assets and build out the platform.
           </p>
 

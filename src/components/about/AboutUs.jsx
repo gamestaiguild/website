@@ -69,7 +69,7 @@ const AboutUs = (props) => {
               <div>
                 <h1 className="community-title">
                   Gamesta has a large community with hundreds of players ready
-                  to activate assets
+                  to activate in-game assets
                 </h1>
                 <a
                   href="https://forms.gle/3TG7dPkiHF9BjMQh7"
@@ -164,7 +164,7 @@ const AboutUs = (props) => {
                 )}
               </div>
               <p className="video-content">
-                Based out of Bali, Indonesia, we are empowering under privileged
+                Based out of Bali, Indonesia, we are empowering underprivileged
                 players through the play 2 earn revolution
               </p>
             </div>

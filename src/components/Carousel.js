@@ -7,13 +7,13 @@ const _items = [
   {
     player: {
       title: "Machine Learning Player Promotion",
-      desc: "To optimise our yields and reward the best players with the best assets, we are developing an AI based Machine Learning algorithm to automatically promote and reward scholars in our program.",
+      desc: "To optimise our yields and reward the best players with the best in-game assets, we are developing an AI based Machine Learning algorithm to automatically promote and reward scholars in our program.",
     },
   },
   {
     player: {
       title: "Gamestation Incubation",
-      desc: "After an extremely successful partnership between DOPEWARZ & GAMESTATION, VMG decided to again incubate Gamesta with Gamestation. With their wealth of knowledge and large network of value add investors, Gamesta are confident of another incredible partnership.",
+      desc: "After an extremely successful partnership between DOPEWARZ & GAMESTATION, VMG decided to again incubate Gamesta with Gamestation. With their wealth of knowledge and large network of value add contributors, Gamesta are confident of another incredible partnership.",
     },
   },
   {
@@ -25,19 +25,19 @@ const _items = [
   {
     player: {
       title: "Tiered 50/50 Profit Split",
-      desc: "We want to attract the BEST players in the world into our ecosystem. We believe that the player's time is equal in value to the assets being used, so therefore will be operating a tiered reward system for players with up to 50/50 profit share from gaming profits.",
+      desc: "We want to attract the BEST players in the world into our ecosystem. We believe that the player's time is equal in value to the in-game assets being used, so therefore will be operating a tiered reward system for players due to their active gaming performance with up to 50/50 profit share from gaming profits.",
     },
   },
   {
     player: {
       title: "Gamesta Academy",
-      desc: "Led by some of the best players in the world, our unique gaming academy will enable us to incubate and train players to maximise their potential and yield when using our assets.",
+      desc: "Led by some of the best players in the world, our unique gaming academy will enable us to train players to maximise their potential and yield when using our in-game assets.",
     },
   },
   {
     player: {
       title: "A.I. Powered Acquisitions",
-      desc: "A.I. & Machine Learning is revolutionising processes in all aspects of business, in every industry. Gamesta is developing an A.I. & ML based algorithm to assist in asset acquisition decisions. We estimate this will increase the efficiency of our treasury 2-3 fold, and significantly reduce the risks of human errors and sentiment based choices.",
+      desc: "A.I. & Machine Learning is revolutionising processes in all aspects of business, in every industry. Gamesta is developing an A.I. & ML based algorithm to assist in-game asset acquisition decisions. We estimate this will increase the efficiency of our treasury 2-3 fold, and significantly reduce the risks of human errors and sentiment based choices.",
     },
   },
 ];

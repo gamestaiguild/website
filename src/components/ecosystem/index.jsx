@@ -28,7 +28,7 @@ const EcoSystem = () => {
               <div className="players-winning">
                 <p className="players-winning-text">
                   All fees collected from players will be collected in this
-                  treasury, and it would also pay out players' winnings.
+                  treasury, and it would also pay out players' gaming winnings.
                 </p>
               </div>
               <p className="ecosystem-revolves">
@@ -182,8 +182,9 @@ const EcoSystem = () => {
                   </h1>
                   <p className="des">
                     which will act as the utility token within Gamesta’s
-                    network. The token will enable investors to take advantage
-                    of the opportunities provided by the play 2 earn ecosystem.
+                    network. The token will enable token holders to take
+                    advantage of the opportunities provided by the play 2 earn
+                    ecosystem.
                   </p>
                 </div>
               </div>
@@ -198,14 +199,13 @@ const EcoSystem = () => {
                 network whilst keeping the gas & transaction fees to a minimum.
               </p>
               <h1>
-                After completion of the private & public sale, Gamesta will
-                allocate capital into in-game assets and begin development work
-                on the infrastructure of the ecosystem
+                After completion of the private & public sale, Gamesta will use
+                capital to purchase in-game assets and begin development work on
+                the infrastructure of the ecosystem
                 <strong>
-                  $GSG will enable holders to be rewarded, players to be
-                  incentivized, and the treasury funded, via our unique smart
-                  contract system of buying back the token with yields
-                  generated.
+                  $GSG will enable, players to earn by playing the game, and
+                  the treasury funded, via our unique smart contract system of
+                  buying back the token with rewards generated.
                 </strong>
                 <a
                   href="https://bit.ly/3jEK7yD"
@@ -253,7 +253,7 @@ const EcoSystem = () => {
                               </span>
                               <h3>
                                 <strong>
-                                  Distributing profits to investors
+                                Automate the revenue-sharing model through which the players who play the games are paid
                                 </strong>
                               </h3>
                             </div>
@@ -267,7 +267,7 @@ const EcoSystem = () => {
                                 <img src={Staking} alt="" />
                               </span>
                               <h3>
-                                <strong>Staking</strong>
+                                <strong>Staking for those who actively play</strong>
                               </h3>
                             </div>
                           </summary>
@@ -282,7 +282,7 @@ const EcoSystem = () => {
 
                               <h3>
                                 <strong>
-                                  Governance + key decisions voted on in the DAO
+                                  Governance + decisions voted on in the DAO to help improve the Guild
                                 </strong>
                               </h3>
                             </div>
@@ -297,8 +297,7 @@ const EcoSystem = () => {
                               </span>
                               <h3>
                                 <strong>
-                                  Further fund raising for asset acquisition if
-                                  deemed necessary
+                                Facilitates access to new play-to-earn games as result of the NFT acquisitions done by the Guild
                                 </strong>
                               </h3>
                             </div>
@@ -356,8 +355,7 @@ const EcoSystem = () => {
                                 </span>
                                 <h3>
                                   <strong>
-                                    Yield gained from assets acquired by
-                                    Treasury
+                                  Rewards gained from in-game assets acquired by Treasury
                                   </strong>
                                 </h3>
                               </div>
@@ -372,8 +370,7 @@ const EcoSystem = () => {
                                 </span>
                                 <h3>
                                   <strong>
-                                    Profits produced from active play of virtual
-                                    assets
+                                  Earnings produced from active play of virtual assets
                                   </strong>
                                 </h3>
                               </div>
@@ -389,7 +386,7 @@ const EcoSystem = () => {
 
                                 <h3>
                                   <strong>
-                                    % of APY generated from farming
+                                  Earnings generated from farming by active gaming role
                                   </strong>
                                 </h3>
                               </div>

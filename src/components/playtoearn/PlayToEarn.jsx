@@ -80,25 +80,25 @@ const PlayToEarn = () => {
                 </div>
               )}
             </Scene>
-
           </div>
           <div className="pte hero">
             <div className="pte-content inner">
               <div>
-              <h1>
-                Play to Earn is flipping the gaming industry on its head
-              </h1>
+                <h1>
+                  Play to Earn is flipping the gaming industry on its head
+                </h1>
 
-              <p
-                // className="pte-content-des"
-                style={{ fontSize: "16px", lineHeight: "20.8px" }}
-              >
-                With the introduction of blockchain technology and the abilityto
-                create <br />
-                trustless networks, gaming developers are now able to reward and
-                incentivise <br />
-                the players that make up the core value of the game.
-              </p>
+                <p
+                  // className="pte-content-des"
+                  style={{ fontSize: "16px", lineHeight: "20.8px" }}
+                >
+                  With the introduction of blockchain technology and the
+                  abilityto create <br />
+                  trustless networks, gaming developers are now able to reward
+                  the players for their active gaming performance and
+                  incentivise <br />
+                  the players that make up the core value of the game.
+                </p>
               </div>
             </div>
           </div>
@@ -110,7 +110,6 @@ const PlayToEarn = () => {
                     <span>
                       <img src={nftIcon} alt="" />
                     </span>
-                    
                   </div>
                 </div>
                 <div className="pte-card-body">
@@ -118,14 +117,16 @@ const PlayToEarn = () => {
                     <h4 className="pte-card-title">NFT’s</h4>
                     <p>
                       In-game asset ownership through the use of NFT’s provides
-                      additional value to the players when the asset is used in
-                      the game.
+                      additional value to the players when the in-game asset is
+                      used within the game world by playing an active role in
+                      the game itself.
                       <br />
                       <br />
-                      As they increase the XP of an asset, its value increases,
-                      meaning players are incentivized to spend time in the
-                      game, cashing out by selling their assets whenever they
-                      wish.
+                      As players increase the XP of an in-game asset by playing,
+                      its value increases, meaning players are incentivized to
+                      spend time in the game to boost, cashing out by selling
+                      their in-game assets and possibly resell them whenever
+                      they wish.
                     </p>
                   </div>
                 </div>
@@ -135,21 +136,20 @@ const PlayToEarn = () => {
                 <div className="pte-card-header">
                   <div>
                     <span>
-                      <img src={tokenIcon}  alt="" />
+                      <img src={tokenIcon} alt="" />
                     </span>
-                    
                   </div>
                 </div>
                 <div className="pte-card-body">
                   <div className="pte-card-content">
-                  <h4 className="pte-card-title">Token Dynamics</h4>
+                    <h4 className="pte-card-title">Token Dynamics</h4>
                     <p>
                       The play 2 earn model enables game developers to create
                       value in unique tokens associated with the game.
                       <br />
                       <br />
-                      These tokens provide utility, and therefore value to the
-                      players that earn them.
+                      These tokens provide utility, and therefore new ways to
+                      engage with the game and trade in-game assets.
                     </p>
                   </div>
                 </div>
@@ -160,7 +160,6 @@ const PlayToEarn = () => {
                     <span>
                       <img src={gameIcon} alt="" />
                     </span>
-                    
                   </div>
                 </div>
                 <div className="pte-card-body">
@@ -174,7 +173,7 @@ const PlayToEarn = () => {
                       <br />
                       That means players from under-privileged countries such as
                       Vietnam, Philippines, & Thailand can make relatively high
-                      full time incomes from playing the games.
+                      full time incomes from actively playing the games.
                     </p>
                   </div>
                 </div>
@@ -184,23 +183,25 @@ const PlayToEarn = () => {
                 <div className="pte-card-header">
                   <div>
                     <span>
-                      <img src={pieIcon} alt=""/>
+                      <img src={pieIcon} alt="" />
                     </span>
-                    
                   </div>
                 </div>
                 <div className="pte-card-body">
                   <div className="pte-card-content">
-                  <h4 className="pte-card-title">Scholarships</h4>
+                    <h4 className="pte-card-title">Scholarships</h4>
                     <p>
-                      Due to the play 2 earn models’ effectiveness, NFT values
-                      are high, meaning barriers of entry exist for those with
-                      no capital.
+                      Due to the play 2 earn models’ effectiveness, the prices
+                      of the NFTs linked to the in-game assets required to play
+                      may be significantly high, meaning barriers of entry exist
+                      for those with no money to purchase such NFT.
                       <br />
                       <br />
                       Scholarships such as Gamesta’s enable the distribution of
-                      these assets to players that can use them in game in
-                      exchange for a profit sharing model.
+                      these in-game assets to players that can use them in game
+                      in exchange for a profit sharing model. This sharing is a
+                      consequence of the active gaming performance of the
+                      players.
                     </p>
                   </div>
                 </div>
@@ -229,7 +230,7 @@ const PlayToEarn = () => {
 
               <li className="pte-game-list-item game-list-item">
                 <img src={farmIcon} alt="" />
-              </li>   
+              </li>
 
               <li className="pte-game-list-item game-list-item">
                 <img src={forestKnight} alt="" />

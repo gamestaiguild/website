@@ -4,6 +4,7 @@ import peopleIcon from "../../assets/people.png";
 import stockIcon from "../../assets/stock.png";
 import nftSmallIcon from "../../assets/nftSmall.png";
 import tokenSmallIcon from "../../assets/tokenSmall.png";
+import playSmallIcon from "../../assets/gameControl.png"
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 
@@ -83,6 +84,21 @@ const BusinessModel = () => {
                           <summary>
                             <div>
                               <span>
+                                <img src={playSmallIcon} alt="" />
+                              </span>
+                              <h3>
+                                <strong>
+                                Playing play-to-earn videogames to make profits
+                                </strong>
+                              </h3>
+                            </div>
+                          </summary>
+                        </details>
+
+                        <details>
+                          <summary>
+                            <div>
+                              <span>
                                 <img src={chartIcon} alt="" />
                               </span>
                               <h3>
@@ -122,7 +138,7 @@ const BusinessModel = () => {
                               </span>
                               <h3>
                                 <strong>
-                                  Producing revenue from activation of NFTs and
+                                  Producing in-game revenue from activation of in-game NFTs and
                                   their utilities
                                 </strong>
                               </h3>
@@ -152,8 +168,7 @@ const BusinessModel = () => {
 
                               <h3>
                                 <strong>
-                                  VC investments into exciting projects being
-                                  added to our community
+                                VC investments into exciting projects being added to our community
                                 </strong>
                               </h3>
                             </div>

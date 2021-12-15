@@ -1,6 +1,6 @@
 import React from "react";
 import daoBackground from "../../assets/daoBackground.png";
-import daoChart from "../../assets/daoChart.png";
+import daoChart from "../../assets/dao-image.png";
 
 import Technology from "../../assets/Frame62.png";
 import Empowerment from "../../assets/Frame63.png";
@@ -89,8 +89,8 @@ const Dao = () => {
                     contract system. */}
                   </p>
                   <p className="sub-des">
-                    This will enable us to create a DAO which will make key
-                    decisions, operate the treasury, and direct the Guild in a
+                    This will enable us to create a DAO which will make
+                    decisions, operate the treasury, and communicate with the Guild in a
                     fair and equitable manner.
                   </p>
                 </div>
@@ -160,7 +160,7 @@ const Dao = () => {
                             <span>
                               <img src={tokenIcon} alt="" />
                             </span>
-                            <h4 className="prop-title">Token distribution</h4>
+                            <h4 className="prop-title">Distribution of rewards in tokens</h4>
                           </div>
                         </div>
                       </article>
@@ -171,7 +171,7 @@ const Dao = () => {
                               <img src={Empowerment} alt="" />
                             </span>
                             <h4 className="prop-title">
-                              Products and projects
+                            Which games the Guild may play
                             </h4>
                           </div>
                         </div>
@@ -183,7 +183,7 @@ const Dao = () => {
                             <span>
                               <img src={GovernanceStructure} alt="" />
                             </span>
-                            <h4 className="prop-title">Governance structure</h4>
+                            <h4 className="prop-title">Governance of certain aspects of the Guild</h4>
                           </div>
                         </div>
                       </article>
@@ -192,7 +192,7 @@ const Dao = () => {
                   <p style={{ marginRight: "auto" }}>
                     Whilst the community is maturing, and until the launch of
                     The DAO, we will run financials in a centralised manner,
-                    reporting asset acquisitions, gaming profits & yields via a
+                    reporting in-game asset acquisitions, gaming profits & yields via a
                     weekly report that will be distributed on the blockchain.
                   </p>
                 </div>

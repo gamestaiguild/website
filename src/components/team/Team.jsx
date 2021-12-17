@@ -164,8 +164,8 @@ const Team = () => {
                 <strong>CTO</strong>
                 <span className="linkedin-link">
                   <a
-                    href="#"
-                    // target="_blank"
+                    href="https://in.linkedin.com/in/sanjj"
+                    target="_blank"
                     rel="noreferrer"
                   >
                     <img src={linkedInIcon} alt="" />
@@ -174,7 +174,7 @@ const Team = () => {
                 <p>
                   Sanjay is a serial techpreneur with 20+ years’ expertise in
                   building scalable disruptive products $MMM honing in on
-                  Blockchain, AI, AR & Big Data. He is passionate about solving
+                  Blockchain, AI, AR & Big Data. He is a visionary and had his Augmented Reality SaaS platform in 2012 serving DIY AR Apps & AR Ecommerce for bluechips. He is passionate about solving
                   real world problems with a customer-centric approach and
                   excels in developing & leading high performance, collaborative
                   and distributed multicultural teams. He is an avid M&A
